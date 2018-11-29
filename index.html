@@ -114,6 +114,13 @@
 		input[type=text]:focus {
 			width: 100%;
 		}
+		p.serif{
+			 font-family: "Times New Roman", Times, serif;
+		}
+		p.sansserif {
+    font-family: Impact, Charcoal, sans-serif;
+		}
+
 		</style>
 	</head>
 
@@ -131,7 +138,10 @@
 
 			<div id="current_image">
 				<img id='tree_image' src='resources/images/ee.png' alt='image' width="300" height="auto" left: 0px; top: -72px; />
-				<div id="Name" style="position: relative; width: 100%; height: 100%; left: 25px; top: -72px;"></div>
+				<p class="sansserif" id="Name" style="position: relative; width: 100%; height: 100%; left: 180px; top: -100px; padding-right: 500px">
+					<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
+				</p>
+				<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
 				<div id="Date" style="position: relative; width: 100%; height: 100%; left: 220px; top: -134px;"></div>
 			</div>
 		</div>
@@ -173,6 +183,21 @@
 				}
 
 				console.log(input.value);
+			}
+
+			function readTextFile(file) {
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, false);
+				rawFile.onreadystatechange = function () {
+					if (rawFile.readyState === 4) {
+						if (rawFile.status === 200 || rawFile.status == 0) {
+							var allText = rawFile.responseText;
+
+							//console.log(allText);
+						}
+					}
+				}
+				rawFile.send(null);
 			}
 
 			function readJSON(path) {
@@ -234,19 +259,22 @@
 
 
 
+				console.log("tree_image: ");
 				pin_image.style.right = "-302px";
 				pin_image.style.right = "0px";
+
 				let person_name = document.getElementById("Name");
-				let plant_date = document.getElementById("Date");
 				let tree_image = document.getElementById("tree_image");
 
-				//tree_image.src = "resources/From Azure/00OZ555AI7B0.jpg";
-				console.log(tree_image);
 
 
-				//  add person name to and plant date to canvas element
-				//	person_name.innerHTML = tree_obj.person_name;
-				//	plant_date.innerHTML = tree_obj.plant_date;
+
+
+
+				person_name.innerHTML = tree_obj.person_name;
+
+
+				console.log("tree_image: ", tree_obj.person_name);
 
 				var v_pos = viewer.scene.view.position;
 				var postion_diff = new THREE.Vector3(Math.abs(final_postion["x"] - v_pos.x),
@@ -460,6 +488,10 @@
 						}
 					});
 
+					var locations_txt = this.readTextFile("./resources/models/testmodels/locations.txt");
+					console.log("text: ", locations_txt);
+
+
 
 
 					soil_model.position.set(
@@ -480,7 +512,6 @@
 					locationgrid.traverse(function (child) {
 						if (child instanceof THREE.Mesh) {
 
-							console.log("child: ", child);
 						}
 					});
 
@@ -491,7 +522,21 @@
 					);
 					locationgrid.scale.multiplyScalar(200);
 					locationgrid.rotation.set(Math.PI / 2, Math.PI, 0)
+
+
+
 					//viewer.scene.scene.add(locationgrid);
+					console.log("jbsdusbdu wudbwudbgwd ujwbduwdbgwudb wudbwudwudbg");
+					var geometry = new THREE.BoxGeometry(1, 1, 1);
+					var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+					var cube = new THREE.Mesh(geometry, material);
+					cube.position.set(
+						589742.5396259155, 231513.74975000002, 723.1750000762939
+					);
+					viewer.scene.scene.add(cube);
+
+
+
 
 
 					locationgrid.updateMatrixWorld();
@@ -515,10 +560,7 @@
 
 						//	pos_vector = THREE.geometry.center(locationgrid.children[k].geometry.boundingSphere.center);
 
-						locationgrid.children[k].setFromMatrixPosition(pos_vector);
-						console.log("______ ",
 
-							pos_vector);
 
 
 

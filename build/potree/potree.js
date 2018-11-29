@@ -23406,7 +23406,7 @@ ENDSEC
 			if (mouse_down_detector)
 				if (hovered_object != null) {
 
-					console.log("hovered: ", hovered_object.object.parent);
+					console.log("hoveredswdsf: ", hovered_object.object.parent);
 					//console.log("height ", this.viewer.scene.estimateHeightAt(new THREE.Vector3(589999.587, 231557.213, 745.614)));
 
 					//this.zoom_to_pin(hovered_object.point);
@@ -23421,13 +23421,34 @@ ENDSEC
 							console.log("hovered: ", hovered_object.point);
 							if (pin_was_hovered) {
 								pin_image.style.right = "-302px";
+
 								let person_name = document.getElementById("Name");
-								let plant_date = document.getElementById("Date");
+								let tree_image = document.getElementById("tree_image");
 
 
-								pin_objects[i].mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1)
+								person_name.innerHTML =  pin_objects[i].person_name;
 
-								pin_objects[i].mesh_obj.children[0].visible = true;
+
+								console.log("hovered_object: ", hovered_object.object);
+
+
+								hovered_object.object.parent.children[0].visible = true;
+								hovered_object.object.parent.children[1].visible = false;
+								hovered_object.object.parent.children[0].material.color = new THREE.Color(100, 11, 1);
+
+
+								// hovered_object.object.visible = true;
+								// hovered_object.object.visible = false;
+
+
+								//  hovered_object.object.material.color = new THREE.Color(100, 11, 1);
+
+
+
+
+								// pin_objects[i].mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1)
+
+								// pin_objects[i].mesh_obj.children[0].visible = true;
 
 								// pin_objects[i].mesh_obj.position.set(
 								// 	pin_objects[i].mesh_obj.position.x,
