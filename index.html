@@ -264,17 +264,9 @@
 				pin_image.style.right = "0px";
 
 				let person_name = document.getElementById("Name");
-				let tree_image = document.getElementById("tree_image");
-
-
-
-
 
 
 				person_name.innerHTML = tree_obj.person_name;
-
-
-				console.log("tree_image: ", tree_obj.person_name);
 
 				var v_pos = viewer.scene.view.position;
 				var postion_diff = new THREE.Vector3(Math.abs(final_postion["x"] - v_pos.x),

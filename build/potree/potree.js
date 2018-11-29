@@ -23423,13 +23423,10 @@ ENDSEC
 								pin_image.style.right = "-302px";
 
 								let person_name = document.getElementById("Name");
-								let tree_image = document.getElementById("tree_image");
+								
 
+								person_name.innerHTML = pin_objects[i].person_name;
 
-								person_name.innerHTML =  pin_objects[i].person_name;
-
-
-								console.log("hovered_object: ", hovered_object.object);
 
 
 								hovered_object.object.parent.children[0].visible = true;
@@ -23437,41 +23434,6 @@ ENDSEC
 								hovered_object.object.parent.children[0].material.color = new THREE.Color(100, 11, 1);
 
 
-								// hovered_object.object.visible = true;
-								// hovered_object.object.visible = false;
-
-
-								//  hovered_object.object.material.color = new THREE.Color(100, 11, 1);
-
-
-
-
-								// pin_objects[i].mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1)
-
-								// pin_objects[i].mesh_obj.children[0].visible = true;
-
-								// pin_objects[i].mesh_obj.position.set(
-								// 	pin_objects[i].mesh_obj.position.x,
-								// 	pin_objects[i].mesh_obj.position.y,
-								// 	pin_objects[i].mesh_obj.position.z
-								// );
-								// console.log(pin_objects[i].mesh_obj);
-
-								// pin_objects[i].mesh_obj.visible =
-								// console.log(pin_objects[i].mesh_obj);
-
-								//	person_name.innerHTML = pin_objects[i].person_name;
-								//	plant_date.innerHTML = pin_objects[i].plant_date;
-
-
-
-
-								// var cam =  this.scene.getActiveCamera();
-								// console.log("cam: ",cam);
-								// console.log("viwer: ",this.viewer);
-
-								// pin_objects[i].mesh_obj.lookAt(new THREE.Vector3(1,1,1));
-								// this.viewer.scene.lookAt(pin_objects[i].mesh_obj);
 
 							}
 							else {
