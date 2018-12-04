@@ -165,11 +165,7 @@
 				let searchParams = new URLSearchParams(window.location.search)
 				searchParams.has('id') // true
 				let param = searchParams.get('id')
-
-				let tree_id = parseFloat(param);
-				console.log("params: ", param);
-
-
+				let tree_id = "id:" + param;
 				//for testing
 				for (let i = 0; i < pin_objects.length; i++) {
 					if (tree_id == pin_objects[i].object_id) { // pick any tree 
