@@ -105,12 +105,18 @@ div.shcreensh {
 }
 
 #potree_description{
+
 	position: absolute; 
-	top: 10px; 
+	top: 95%; 
 	left: 50%; 
 	transform: translateX(-50%); 
 	text-align: center;
 	z-index:	1000;
+	/* text-shadow:  1px  1px 1px black,
+	1px -1px 1px gray,
+   -1px  1px 1px gray,
+   -1px -1px 1px gray; */
+	
 }
 
 

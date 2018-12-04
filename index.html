@@ -16,6 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="./libs/spectrum/spectrum.css">
 	<link rel="stylesheet" type="text/css" href="./libs/style/style.css">
 	<link rel="stylesheet" type="text/css" href="./libs/jstree/themes/mixed/style.css">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD09C97D-46E4-BF4C-A35C-16E4509CFF9C/main.js"
+	 charset="UTF-8"></script>
 	<style>
 		#pin_image {
 			position: absolute;
@@ -122,6 +124,7 @@
 		}
 
 		</style>
+
 	</head>
 
 	<body>
@@ -132,36 +135,56 @@
 		</div>
 
 		<div id="pin_image" , class="shcreensh">
-			<div class="fb-share-button" data-href="https://davitgoder.github.io/davitgoder/" data-layout="button_count"
+			<div class="fb-share-button" data-href="https://davitgoder.github.io/davitgoder.git.io/?id=10" data-layout="button_count"
 			 data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavitgoder.github.io%2Fdavitgoder.git.io%2F&amp;src=sdkpreparse"
 				 class="fb-xfbml-parse-ignore">გაზიარება</a></div>
 
-			<div id="current_image">
-				<img id='tree_image' src='resources/images/ee.png' alt='image' width="300" height="auto" left: 0px; top: -72px; />
-				<p class="sansserif" id="Name" style="position: relative; width: 100%; height: 100%; left: 180px; top: -100px; padding-right: 500px">
+			<div class="current_image" style="display:flex;align-items:flex-stsart;position:relative; ">
+				<img id='tree_image' src='resources/images/4.png' alt='image' width="170" height="170" left: 50; top: -72px; />
+				<img id='tree_image' src='resources/images/left.png' alt='image' width="180" height="170" left: 50; top: -72px; />
+				<img style="position: absolute;left:57%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/circle.png'
+				 alt='image' width="80" height="80" left: 50; top: -80px; />
+
+				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 2px;">
 					<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
 				</p>
 				<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
-				<div id="Date" style="position: relative; width: 100%; height: 100%; left: 220px; top: -134px;"></div>
+				<div id="Date" style="position: relative; width: 100%; height: 100%; left: 180px; top: -134px;"></div>
 			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 		<script>
-
 			//get the current url, number after url will be the pin id
 			//TODO: __3__ go to corresponding id	
 			function get_url() {
-				var url_string = document.URL;
-				var tree_ides = url_string.split("/");
-				var tree_id = tree_ides[tree_ides.length - 1];
-			}
+				// var url_string = document.URL;
+				// var tree_ides = url_string.split("/");
+				// var tree_id = tree_ides[tree_ides.length - 1];
 
+				let searchParams = new URLSearchParams(window.location.search)
+				searchParams.has('id') // true
+				let param = searchParams.get('id')
+
+				console.log("params: ", param);
+
+
+				//for testing
+				for (let i = 0; i < pin_objects.length; i++) {
+					if (tree_id == pin_objects[i].object_id) { // pick any tree 
+
+						this.go_to_tree(pin_objects[i]);
+
+						return;
+						//	pin_objects[i].mesh_obj.children[0].material.emissive[0] =  new THREE.Color( 0xff0000 );
+						//return;
+					}
+				}
+			}
 		</script>
 
 		<script>
-
-			this.readJSON("build/data.json");// initilze trees
+			this.readJSON("build/data.json"); // initilze trees
 			var json_string;
 
 			function search_tree() {
@@ -223,7 +246,8 @@
 			// go to tree
 			//TODO __1__ go smoothly and with lookrotation
 			var colored_trees = [];
-			function go_to_tree(tree_obj) {// _goder
+
+			function go_to_tree(tree_obj) { // _goder
 
 				//this.screenshot();
 
@@ -299,7 +323,7 @@
 						let pngUrl = canvas.toDataURL();
 						let img = document.querySelector(".shcreensh");
 						img.src = pngUrl;
-						image_url = pngUrl;  // <--- upload image_url to facebook
+						image_url = pngUrl; // <--- upload image_url to facebook
 
 						//console.log("generated image:   ", image_url); // <-------- image_url contains image
 
@@ -317,7 +341,9 @@
 				for (var i = 0; i < byteString.length; i++) {
 					ia[i] = byteString.charCodeAt(i);
 				}
-				return new Blob([ab], { type: 'image/png' });
+				return new Blob([ab], {
+					type: 'image/png'
+				});
 			}
 
 			pin_image.style.right = "-302px";
@@ -345,7 +371,8 @@
 				u = TheImg.src;
 				// t=document.title;
 				t = TheImg.getAttribute('alt');
-				window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600'); return false;
+				window.open('https://twitter.com/share?url=' + document.URL, 'twitter-popup', 'height=350,width=600');
+				return false;
 			}
 
 			window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
@@ -448,7 +475,7 @@
 
 
 
-				let onError = function (xhr) { };
+				let onError = function (xhr) {};
 				let loader = new THREE.OBJLoader(manager);
 
 
@@ -518,9 +545,11 @@
 
 
 					//viewer.scene.scene.add(locationgrid);
-					console.log("jbsdusbdu wudbwudbgwd ujwbduwdbgwudb wudbwudwudbg");
+
 					var geometry = new THREE.BoxGeometry(1, 1, 1);
-					var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+					var material = new THREE.MeshBasicMaterial({
+						color: 0x00ff00
+					});
 					var cube = new THREE.Mesh(geometry, material);
 					cube.position.set(
 						589742.5396259155, 231513.74975000002, 723.1750000762939
@@ -628,6 +657,8 @@
 						viewer.scene.scene.add(obj);
 					}
 
+					this.get_url();
+
 				}, onProgress, onError);
 
 				draw();
@@ -681,7 +712,6 @@
 				// }
 
 			}
-
 		</script>
 
 

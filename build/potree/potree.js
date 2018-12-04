@@ -23423,18 +23423,11 @@ ENDSEC
 								pin_image.style.right = "-302px";
 
 								let person_name = document.getElementById("Name");
-								
-
 								person_name.innerHTML = pin_objects[i].person_name;
-
-
 
 								hovered_object.object.parent.children[0].visible = true;
 								hovered_object.object.parent.children[1].visible = false;
 								hovered_object.object.parent.children[0].material.color = new THREE.Color(100, 11, 1);
-
-
-
 							}
 							else {
 
