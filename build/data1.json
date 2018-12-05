@@ -1,10 +1,10 @@
 [
     {
-        "object_id": "id:1",
-        "person_name": "Maia Sikharulidze's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "m.sikharulidze@ardi.ge",
-        "pin_picture": "1",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590091.4491219482,
@@ -13,11 +13,11 @@
         ]
     },
     {
-        "object_id": "id:2",
-        "person_name": "Giorgi Turdziladze's Tree",
+        "object_id": "id:1",
+        "person_name": "test_name",
         "plant_date": "533",
-        "person_email": "turdziladze@ardi.ge",
-        "pin_picture": "2",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590090.3692451172,
@@ -26,11 +26,11 @@
         ]
     },
     {
-        "object_id": "id:3",
-        "person_name": "Keti Katamashvili's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "k.katamashvili@ardi.ge",
-        "pin_picture": "3",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590090.9891228637,
@@ -39,11 +39,11 @@
         ]
     },
     {
-        "object_id": "id:4",
-        "person_name": "Eka Ergemlidze's Tree",
+        "object_id": "id:3",
+        "person_name": "name",
         "plant_date": "533",
-        "person_email": "ergemlidze@ardi.ge",
-        "pin_picture": "4",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590090.769121643,
@@ -52,11 +52,11 @@
         ]
     },
     {
-        "object_id": "id:5",
-        "person_name": "Nino Okhanashvili's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "nokhanashvili@gmail.com",
-        "pin_picture": "5",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590091.8791222534,
@@ -65,11 +65,11 @@
         ]
     },
     {
-        "object_id": "id:6",
-        "person_name": "Medea Tabatadze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "medea.tabatadze@insource.ge",
-        "pin_picture": "6",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590093.2192512207,
@@ -78,11 +78,11 @@
         ]
     },
     {
-        "object_id": "id:7",
-        "person_name": "Tamar Gonjilashvili's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "info@tamara.ge",
-        "pin_picture": "7",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.5891213379,
@@ -91,11 +91,11 @@
         ]
     },
     {
-        "object_id": "id:8",
-        "person_name": "Alex Dolidze's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "alex@smartphotos.ge",
-        "pin_picture": "8",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.6391243896,
@@ -104,11 +104,11 @@
         ]
     },
     {
-        "object_id": "id:9",
-        "person_name": "Mariam Adeishvili's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "madeishvili@ssa.gov.ge",
-        "pin_picture": "9",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590093.4891228637,
@@ -117,11 +117,11 @@
         ]
     },
     {
-        "object_id": "id:10",
-        "person_name": "Dako Bakhturidze's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "dakobakhturidze@gmail.com",
-        "pin_picture": "10",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590093.4291253051,
@@ -130,11 +130,11 @@
         ]
     },
     {
-        "object_id": "id:11",
-        "person_name": "Nazi Burduladze's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "nazi@cida.ge ",
-        "pin_picture": "11",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590093.6691231689,
@@ -143,11 +143,11 @@
         ]
     },
     {
-        "object_id": "id:12",
-        "person_name": "Nana Bakuradze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "nana.bakuradze@gmail.com",
-        "pin_picture": "12",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590091.1895024413,
@@ -156,11 +156,11 @@
         ]
     },
     {
-        "object_id": "id:13",
-        "person_name": "Eliso Shikhiashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Maia Sikharulidze",
         "plant_date": "533",
-        "person_email": "eshixiashvili@notary.ge",
-        "pin_picture": "13",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590091.4591240844,
@@ -169,11 +169,11 @@
         ]
     },
     {
-        "object_id": "id:14",
-        "person_name": "Tea Kikuashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Giorgi Turdziladze",
         "plant_date": "533",
-        "person_email": "tkikuashvili@notary.ge",
-        "pin_picture": "14",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590091.7692542725,
@@ -182,11 +182,11 @@
         ]
     },
     {
-        "object_id": "id:15",
-        "person_name": "Revaz Beridze's Tree",
+        "object_id": "id:5",
+        "person_name": "Keti Katamashvili",
         "plant_date": "533",
-        "person_email": "rberidze@ep.ge",
-        "pin_picture": "15",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.499125,
@@ -195,11 +195,11 @@
         ]
     },
     {
-        "object_id": "id:16",
-        "person_name": "Irakli Mgaloblishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Eka Ergemlidze",
         "plant_date": "533",
-        "person_email": "imgaloblishvili@mkd.ge",
-        "pin_picture": "16",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.7392554932,
@@ -208,11 +208,11 @@
         ]
     },
     {
-        "object_id": "id:17",
-        "person_name": "Sopo Zadikashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Nino Okhanashvili",
         "plant_date": "533",
-        "person_email": "targmna_2006@yahoo.com",
-        "pin_picture": "17",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.3791222534,
@@ -221,11 +221,11 @@
         ]
     },
     {
-        "object_id": "id:18",
-        "person_name": "Shorena Mazanashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Medea Tabatadze",
         "plant_date": "533",
-        "person_email": "gbg_group@yahoo.com",
-        "pin_picture": "18",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590091.8391213379,
@@ -234,11 +234,11 @@
         ]
     },
     {
-        "object_id": "id:19",
-        "person_name": "Leila Chavlagova's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "leila_geo@yahoo.com",
-        "pin_picture": "19",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.4291253051,
@@ -247,11 +247,11 @@
         ]
     },
     {
-        "object_id": "id:20",
-        "person_name": "Daan Harmsen's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": " daan@drm.ge ",
-        "pin_picture": "20",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.4892554932,
@@ -260,11 +260,11 @@
         ]
     },
     {
-        "object_id": "id:21",
-        "person_name": "Vasil Grigalashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "vasil.grigalashvili@clouddesk.info",
-        "pin_picture": "21",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590092.3192573242,
@@ -273,11 +273,11 @@
         ]
     },
     {
-        "object_id": "id:22",
-        "person_name": "Vano Nadiradze's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "vano.nadiradze@macademy.ge",
-        "pin_picture": "22",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590071.4491219482,
@@ -286,11 +286,11 @@
         ]
     },
     {
-        "object_id": "id:23",
-        "person_name": "Marika Kldiashvili Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "marika@macademy.ge",
-        "pin_picture": "23",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590070.3692451172,
@@ -299,11 +299,11 @@
         ]
     },
     {
-        "object_id": "id:24",
-        "person_name": "Tinatin Dzirkvadze's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "info@reflections.ge",
-        "pin_picture": "24",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590070.9891228637,
@@ -312,11 +312,11 @@
         ]
     },
     {
-        "object_id": "id:25",
-        "person_name": "Mamuka Saakashvili's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "accent@designaccent.ge",
-        "pin_picture": "25",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590070.769121643,
@@ -325,11 +325,11 @@
         ]
     },
     {
-        "object_id": "id:26",
-        "person_name": "Giorgi Toradze's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "victoriasecurity@gmail.com",
-        "pin_picture": "26",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590071.8791222534,
@@ -338,11 +338,11 @@
         ]
     },
     {
-        "object_id": "id:27",
-        "person_name": "Ilia Mamaiashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "imamaiashvili@gmt.ge",
-        "pin_picture": "27",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590073.2192512207,
@@ -351,11 +351,11 @@
         ]
     },
     {
-        "object_id": "id:28",
-        "person_name": "Valeri Giorgadze's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "vgiorgadze@gmt.ge",
-        "pin_picture": "28",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.5891213379,
@@ -364,11 +364,11 @@
         ]
     },
     {
-        "object_id": "id:29",
-        "person_name": "Vakhtang Germanashvili's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "vakhtang.germanashvili@axis.ge",
-        "pin_picture": "29",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.6391243896,
@@ -377,11 +377,11 @@
         ]
     },
     {
-        "object_id": "id:30",
-        "person_name": "Otar Margvelashvilis Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "emailotar.margvelashvili@axis.ge",
-        "pin_picture": "30",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590073.4891228637,
@@ -390,11 +390,11 @@
         ]
     },
     {
-        "object_id": "id:31",
-        "person_name": "Lika Nezhinskaya's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "lika@prolight.ge",
-        "pin_picture": "31",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590073.4291253051,
@@ -403,11 +403,11 @@
         ]
     },
     {
-        "object_id": "id:32",
-        "person_name": "Igor Stepanov's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "Igor.Stepanov@mastercard.com",
-        "pin_picture": "32",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590073.6691231689,
@@ -416,11 +416,11 @@
         ]
     },
     {
-        "object_id": "id:33",
-        "person_name": "Irakli Kodua's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ikodua@gc.ge",
-        "pin_picture": "33",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590071.1895024413,
@@ -429,11 +429,11 @@
         ]
     },
     {
-        "object_id": "id:34",
-        "person_name": "Olena Brazhnyk's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "Olena.Brazhnyk@mastercard.com",
-        "pin_picture": "34",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590071.4591240844,
@@ -442,11 +442,11 @@
         ]
     },
     {
-        "object_id": "id:35",
-        "person_name": "Emilio Kiris's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "emilio.kiris@bs2.lt",
-        "pin_picture": "35",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590071.7692542725,
@@ -468,11 +468,11 @@
         ]
     },
     {
-        "object_id": "id:36",
-        "person_name": "Akaki Gelazonia's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "akaki.gelazonia@nbg.gov.ge",
-        "pin_picture": "36",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.7392554932,
@@ -481,11 +481,11 @@
         ]
     },
     {
-        "object_id": "id:37",
-        "person_name": "Ana Subeliani's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ana.subeliani@nbg.gov.ge",
-        "pin_picture": "37",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.3791222534,
@@ -494,11 +494,11 @@
         ]
     },
     {
-        "object_id": "id:38",
-        "person_name": "Ana Kusrashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ana.kusrashvili@ge.ey.com",
-        "pin_picture": "38",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590071.8391213379,
@@ -507,11 +507,11 @@
         ]
     },
     {
-        "object_id": "id:39",
-        "person_name": "Archil Mestvirishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "archil.mestvirishvili@nbg.gov.ge",
-        "pin_picture": "39",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.4291253051,
@@ -520,11 +520,11 @@
         ]
     },
     {
-        "object_id": "id:40",
-        "person_name": "Bakar Arabuliho's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "B.Arabuli@altasoft.ge",
-        "pin_picture": "40",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.4892554932,
@@ -533,11 +533,11 @@
         ]
     },
     {
-        "object_id": "id:41",
-        "person_name": "Besarion Mikelashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "besarion.mikelashvili@nbg.gov.ge",
-        "pin_picture": "41",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590072.3192573242,
@@ -546,284 +546,11 @@
         ]
     },
     {
-        "object_id": "id:42",
-        "person_name": "Gela Gelashvili's Tree",
-        "plant_date": "533",
-        "person_email": "gela.gelashvili@nbg.gov.ge",
-        "pin_picture": "43",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590031.4491219482,
-            231552.21962431335,
-            733.0650004196167
-        ]
-    },
-    {
-        "object_id": "id:43",
-        "person_name": "Andrew Coxshall's Tree",
-        "plant_date": "533",
-        "person_email": "acoxshall@kpmg.com",
-        "pin_picture": "43",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590030.3692451172,
-            231537.57975183107,
-            732.9250000762939
-        ]
-    },
-    {
-        "object_id": "id:44",
-        "person_name": "Violetta Bechvaya's Tree",
-        "plant_date": "533",
-        "person_email": "Violetta.Bechvaya@ge.ey.com",
-        "pin_picture": "44",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590030.9891228637,
-            231526.41962495708,
-            733.1850003051758
-        ]
-    },
-    {
-        "object_id": "id:45",
-        "person_name": "Zaal Grigalashvili's Tree",
-        "plant_date": "533",
-        "person_email": "Zaal.Grigalashvili@nbg.gov.ge",
-        "pin_picture": "45",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590030.769121643,
-            231515.38974938967,
-            733.715000038147
-        ]
-    },
-    {
-        "object_id": "id:46",
-        "person_name": "Zurab Lalazashvili's Tree",
-        "plant_date": "533",
-        "person_email": "Zlalazashvili@bdo.ge",
-        "pin_picture": "46",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590031.8791222534,
-            231503.26975045778,
-            734.9449995803833
-        ]
-    },
-    {
-        "object_id": "id:47",
-        "person_name": "Irina Chernigina's Tree",
-        "plant_date": "533",
-        "person_email": "I.chernigova@altasoft.ge",
-        "pin_picture": "47",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590033.2192512207,
-            231495.3697489319,
-            736.1450003433227
-        ]
-    },
-    {
-        "object_id": "id:48",
-        "person_name": "Levan Benidze's Tree",
-        "plant_date": "533",
-        "person_email": "Levan.Benidze@nbg.gov.ge",
-        "pin_picture": "48",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.5891213379,
-            231485.62975106813,
-            737.1649998474121
-        ]
-    },
-    {
-        "object_id": "id:49",
-        "person_name": "Nana Aslamazishvili's Tree",
-        "plant_date": "533",
-        "person_email": "nana.aslamazashvili@nbg.gov.ge",
-        "pin_picture": "49",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.6391243896,
-            231474.18975053407,
-            738.9450005340576
-        ]
-    },
-    {
-        "object_id": "id:50",
-        "person_name": "Nestan Chitanava's Tree",
-        "plant_date": "533",
-        "person_email": "nestan.chitanava@nbg.gov.ge",
-        "pin_picture": "50",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590033.4891228637,
-            231453.90975008585,
-            741.4350003051758
-        ]
-    },
-    {
-        "object_id": "id:51",
-        "person_name": "Nino Tedoradze's Tree",
-        "plant_date": "533",
-        "person_email": "nino.tedoradze@nbg.gov.ge",
-        "pin_picture": "51",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590033.4291253051,
-            231445.12987225343,
-            741.8750008392334
-        ]
-    },
-    {
-        "object_id": "id:52",
-        "person_name": "Rati Dumbadze's Tree",
-        "plant_date": "533",
-        "person_email": "RDumbadze@bdo.ge",
-        "pin_picture": "52",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590033.6691231689,
-            231437.76987545777,
-            742.5450009155273
-        ]
-    },
-    {
-        "object_id": "id:53",
-        "person_name": "Ruslan Khoroshvili's Tree",
-        "plant_date": "533",
-        "person_email": "ruslan.khoroshvili@ge.ey.com",
-        "pin_picture": "53",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590031.1895024413,
-            231418.43000030518,
-            744.084999923706
-        ]
-    },
-    {
-        "object_id": "id:54",
-        "person_name": "Sanan Mammadovs Tree",
-        "plant_date": "533",
-        "person_email": "SANAN_MAMMADOV@YAHOO.COM",
-        "pin_picture": "54",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590031.4591240844,
-            231406.97987454224,
-            744.755
-        ]
-    },
-    {
-        "object_id": "id:55",
-        "person_name": "Svetlana Milashvili's Tree",
-        "plant_date": "533",
-        "person_email": "S.Milashvili@rs.ge",
-        "pin_picture": "55",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590031.7692542725,
-            231395.63999938965,
-            746.255
-        ]
-    },
-    {
-        "object_id": "id:56",
-        "person_name": "Suliko Tsulaia's Tree",
-        "plant_date": "533",
-        "person_email": "Suliko.Tsulaia@nbg.gov.ge",
-        "pin_picture": "56",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.499125,
-            231384.03987496186,
-            747.4849995422363
-        ]
-    },
-    {
-        "object_id": "id:57",
+        "object_id": "id:0",
         "person_name": "Bacho's Tree",
         "plant_date": "533",
         "person_email": "email",
-        "pin_picture": "57",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.7392554932,
-            231372.30000305176,
-            749.4350003051758
-        ]
-    },
-    {
-        "object_id": "id:58",
-        "person_name": "Khatia Datiashvili's Tree",
-        "plant_date": "533",
-        "person_email": "Kh.Datiashvili@altasoft.ge",
-        "pin_picture": "58",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.3791222534,
-            231360.61000061035,
-            751.2349995422363
-        ]
-    },
-    {
-        "object_id": "id:59",
-        "person_name": "Khvicha Gogichaishvili's Tree",
-        "plant_date": "533",
-        "person_email": "khvicha.gogichaishvili@nbg.gov.ge",
-        "pin_picture": "59",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590031.8391213379,
-            231348.84999847412,
-            755.5349987792969
-        ]
-    },
-    {
-        "object_id": "id:60",
-        "person_name": "Davit Gurielidze's Tree",
-        "plant_date": "533",
-        "person_email": "d.gurielidze@rs.ge",
-        "pin_picture": "60",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.4291253051,
-            231336.75999832153,
-            758.5250004577637
-        ]
-    },
-    {
-        "object_id": "id:61",
-        "person_name": "Nino Mchedlidze's Tree",
-        "plant_date": "533",
-        "person_email": "ninomchedlidzen@gmail.com",
-        "pin_picture": "61",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.4892554932,
-            231324.36000061035,
-            759.9849995422363
-        ]
-    },
-    {
-        "object_id": "id:62",
-        "person_name": "Aleko Sadaghashvili's Tree",
-        "plant_date": "533",
-        "person_email": "ale555777@mail.ru",
-        "pin_picture": "62",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            590032.3192573242,
-            231311.98999977112,
-            759.1150006103516
-        ]
-    },
-    {
-        "object_id": "id:63",
-        "person_name": "Zura Kalandadze's Tree",
-        "plant_date": "533",
-        "person_email": "mari_mgaloblishvili@mail.ru",
-        "pin_picture": "63",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.4491219482,
@@ -832,11 +559,11 @@
         ]
     },
     {
-        "object_id": "id:65",
-        "person_name": "Diana Kighuradze's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": " dkigurad@visa.com  ",
-        "pin_picture": "64",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590030.3692451172,
@@ -845,11 +572,11 @@
         ]
     },
     {
-        "object_id": "id:66",
-        "person_name": "Irina Vacharadze's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ivatchar@visa.com",
-        "pin_picture": "66",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590030.9891228637,
@@ -858,11 +585,11 @@
         ]
     },
     {
-        "object_id": "id:67",
-        "person_name": "Giorgi Shermazanashvili's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "Giorgi.Shermazanashvili@nbg.gov.ge",
-        "pin_picture": "67",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590030.769121643,
@@ -871,11 +598,11 @@
         ]
     },
     {
-        "object_id": "id:68",
-        "person_name": "Nino Mushkudiani's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "Nino.Mushkudiani@nbg.gov.ge",
-        "pin_picture": "68",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.8791222534,
@@ -884,11 +611,11 @@
         ]
     },
     {
-        "object_id": "id:69",
-        "person_name": "Natalia Chkoidze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "Natalia.Chkoidze@nbg.gov.ge",
-        "pin_picture": "69",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.2192512207,
@@ -897,11 +624,11 @@
         ]
     },
     {
-        "object_id": "id:70",
-        "person_name": "George Beridze's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "George.Beridze@nbg.gov.ge",
-        "pin_picture": "70",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.5891213379,
@@ -910,11 +637,11 @@
         ]
     },
     {
-        "object_id": "id:71",
-        "person_name": "Nino Mdzinarishvili's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "nino.mdzinarishvili@nbg.gov.ge",
-        "pin_picture": "71",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.6391243896,
@@ -923,11 +650,11 @@
         ]
     },
     {
-        "object_id": "id:72",
-        "person_name": "Gia Nikolaishvili's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "G.Nikolaishvili@altasoft.ge",
-        "pin_picture": "72",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.4891228637,
@@ -936,11 +663,11 @@
         ]
     },
     {
-        "object_id": "id:73",
-        "person_name": "Giorgi Kajaia's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "g.kajaia@altasoft.ge",
-        "pin_picture": "73",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.4291253051,
@@ -949,11 +676,11 @@
         ]
     },
     {
-        "object_id": "id:74",
-        "person_name": "Giorgi Kikuashvili's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "g.kikuashvili@altasoft.ge",
-        "pin_picture": "74",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.6691231689,
@@ -962,11 +689,11 @@
         ]
     },
     {
-        "object_id": "id:75",
-        "person_name": "Natia Tavartkiladze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "n.tavartkiladze@altasoft.ge",
-        "pin_picture": "75",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.1895024413,
@@ -975,11 +702,11 @@
         ]
     },
     {
-        "object_id": "id:76",
-        "person_name": "Atanasi Makaridi's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "amakaridi@ucc.ge",
-        "pin_picture": "76",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.4591240844,
@@ -988,11 +715,11 @@
         ]
     },
     {
-        "object_id": "id:77",
-        "person_name": "Giorgi Pochkhua's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "gpochkhua@bog.ge",
-        "pin_picture": "77",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.7692542725,
@@ -1001,11 +728,11 @@
         ]
     },
     {
-        "object_id": "id:78",
-        "person_name": "Giorgi Adeishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "giorgi.adeishvili@lb.ge",
-        "pin_picture": "78",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.499125,
@@ -1014,11 +741,11 @@
         ]
     },
     {
-        "object_id": "id:79",
-        "person_name": "Violetta Javakhishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "i.javakhishvili72@gmail.com;",
-        "pin_picture": "79",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.7392554932,
@@ -1027,11 +754,11 @@
         ]
     },
     {
-        "object_id": "id:80",
-        "person_name": "Oksana Muzhichenkos Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ksusha027@yahoo.com;",
-        "pin_picture": "80",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.3791222534,
@@ -1040,11 +767,11 @@
         ]
     },
     {
-        "object_id": "id:81",
-        "person_name": "Archil Khvedelianis Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "archil.khvedeliani@exinpro.ge;",
-        "pin_picture": "81",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.8391213379,
@@ -1053,11 +780,11 @@
         ]
     },
     {
-        "object_id": "id:82",
-        "person_name": "Berika Gelashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "berikainfo@gmail.com  ",
-        "pin_picture": "82",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.4291253051,
@@ -1066,11 +793,11 @@
         ]
     },
     {
-        "object_id": "id:83",
-        "person_name": "Natia Shavdia's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "natiashavdia@cito.ge",
-        "pin_picture": "83",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.4892554932,
@@ -1079,11 +806,284 @@
         ]
     },
     {
-        "object_id": "id:84",
-        "person_name": "Davit Cherkezishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "dcherkezishvili@gmail.com",
-        "pin_picture": "84",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.3192573242,
+            231311.98999977112,
+            759.1150006103516
+        ]
+    },
+    {
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590031.4491219482,
+            231552.21962431335,
+            733.0650004196167
+        ]
+    },
+    {
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590030.3692451172,
+            231537.57975183107,
+            732.9250000762939
+        ]
+    },
+    {
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590030.9891228637,
+            231526.41962495708,
+            733.1850003051758
+        ]
+    },
+    {
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590030.769121643,
+            231515.38974938967,
+            733.715000038147
+        ]
+    },
+    {
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590031.8791222534,
+            231503.26975045778,
+            734.9449995803833
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590033.2192512207,
+            231495.3697489319,
+            736.1450003433227
+        ]
+    },
+    {
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.5891213379,
+            231485.62975106813,
+            737.1649998474121
+        ]
+    },
+    {
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.6391243896,
+            231474.18975053407,
+            738.9450005340576
+        ]
+    },
+    {
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590033.4891228637,
+            231453.90975008585,
+            741.4350003051758
+        ]
+    },
+    {
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590033.4291253051,
+            231445.12987225343,
+            741.8750008392334
+        ]
+    },
+    {
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590033.6691231689,
+            231437.76987545777,
+            742.5450009155273
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590031.1895024413,
+            231418.43000030518,
+            744.084999923706
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590031.4591240844,
+            231406.97987454224,
+            744.755
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590031.7692542725,
+            231395.63999938965,
+            746.255
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.499125,
+            231384.03987496186,
+            747.4849995422363
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.7392554932,
+            231372.30000305176,
+            749.4350003051758
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.3791222534,
+            231360.61000061035,
+            751.2349995422363
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590031.8391213379,
+            231348.84999847412,
+            755.5349987792969
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.4291253051,
+            231336.75999832153,
+            758.5250004577637
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
+        "mesh_obj": "mesh obj",
+        "obj_pos": [
+            590032.4892554932,
+            231324.36000061035,
+            759.9849995422363
+        ]
+    },
+    {
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
+        "plant_date": "533",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.3192573242,
@@ -1096,11 +1096,11 @@
 
 
     {
-        "object_id": "id:85",
-        "person_name": "Giorgi Jamrishvili's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "g.jamrishvili@gmail.com",
-        "pin_picture": "85",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.4491219482,
@@ -1109,11 +1109,11 @@
         ]
     },
     {
-        "object_id": "id:86",
-        "person_name": "Nika Kvaskhvadze's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "nikakvaskhvadze@gmail.com",
-        "pin_picture": "86",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590030.3692451172,
@@ -1122,11 +1122,11 @@
         ]
     },
     {
-        "object_id": "id:87",
-        "person_name": "Khvicha Bantsuri's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "bubajorjia@mail.ru ",
-        "pin_picture": "87",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590030.9891228637,
@@ -1135,11 +1135,11 @@
         ]
     },
     {
-        "object_id": "id:88",
-        "person_name": "Spartak Markhuli's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "megruli.sakhli@gmail.com ",
-        "pin_picture": "88",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590030.769121643,
@@ -1148,11 +1148,11 @@
         ]
     },
     {
-        "object_id": "id:89",
-        "person_name": "Lasha Jincharadze's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "l.jincharadze@yahoo.com",
-        "pin_picture": "89",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.8791222534,
@@ -1161,11 +1161,11 @@
         ]
     },
     {
-        "object_id": "id:90",
-        "person_name": "Archil Gegenava's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "archil@gegenava.ge;",
-        "pin_picture": "90",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.2192512207,
@@ -1174,11 +1174,11 @@
         ]
     },
     {
-        "object_id": "id:91",
-        "person_name": "Keti Gognadze's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "k.gognadze@zarapxana.ge",
-        "pin_picture": "91",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.5891213379,
@@ -1187,11 +1187,11 @@
         ]
     },
     {
-        "object_id": "id:92",
-        "person_name": "Maia Janelidze's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "maia.janelidze@gmail.com",
-        "pin_picture": "92",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.6391243896,
@@ -1200,11 +1200,11 @@
         ]
     },
     {
-        "object_id": "id:93",
-        "person_name": "Mamuka Liparteliani's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "m.liparteliani@spd.ge ",
-        "pin_picture": "93",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.4891228637,
@@ -1213,11 +1213,11 @@
         ]
     },
     {
-        "object_id": "id:94",
-        "person_name": "Givi Abaloidze's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "abaloidze@spd.ge ",
-        "pin_picture": "94",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.4291253051,
@@ -1226,11 +1226,11 @@
         ]
     },
     {
-        "object_id": "id:95",
-        "person_name": "Davit Khutsaidze's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "khutsaidze@spd.ge ",
-        "pin_picture": "95",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590033.6691231689,
@@ -1239,11 +1239,11 @@
         ]
     },
     {
-        "object_id": "id:96",
-        "person_name": "Giorgi Ramishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "gramishvili@tbcbank.com.ge",
-        "pin_picture": "96",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.1895024413,
@@ -1252,11 +1252,11 @@
         ]
     },
     {
-        "object_id": "id:97",
-        "person_name": "Irakli Kekelia's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "i.kekelia@yahoo.com ",
-        "pin_picture": "97",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.4591240844,
@@ -1265,11 +1265,11 @@
         ]
     },
     {
-        "object_id": "id:98",
-        "person_name": "Davit Avkopashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "name1",
         "plant_date": "533",
-        "person_email": "avq077@gmail.com",
-        "pin_picture": "98",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.7692542725,
@@ -1278,11 +1278,11 @@
         ]
     },
     {
-        "object_id": "id:99",
-        "person_name": "Zurab Koniashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "zura_koniashvili@yahoo.com    ",
-        "pin_picture": "99",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.499125,
@@ -1291,11 +1291,11 @@
         ]
     },
     {
-        "object_id": "id:100",
-        "person_name": "Gogtu Sireli's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "g.sirel@temelsu.com.tr ",
-        "pin_picture": "100",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.7392554932,
@@ -1304,11 +1304,11 @@
         ]
     },
     {
-        "object_id": "id:101",
-        "person_name": "Tina Simonishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "tsimonishvili@gwp.ge",
-        "pin_picture": "101",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.3791222534,
@@ -1317,11 +1317,11 @@
         ]
     },
     {
-        "object_id": "id:102",
-        "person_name": "Archil Gachechiladze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "agachechiladze@gwp.ge",
-        "pin_picture": "102",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590031.8391213379,
@@ -1330,11 +1330,11 @@
         ]
     },
     {
-        "object_id": "id:103",
-        "person_name": "Nino Tsurtsumia's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ntsurtsumia@gwp.ge",
-        "pin_picture": "103",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.4291253051,
@@ -1343,11 +1343,11 @@
         ]
     },
     {
-        "object_id": "id:104",
-        "person_name": "Giorgi Tskhadadze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "gtskhadadze@georgianwater.com",
-        "pin_picture": "104",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.4892554932,
@@ -1356,11 +1356,11 @@
         ]
     },
     {
-        "object_id": "id:106",
-        "person_name": "Giorgi Vakhtangishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "gvakhtangishvili@gwp.ge",
-        "pin_picture": "106",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590032.3192573242,
@@ -1374,11 +1374,11 @@
 
 
     {
-        "object_id": "id:107",
-        "person_name": "Irakli Kirtava",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "ikirtava@gt.ge",
-        "pin_picture": "107",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590011.4491219482,
@@ -1387,11 +1387,11 @@
         ]
     },
     {
-        "object_id": "id:108",
-        "person_name": "Goga Melikidze's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "goga.melikidze@gt.ge",
-        "pin_picture": "108",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590010.3692451172,
@@ -1400,11 +1400,11 @@
         ]
     },
     {
-        "object_id": "id:109",
-        "person_name": "Otar Sharikadze's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "o.sharikadze@gt.ge",
-        "pin_picture": "109",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590010.9891228637,
@@ -1413,11 +1413,11 @@
         ]
     },
     {
-        "object_id": "id:110",
-        "person_name": "Sophio Beraia's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "beraia@unison.ge",
-        "pin_picture": "110",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590010.769121643,
@@ -1426,11 +1426,11 @@
         ]
     },
     {
-        "object_id": "id:111",
-        "person_name": "Levan Tsereteli's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "tsereteli@unison.ge",
-        "pin_picture": "111",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590011.8791222534,
@@ -1439,11 +1439,11 @@
         ]
     },
     {
-        "object_id": "id:112",
-        "person_name": "Gocha Mamatelashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "gmamatelashvili@unison.ge",
-        "pin_picture": "112",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590013.2192512207,
@@ -1452,11 +1452,11 @@
         ]
     },
     {
-        "object_id": "id:113",
-        "person_name": "Irakli Tikaradze's Tree",
+        "object_id": "id:0",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "itikaradze@aldagi.ge",
-        "pin_picture": "113",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590012.5891213379,
@@ -1465,11 +1465,11 @@
         ]
     },
     {
-        "object_id": "id:114",
-        "person_name": "Sopho Tikaradze's Tree",
+        "object_id": "id:1",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "stikaradze@big.com.ge",
-        "pin_picture": "114",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590012.6391243896,
@@ -1478,11 +1478,11 @@
         ]
     },
     {
-        "object_id": "id:115",
-        "person_name": "Shota Gavasheli's Tree",
+        "object_id": "id:2",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "sh.gavasheli@vtb.ge",
-        "pin_picture": "115",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590013.4891228637,
@@ -1491,11 +1491,11 @@
         ]
     },
     {
-        "object_id": "id:116",
-        "person_name": "Lado Robakidze's Tree",
+        "object_id": "id:3",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "emv.robakidze@vtb.geail",
-        "pin_picture": "116",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590013.4291253051,
@@ -1504,11 +1504,11 @@
         ]
     },
     {
-        "object_id": "id:117",
-        "person_name": "Archil Usanetashvili's Tree",
+        "object_id": "id:4",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": " a. usanetashvili@vtb.ge ",
-        "pin_picture": "117",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590013.6691231689,
@@ -1517,11 +1517,11 @@
         ]
     },
     {
-        "object_id": "id:118",
-        "person_name": "Tamar Khizanishvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "tkhizanishvili@tbcbank.ge",
-        "pin_picture": "118",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590011.1895024413,
@@ -1530,11 +1530,11 @@
         ]
     },
     {
-        "object_id": "id:119",
-        "person_name": "Nino Dadunashvilis Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "nino.dadunashvili@energo-pro.ge",
-        "pin_picture": "119",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590011.4591240844,
@@ -1543,11 +1543,11 @@
         ]
     },
     {
-        "object_id": "id:120",
-        "person_name": "Mamuka Shurghaia's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "mamuka.shurgaia@silkroad.ge",
-        "pin_picture": "120",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590011.7692542725,
@@ -1556,11 +1556,11 @@
         ]
     },
     {
-        "object_id": "id:121",
-        "person_name": "Giorgi Marr's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "giorgi.marr@silkroad.ge",
-        "pin_picture": "121",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590012.499125,
@@ -1569,11 +1569,11 @@
         ]
     },
     {
-        "object_id": "id:122",
-        "person_name": "Davit Mamulashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "david.m@silknet.com",
-        "pin_picture": "122",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590012.7392554932,
@@ -1582,11 +1582,11 @@
         ]
     },
     {
-        "object_id": "id:123",
-        "person_name": "Vasil Akhrakhadze's Tree",
+        "object_id": "id:10",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "akhrakhadze@unison.ge",
-        "pin_picture": "123",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590012.3791222534,
@@ -1595,11 +1595,11 @@
         ]
     },
     {
-        "object_id": "id:124",
-        "person_name": "Giorgi Baratashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "gbaratashvili@aldagi.ge",
-        "pin_picture": "124",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590011.8391213379,
@@ -1608,11 +1608,11 @@
         ]
     },
     {
-        "object_id": "id:125",
-        "person_name": "Armaz Tavadze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "125",
-        "pin_picture": "armazi@ardi.ge",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
             590012.4291253051,
@@ -1621,10 +1621,10 @@
         ]
     },
     {
-        "object_id": "id:126",
-        "person_name": "Mikheil Botsvadze's Tree",
+        "object_id": "id:5",
+        "person_name": "Bacho's Tree",
         "plant_date": "533",
-        "person_email": "mikheil.botsvadze@energo-pro.ge",
+        "person_email": "email",
         "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
@@ -1634,42 +1634,16 @@
         ]
     },
     {
-        "object_id": "id:127",
-        "person_name": "Alexander Gomiashvili's Tree",
+        "object_id": "id:5",
+        "person_name": "go",
         "plant_date": "533",
-        "person_email": "alexander@creditinfo.ge",
-        "pin_picture": "127",
+        "person_email": "email",
+        "pin_picture": "picture",
         "mesh_obj": "mesh obj",
         "obj_pos": [
-            589610.8798760681,
-            231471.49975000002,
-            755.9550007629394
-        ]
-    },
-    {
-        "object_id": "id:128",
-        "person_name": "Irakli Baidashvili's Tree",
-        "plant_date": "533",
-        "person_email": "ibaidashvili@gmt.ge",
-        "pin_picture": "128",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            589714.7899932861,
-            231453.3800048828,
-            757.8650006103516
-        ]
-    },
-    {
-        "object_id": "id:129",
-        "person_name": "Giorgi Emiridze's Tree",
-        "plant_date": "533",
-        "person_email": "g_emiridze@gig.ge",
-        "pin_picture": "129",
-        "mesh_obj": "mesh obj",
-        "obj_pos": [
-            589991.1492515259,
-            231309.52000045776,
-            757.9550007629394
+            590012.3192573242,
+            231311.98999977112,
+            759.1150006103516
         ]
     }
 ]

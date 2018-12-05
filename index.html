@@ -118,9 +118,17 @@
 		}
 		p.serif{
 			 font-family: "Times New Roman", Times, serif;
+			
+  float:right;
+  width:calc(100% - 3.6em); height:1em;
+  content:'';
+
 		}
 		p.sansserif {
     font-family: Impact, Charcoal, sans-serif;
+
+
+
 		}
 
 		</style>
@@ -146,6 +154,7 @@
 				 alt='image' width="80" height="80" left: 50; top: -80px; />
 
 				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 2px;">
+					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 2px;"> </p>>
 					<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
 				</p>
 				<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
@@ -155,26 +164,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 		<script>
-			//get the current url, number after url will be the pin id
-			//TODO: __3__ go to corresponding id	
 			function get_url() {
-				// var url_string = document.URL;
-				// var tree_ides = url_string.split("/");
-				// var tree_id = tree_ides[tree_ides.length - 1];
-
 				let searchParams = new URLSearchParams(window.location.search)
-				searchParams.has('id') // true
+				searchParams.has('id')
 				let param = searchParams.get('id')
 				let tree_id = "id:" + param;
 				//for testing
 				for (let i = 0; i < pin_objects.length; i++) {
 					if (tree_id == pin_objects[i].object_id) { // pick any tree 
-
 						this.go_to_tree(pin_objects[i]);
-
 						return;
-						//	pin_objects[i].mesh_obj.children[0].material.emissive[0] =  new THREE.Color( 0xff0000 );
-						//return;
 					}
 				}
 			}
@@ -185,16 +184,11 @@
 			var json_string;
 
 			function search_tree() {
-
-
 				var input = document.getElementById('input');
-
 				let search_word = input.value;
-
 				//for testing
 				for (let i = 0; i < pin_objects.length; i++) {
 					if (search_word == pin_objects[i].person_name) { // pick any tree 
-
 						this.go_to_tree(pin_objects[i]);
 						return;
 						//	pin_objects[i].mesh_obj.children[0].material.emissive[0] =  new THREE.Color( 0xff0000 );
@@ -253,41 +247,19 @@
 				tree_obj.mesh_obj.children[0].visible = true;
 				tree_obj.mesh_obj.children[1].visible = false;
 
-
 				tree_obj.mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1);
 
-				//tree_obj.mesh_obj.children[0].visible = true;
-
-				// if (colored_trees.length > 0) {
-				// 	for (var i = 0; i < colored_trees.length; i++) {
-				// 		if (tree_obj != colored_trees[i] )
-				// 			colored_trees[i].mesh_obj.children[0].visible = false;
-				// 	}
-				// }
-
-				// tree_obj.mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1)
-
-				// tree_obj.mesh_obj.children[0].visible = true;
-
-				// colored_trees.push(tree_obj);
-
-
-				// if (colored_trees.length > 0) {
-				// 	for (var i = 0; i < colored_trees.length; i++) {
-				// 		console.log("colordwddwd: ", colored_trees[i]);
-				// 	}
-				// }
-
-
-
-				console.log("tree_image: ");
-				pin_image.style.right = "-302px";
-				pin_image.style.right = "0px";
+				pin_image.style.right = "10px";
 
 				let person_name = document.getElementById("Name");
+				let person_surname = document.getElementById("Surname");
+				let full_name = tree_obj.person_name;
 
+				let firstname = full_name.split(' ')[0];
+				let surname = full_name.split(' ')[1];
 
-				person_name.innerHTML = tree_obj.person_name;
+				person_name.innerHTML = firstname;
+				person_surname.innerHTML = surname;
 
 				var v_pos = viewer.scene.view.position;
 				var postion_diff = new THREE.Vector3(Math.abs(final_postion["x"] - v_pos.x),
@@ -302,9 +274,7 @@
 					final_postion["z"] + postion_diff.z / magnitude * multipler);
 				viewer.scene.view.position = zoom_positon;
 
-
 				var targetQuaternion = tree_obj.mesh_obj.rotation;
-
 
 				var lookat_rotation = new THREE.Vector3(final_postion.x, final_postion.y, final_postion.z);
 				viewer.scene.view.lookAt(lookat_rotation);

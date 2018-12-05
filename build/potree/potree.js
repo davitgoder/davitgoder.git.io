@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 		typeof define === 'function' && define.amd ? define(['exports'], factory) :
-			(factory((global.Potree = {})));
+		(factory((global.Potree = {})));
 }(this, (function (exports) {
 	'use strict';
 
@@ -52,7 +52,7 @@
 				listeners[type] = [];
 			}
 
-			if (listeners[type].indexOf(listener) === - 1) {
+			if (listeners[type].indexOf(listener) === -1) {
 				listeners[type].push(listener);
 			}
 
@@ -62,7 +62,7 @@
 
 			const listeners = this._listeners;
 
-			return listeners[type] !== undefined && listeners[type].indexOf(listener) !== - 1;
+			return listeners[type] !== undefined && listeners[type].indexOf(listener) !== -1;
 		}
 
 		removeEventListener(type, listener) {
@@ -74,7 +74,7 @@
 
 				let index = listenerArray.indexOf(listener);
 
-				if (index !== - 1) {
+				if (index !== -1) {
 					listenerArray.splice(index, 1);
 				}
 			}
@@ -213,8 +213,12 @@
 			let tEnd = this.endPoint / this.length;
 			let animationDuration = (tEnd - tStart) * this.length * 1000 / this.speed;
 
-			let progress = { t: tStart };
-			this.tween = new TWEEN.Tween(progress).to({ t: tEnd }, animationDuration);
+			let progress = {
+				t: tStart
+			};
+			this.tween = new TWEEN.Tween(progress).to({
+				t: tEnd
+			}, animationDuration);
 			this.tween.easing(TWEEN.Easing.Linear.None);
 			this.tween.onUpdate((e) => {
 				this.t = progress.t;
@@ -354,9 +358,10 @@
 	const XHRFactory = {
 		config: {
 			withCredentials: false,
-			customHeaders: [
-				{ header: null, value: null }
-			]
+			customHeaders: [{
+				header: null,
+				value: null
+			}]
 		},
 
 		createXMLHttpRequest: function () {
@@ -406,9 +411,24 @@
 			this.borderThickness = 4;
 			this.fontface = 'Arial';
 			this.fontsize = 28;
-			this.borderColor = { r: 0, g: 0, b: 0, a: 1.0 };
-			this.backgroundColor = { r: 255, g: 255, b: 255, a: 1.0 };
-			this.textColor = { r: 255, g: 255, b: 255, a: 1.0 };
+			this.borderColor = {
+				r: 0,
+				g: 0,
+				b: 0,
+				a: 1.0
+			};
+			this.backgroundColor = {
+				r: 255,
+				g: 255,
+				b: 255,
+				a: 1.0
+			};
+			this.textColor = {
+				r: 255,
+				g: 255,
+				b: 255,
+				a: 1.0
+			};
 			this.text = '';
 
 			this.setText(text);
@@ -522,8 +542,18 @@
 			this._modifiable = args.modifiable || true;
 
 			this.label = new TextSprite('0');
-			this.label.setBorderColor({ r: 0, g: 255, b: 0, a: 0.0 });
-			this.label.setBackgroundColor({ r: 0, g: 255, b: 0, a: 0.0 });
+			this.label.setBorderColor({
+				r: 0,
+				g: 255,
+				b: 0,
+				a: 0.0
+			});
+			this.label.setBackgroundColor({
+				r: 0,
+				g: 255,
+				b: 0,
+				a: 0.0
+			});
 			this.label.material.depthTest = false;
 			this.label.material.depthWrite = false;
 			this.label.material.transparent = true;
@@ -544,8 +574,8 @@
 			};
 
 			{ // event listeners
-				this.addEventListener('select', e => { });
-				this.addEventListener('deselect', e => { });
+				this.addEventListener('select', e => {});
+				this.addEventListener('deselect', e => {});
 			}
 
 		}
@@ -558,7 +588,10 @@
 			if (this._visible !== value) {
 				this._visible = value;
 
-				this.dispatchEvent({ type: "visibility_changed", object: this });
+				this.dispatchEvent({
+					type: "visibility_changed",
+					object: this
+				});
 			}
 		}
 
@@ -616,8 +649,7 @@
 			let boxGeometry = new THREE.BoxGeometry(1, 1, 1);
 			boxGeometry.computeBoundingBox();
 
-			let boxFrameGeometry = new THREE.Geometry();
-			{
+			let boxFrameGeometry = new THREE.Geometry(); {
 				// bottom
 				boxFrameGeometry.vertices.push(new THREE.Vector3(-0.5, -0.5, 0.5));
 				boxFrameGeometry.vertices.push(new THREE.Vector3(0.5, -0.5, 0.5));
@@ -659,7 +691,9 @@
 			this.boundingBox = this.box.geometry.boundingBox;
 			this.add(this.box);
 
-			this.frame = new THREE.LineSegments(boxFrameGeometry, new THREE.LineBasicMaterial({ color: 0x000000 }));
+			this.frame = new THREE.LineSegments(boxFrameGeometry, new THREE.LineBasicMaterial({
+				color: 0x000000
+			}));
 			// this.frame.mode = THREE.Lines;
 			this.add(this.frame);
 
@@ -726,8 +760,7 @@
 			this.label.visible = false;
 
 
-			let frameGeometry = new THREE.Geometry();
-			{
+			let frameGeometry = new THREE.Geometry(); {
 				let steps = 64;
 				let uSegments = 8;
 				let vSegments = 5;
@@ -788,10 +821,15 @@
 				}
 			}
 
-			this.frame = new THREE.LineSegments(frameGeometry, new THREE.LineBasicMaterial({ color: 0x000000 }));
+			this.frame = new THREE.LineSegments(frameGeometry, new THREE.LineBasicMaterial({
+				color: 0x000000
+			}));
 			this.add(this.frame);
 
-			let frameMaterial = new THREE.MeshBasicMaterial({ wireframe: true, color: 0x000000 });
+			let frameMaterial = new THREE.MeshBasicMaterial({
+				wireframe: true,
+				color: 0x000000
+			});
 			this.frame = new THREE.Mesh(sphereGeometry, frameMaterial);
 			//this.add(this.frame);
 
@@ -863,8 +901,7 @@
 				color: 0xff0000,
 				depthTest: false,
 				depthWrite: false
-			}
-			);
+			});
 
 			return sphereMaterial;
 		};
@@ -875,7 +912,10 @@
 			for (let i = 0; i < this.points.length - 1; i++) {
 				let start = this.points[i].clone();
 				let end = this.points[i + 1].clone();
-				segments.push({ start: start, end: end });
+				segments.push({
+					start: start,
+					end: end
+				});
 			}
 
 			return segments;
@@ -886,7 +926,10 @@
 			let matrices = [];
 
 			for (let segment of segments) {
-				let { start, end } = segment;
+				let {
+					start,
+					end
+				} = segment;
 
 				let box = new THREE.Object3D();
 
@@ -936,7 +979,11 @@
 				this.edges.push(edge);
 
 				let boxGeometry = new THREE.BoxGeometry(1, 1, 1);
-				let boxMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, transparent: true, opacity: 0.2 });
+				let boxMaterial = new THREE.MeshBasicMaterial({
+					color: 0xff0000,
+					transparent: true,
+					opacity: 0.2
+				});
 				let box = new THREE.Mesh(boxGeometry, boxMaterial);
 				box.visible = false;
 
@@ -1143,7 +1190,9 @@
 				let I = intersects[i];
 				I.distance = raycaster.ray.origin.distanceTo(I.point);
 			}
-			intersects.sort(function (a, b) { return a.distance - b.distance; });
+			intersects.sort(function (a, b) {
+				return a.distance - b.distance;
+			});
 		};
 
 		get modifiable() {
@@ -1176,7 +1225,9 @@
 			this.sphereGeometry = new THREE.SphereGeometry(0.4, 10, 10);
 			this.color = new THREE.Color(0xff0000);
 
-			this.lengthUnit = { code: 'm' };
+			this.lengthUnit = {
+				code: 'm'
+			};
 
 			this.spheres = [];
 			this.edges = [];
@@ -1196,8 +1247,11 @@
 						new THREE.Vector3(),
 						new THREE.Vector3());
 					lineGeometry.colors.push(this.color, this.color, this.color);
-					let lineMaterial = new THREE.LineDashedMaterial(
-						{ color: 0xff0000, dashSize: 5, gapSize: 2 });
+					let lineMaterial = new THREE.LineDashedMaterial({
+						color: 0xff0000,
+						dashSize: 5,
+						gapSize: 2
+					});
 
 					lineMaterial.depthTest = false;
 					this.heightEdge = new THREE.Line(lineGeometry, lineMaterial);
@@ -1208,9 +1262,24 @@
 
 				{ // height label
 					this.heightLabel = new TextSprite('');
-					this.heightLabel.setBorderColor({ r: 0, g: 0, b: 0, a: 0.8 });
-					this.heightLabel.setBackgroundColor({ r: 0, g: 0, b: 0, a: 0.3 });
-					this.heightLabel.setTextColor({ r: 180, g: 220, b: 180, a: 1.0 });
+					this.heightLabel.setBorderColor({
+						r: 0,
+						g: 0,
+						b: 0,
+						a: 0.8
+					});
+					this.heightLabel.setBackgroundColor({
+						r: 0,
+						g: 0,
+						b: 0,
+						a: 0.3
+					});
+					this.heightLabel.setTextColor({
+						r: 180,
+						g: 220,
+						b: 180,
+						a: 1.0
+					});
 					this.heightLabel.material.depthTest = false;
 					this.heightLabel.material.opacity = 1;
 					this.heightLabel.visible = false;
@@ -1219,9 +1288,24 @@
 			}
 
 			this.areaLabel = new TextSprite('');
-			this.areaLabel.setBorderColor({ r: 0, g: 0, b: 0, a: 0.8 });
-			this.areaLabel.setBackgroundColor({ r: 0, g: 0, b: 0, a: 0.3 });
-			this.areaLabel.setTextColor({ r: 180, g: 220, b: 180, a: 1.0 });
+			this.areaLabel.setBorderColor({
+				r: 0,
+				g: 0,
+				b: 0,
+				a: 0.8
+			});
+			this.areaLabel.setBackgroundColor({
+				r: 0,
+				g: 0,
+				b: 0,
+				a: 0.3
+			});
+			this.areaLabel.setTextColor({
+				r: 180,
+				g: 220,
+				b: 180,
+				a: 1.0
+			});
 			this.areaLabel.material.depthTest = false;
 			this.areaLabel.material.opacity = 1;
 			this.areaLabel.visible = false;
@@ -1234,17 +1318,20 @@
 				color: this.color,
 				depthTest: false,
 				depthWrite: false
-			}
-			);
+			});
 
 			return sphereMaterial;
 		};
 
 		addMarker(point) {
 			if (point instanceof THREE.Vector3) {
-				point = { position: point };
+				point = {
+					position: point
+				};
 			} else if (point instanceof Array) {
-				point = { position: new THREE.Vector3(...point) };
+				point = {
+					position: new THREE.Vector3(...point)
+				};
 			}
 			this.points.push(point);
 
@@ -1271,8 +1358,18 @@
 
 			{ // edge labels
 				let edgeLabel = new TextSprite();
-				edgeLabel.setBorderColor({ r: 0, g: 0, b: 0, a: 0.8 });
-				edgeLabel.setBackgroundColor({ r: 0, g: 0, b: 0, a: 0.3 });
+				edgeLabel.setBorderColor({
+					r: 0,
+					g: 0,
+					b: 0,
+					a: 0.8
+				});
+				edgeLabel.setBackgroundColor({
+					r: 0,
+					g: 0,
+					b: 0,
+					a: 0.3
+				});
 				edgeLabel.material.depthTest = false;
 				edgeLabel.visible = false;
 				this.edgeLabels.push(edgeLabel);
@@ -1281,8 +1378,18 @@
 
 			{ // angle labels
 				let angleLabel = new TextSprite();
-				angleLabel.setBorderColor({ r: 0, g: 0, b: 0, a: 0.8 });
-				angleLabel.setBackgroundColor({ r: 0, g: 0, b: 0, a: 0.3 });
+				angleLabel.setBorderColor({
+					r: 0,
+					g: 0,
+					b: 0,
+					a: 0.8
+				});
+				angleLabel.setBackgroundColor({
+					r: 0,
+					g: 0,
+					b: 0,
+					a: 0.3
+				});
 				angleLabel.material.depthTest = false;
 				angleLabel.material.opacity = 1;
 				angleLabel.visible = false;
@@ -1292,8 +1399,18 @@
 
 			{ // coordinate labels
 				let coordinateLabel = new TextSprite();
-				coordinateLabel.setBorderColor({ r: 0, g: 0, b: 0, a: 0.8 });
-				coordinateLabel.setBackgroundColor({ r: 0, g: 0, b: 0, a: 0.3 });
+				coordinateLabel.setBorderColor({
+					r: 0,
+					g: 0,
+					b: 0,
+					a: 0.8
+				});
+				coordinateLabel.setBackgroundColor({
+					r: 0,
+					g: 0,
+					b: 0,
+					a: 0.3
+				});
 				coordinateLabel.material.depthTest = false;
 				coordinateLabel.material.opacity = 1;
 				coordinateLabel.visible = false;
@@ -1307,8 +1424,9 @@
 						e.drag.end,
 						e.viewer.scene.getActiveCamera(),
 						e.viewer,
-						e.viewer.scene.pointclouds,
-						{ pickClipped: true });
+						e.viewer.scene.pointclouds, {
+							pickClipped: true
+						});
 
 
 					if (I) {
@@ -1371,7 +1489,10 @@
 
 			this.update();
 
-			this.dispatchEvent({ type: 'marker_removed', measurement: this });
+			this.dispatchEvent({
+				type: 'marker_removed',
+				measurement: this
+			});
 		};
 
 		setMarker(index, point) {
@@ -1615,7 +1736,9 @@
 				let I = intersects[i];
 				I.distance = raycaster.ray.origin.distanceTo(I.point);
 			}
-			intersects.sort(function (a, b) { return a.distance - b.distance; });
+			intersects.sort(function (a, b) {
+				return a.distance - b.distance;
+			});
 		};
 
 		get showCoordinates() {
@@ -1760,7 +1883,10 @@
 				if (typeof value === "object") {
 					value.name = key;
 				} else {
-					value = { name: key, value: value };
+					value = {
+						name: key,
+						value: value
+					};
 				}
 
 				this[key] = new EnumItem(value);
@@ -1895,7 +2021,9 @@
 			let material;
 
 			if (color !== undefined) {
-				material = new THREE.MeshBasicMaterial({ color: color });
+				material = new THREE.MeshBasicMaterial({
+					color: color
+				});
 			} else {
 				material = new THREE.MeshNormalMaterial();
 			}
@@ -1906,7 +2034,9 @@
 		}
 
 		static debugLine(parent, start, end, color) {
-			let material = new THREE.LineBasicMaterial({ color: color });
+			let material = new THREE.LineBasicMaterial({
+				color: color
+			});
 			let geometry = new THREE.Geometry();
 			geometry.vertices.push(start, end);
 			let tl = new THREE.Line(geometry, material);
@@ -1928,22 +2058,48 @@
 			].map(v => new THREE.Vector3(...v));
 
 			let edges = [
-				[0, 4], [4, 5], [5, 1], [1, 0],
-				[2, 6], [6, 7], [7, 3], [3, 2],
-				[0, 2], [4, 6], [5, 7], [1, 3]
+				[0, 4],
+				[4, 5],
+				[5, 1],
+				[1, 0],
+				[2, 6],
+				[6, 7],
+				[7, 3],
+				[3, 2],
+				[0, 2],
+				[4, 6],
+				[5, 7],
+				[1, 3]
 			];
 
 			let center = box.getCenter(new THREE.Vector3());
 
-			let centroids = [
-				{ position: [box.min.x, center.y, center.z], color: 0xFF0000 },
-				{ position: [box.max.x, center.y, center.z], color: 0x880000 },
+			let centroids = [{
+					position: [box.min.x, center.y, center.z],
+					color: 0xFF0000
+				},
+				{
+					position: [box.max.x, center.y, center.z],
+					color: 0x880000
+				},
 
-				{ position: [center.x, box.min.y, center.z], color: 0x00FF00 },
-				{ position: [center.x, box.max.y, center.z], color: 0x008800 },
+				{
+					position: [center.x, box.min.y, center.z],
+					color: 0x00FF00
+				},
+				{
+					position: [center.x, box.max.y, center.z],
+					color: 0x008800
+				},
 
-				{ position: [center.x, center.y, box.min.z], color: 0x0000FF },
-				{ position: [center.x, center.y, box.max.z], color: 0x000088 },
+				{
+					position: [center.x, center.y, box.min.z],
+					color: 0x0000FF
+				},
+				{
+					position: [center.x, center.y, box.max.z],
+					color: 0x000088
+				},
 			];
 
 			for (let vertex of vertices) {
@@ -2024,7 +2180,9 @@
 		 * code from http://stackoverflow.com/questions/10343913/how-to-create-a-web-worker-from-a-string
 		 */
 		static createWorker(code) {
-			let blob = new Blob([code], { type: 'application/javascript' });
+			let blob = new Blob([code], {
+				type: 'application/javascript'
+			});
 			let worker = new Worker(URL.createObjectURL(blob));
 
 			return worker;
@@ -2074,8 +2232,7 @@
 				path + 'pz' + format, path + 'nz' + format
 			];
 
-			let materialArray = [];
-			{
+			let materialArray = []; {
 				for (let i = 0; i < 6; i++) {
 					let material = new THREE.MeshBasicMaterial({
 						map: null,
@@ -2093,9 +2250,11 @@
 							material.map = texture;
 							material.needsUpdate = true;
 							material.color.setHex(0xffffff);
-						}, function progress(xhr) {
+						},
+						function progress(xhr) {
 							// console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-						}, function error(xhr) {
+						},
+						function error(xhr) {
 							console.log('An error happened', xhr);
 						}
 					);
@@ -2110,7 +2269,10 @@
 			// z up
 			scene.rotation.x = Math.PI / 2;
 
-			return { 'camera': camera, 'scene': scene };
+			return {
+				'camera': camera,
+				'scene': scene
+			};
 		};
 
 		static createGrid(width, length, spacing, color) {
@@ -2697,10 +2859,10 @@
 				this.position = new THREE.Vector3(...args.position);
 			}
 
-			this.cameraPosition = (args.cameraPosition instanceof Array)
-				? new THREE.Vector3().fromArray(args.cameraPosition) : args.cameraPosition;
-			this.cameraTarget = (args.cameraTarget instanceof Array)
-				? new THREE.Vector3().fromArray(args.cameraTarget) : args.cameraTarget;
+			this.cameraPosition = (args.cameraPosition instanceof Array) ?
+				new THREE.Vector3().fromArray(args.cameraPosition) : args.cameraPosition;
+			this.cameraTarget = (args.cameraTarget instanceof Array) ?
+				new THREE.Vector3().fromArray(args.cameraTarget) : args.cameraTarget;
 			this.radius = args.radius;
 			this.view = args.view || null;
 			this.keepOpen = false;
@@ -2745,7 +2907,10 @@
 				if (this.hasView()) {
 					this.moveHere(this.scene.getActiveCamera());
 				}
-				this.dispatchEvent({ type: 'click', target: this });
+				this.dispatchEvent({
+					type: 'click',
+					target: this
+				});
 			};
 
 			this.elTitle.click(this.clickTitle);
@@ -2768,7 +2933,9 @@
 			for (let action of actions) {
 				let elButton = $(`<img src="${action.icon}" class="annotation-action-icon">`);
 				this.elTitlebar.append(elButton);
-				elButton.click(() => action.onclick({ annotation: this }));
+				elButton.click(() => action.onclick({
+					annotation: this
+				}));
 			}
 
 			this.elDescriptionClose.hover(
@@ -3044,7 +3211,9 @@
 				annotation.parent = this;
 
 				let descendants = [];
-				annotation.traverse(a => { descendants.push(a); });
+				annotation.traverse(a => {
+					descendants.push(a);
+				});
 
 				for (let descendant of descendants) {
 					let c = this;
@@ -3238,10 +3407,14 @@
 				}
 
 				{ // animate radius
-					let t = { x: 0 };
+					let t = {
+						x: 0
+					};
 
 					let tween = new TWEEN.Tween(t)
-						.to({ x: 1 }, animationDuration)
+						.to({
+							x: 1
+						}, animationDuration)
 						.onUpdate(function () {
 							view.radius = this.x * endRadius + (1 - this.x) * startRadius;
 						});
@@ -3265,7 +3438,9 @@
 	const Features = (function () {
 		let ftCanvas = document.createElement('canvas');
 		let gl = ftCanvas.getContext('webgl2') || ftCanvas.getContext('webgl') || ftCanvas.getContext('experimental-webgl');
-		if (gl === null) { return null; }
+		if (gl === null) {
+			return null;
+		}
 
 		// -- code taken from THREE.WebGLRenderer --
 		let _vertexShaderPrecisionHighpFloat = gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.HIGH_FLOAT);
@@ -3546,7 +3721,10 @@
 			// the serverURL will contain the base URL of the greyhound server. f.e. http://dev.greyhound.io/resource/autzen/
 			this.serverURL = null;
 
-			this.normalize = { color: false, intensity: false };
+			this.normalize = {
+				color: false,
+				intensity: false
+			};
 		}
 
 	}
@@ -3762,28 +3940,36 @@
 					if (key === 'n') return;
 					switch (key) {
 						case 'swd':
-							child = base.swd; childName = parentName + transform[0];
+							child = base.swd;
+							childName = parentName + transform[0];
 							break;
 						case 'nwd':
-							child = base.nwd; childName = parentName + transform[1];
+							child = base.nwd;
+							childName = parentName + transform[1];
 							break;
 						case 'swu':
-							child = base.swu; childName = parentName + transform[2];
+							child = base.swu;
+							childName = parentName + transform[2];
 							break;
 						case 'nwu':
-							child = base.nwu; childName = parentName + transform[3];
+							child = base.nwu;
+							childName = parentName + transform[3];
 							break;
 						case 'sed':
-							child = base.sed; childName = parentName + transform[4];
+							child = base.sed;
+							childName = parentName + transform[4];
 							break;
 						case 'ned':
-							child = base.ned; childName = parentName + transform[5];
+							child = base.ned;
+							childName = parentName + transform[5];
 							break;
 						case 'seu':
-							child = base.seu; childName = parentName + transform[6];
+							child = base.seu;
+							childName = parentName + transform[6];
 							break;
 						case 'neu':
-							child = base.neu; childName = parentName + transform[7];
+							child = base.neu;
+							childName = parentName + transform[7];
 							break;
 						default:
 							break;
@@ -4054,7 +4240,11 @@
 				let children = view.getUint8(0);
 				let numPoints = view.getUint32(1, true);
 				node.numPoints = numPoints;
-				stack.push({ children: children, numPoints: numPoints, name: node.name });
+				stack.push({
+					children: children,
+					numPoints: numPoints,
+					name: node.name
+				});
 
 				let decoded = [];
 
@@ -4069,9 +4259,17 @@
 							let childChildren = view.getUint8(offset);
 							let childNumPoints = view.getUint32(offset + 1, true);
 
-							stack.push({ children: childChildren, numPoints: childNumPoints, name: childName });
+							stack.push({
+								children: childChildren,
+								numPoints: childNumPoints,
+								name: childName
+							});
 
-							decoded.push({ children: childChildren, numPoints: childNumPoints, name: childName });
+							decoded.push({
+								children: childChildren,
+								numPoints: childNumPoints,
+								name: childName
+							});
 
 							offset += 5;
 						}
@@ -6644,81 +6842,282 @@ void main() {
 			this._defaultElevationRangeChanged = false;
 
 			this.attributes = {
-				position: { type: 'fv', value: [] },
-				color: { type: 'fv', value: [] },
-				normal: { type: 'fv', value: [] },
-				intensity: { type: 'f', value: [] },
-				classification: { type: 'f', value: [] },
-				returnNumber: { type: 'f', value: [] },
-				numberOfReturns: { type: 'f', value: [] },
-				pointSourceID: { type: 'f', value: [] },
-				indices: { type: 'fv', value: [] }
+				position: {
+					type: 'fv',
+					value: []
+				},
+				color: {
+					type: 'fv',
+					value: []
+				},
+				normal: {
+					type: 'fv',
+					value: []
+				},
+				intensity: {
+					type: 'f',
+					value: []
+				},
+				classification: {
+					type: 'f',
+					value: []
+				},
+				returnNumber: {
+					type: 'f',
+					value: []
+				},
+				numberOfReturns: {
+					type: 'f',
+					value: []
+				},
+				pointSourceID: {
+					type: 'f',
+					value: []
+				},
+				indices: {
+					type: 'fv',
+					value: []
+				}
 			};
 
 			this.uniforms = {
-				level: { type: "f", value: 0.0 },
-				vnStart: { type: "f", value: 0.0 },
-				spacing: { type: "f", value: 1.0 },
-				blendHardness: { type: "f", value: 2.0 },
-				blendDepthSupplement: { type: "f", value: 0.0 },
-				fov: { type: "f", value: 1.0 },
-				screenWidth: { type: "f", value: 1.0 },
-				screenHeight: { type: "f", value: 1.0 },
-				near: { type: "f", value: 0.1 },
-				far: { type: "f", value: 1.0 },
-				uColor: { type: "c", value: new THREE.Color(0xffffff) },
-				uOpacity: { type: "f", value: 1.0 },
-				size: { type: "f", value: pointSize },
-				minSize: { type: "f", value: minSize },
-				maxSize: { type: "f", value: maxSize },
-				octreeSize: { type: "f", value: 0 },
-				bbSize: { type: "fv", value: [0, 0, 0] },
-				elevationRange: { type: "2fv", value: [0, 0] },
+				level: {
+					type: "f",
+					value: 0.0
+				},
+				vnStart: {
+					type: "f",
+					value: 0.0
+				},
+				spacing: {
+					type: "f",
+					value: 1.0
+				},
+				blendHardness: {
+					type: "f",
+					value: 2.0
+				},
+				blendDepthSupplement: {
+					type: "f",
+					value: 0.0
+				},
+				fov: {
+					type: "f",
+					value: 1.0
+				},
+				screenWidth: {
+					type: "f",
+					value: 1.0
+				},
+				screenHeight: {
+					type: "f",
+					value: 1.0
+				},
+				near: {
+					type: "f",
+					value: 0.1
+				},
+				far: {
+					type: "f",
+					value: 1.0
+				},
+				uColor: {
+					type: "c",
+					value: new THREE.Color(0xffffff)
+				},
+				uOpacity: {
+					type: "f",
+					value: 1.0
+				},
+				size: {
+					type: "f",
+					value: pointSize
+				},
+				minSize: {
+					type: "f",
+					value: minSize
+				},
+				maxSize: {
+					type: "f",
+					value: maxSize
+				},
+				octreeSize: {
+					type: "f",
+					value: 0
+				},
+				bbSize: {
+					type: "fv",
+					value: [0, 0, 0]
+				},
+				elevationRange: {
+					type: "2fv",
+					value: [0, 0]
+				},
 
-				clipBoxCount: { type: "f", value: 0 },
+				clipBoxCount: {
+					type: "f",
+					value: 0
+				},
 				//clipSphereCount:	{ type: "f", value: 0 },
-				clipPolygonCount: { type: "i", value: 0 },
-				clipBoxes: { type: "Matrix4fv", value: [] },
+				clipPolygonCount: {
+					type: "i",
+					value: 0
+				},
+				clipBoxes: {
+					type: "Matrix4fv",
+					value: []
+				},
 				//clipSpheres:		{ type: "Matrix4fv", value: [] },
-				clipPolygons: { type: "3fv", value: [] },
-				clipPolygonVCount: { type: "iv", value: [] },
-				clipPolygonVP: { type: "Matrix4fv", value: [] },
+				clipPolygons: {
+					type: "3fv",
+					value: []
+				},
+				clipPolygonVCount: {
+					type: "iv",
+					value: []
+				},
+				clipPolygonVP: {
+					type: "Matrix4fv",
+					value: []
+				},
 
-				visibleNodes: { type: "t", value: this.visibleNodesTexture },
-				pcIndex: { type: "f", value: 0 },
-				gradient: { type: "t", value: this.gradientTexture },
-				classificationLUT: { type: "t", value: this.classificationTexture },
-				uHQDepthMap: { type: "t", value: null },
-				toModel: { type: "Matrix4f", value: [] },
-				diffuse: { type: "fv", value: [1, 1, 1] },
-				transition: { type: "f", value: 0.5 },
-				intensityRange: { type: "fv", value: [0, 65000] },
-				intensityGamma: { type: "f", value: 1 },
-				intensityContrast: { type: "f", value: 0 },
-				intensityBrightness: { type: "f", value: 0 },
-				rgbGamma: { type: "f", value: 1 },
-				rgbContrast: { type: "f", value: 0 },
-				rgbBrightness: { type: "f", value: 0 },
-				wRGB: { type: "f", value: 1 },
-				wIntensity: { type: "f", value: 0 },
-				wElevation: { type: "f", value: 0 },
-				wClassification: { type: "f", value: 0 },
-				wReturnNumber: { type: "f", value: 0 },
-				wSourceID: { type: "f", value: 0 },
-				useOrthographicCamera: { type: "b", value: false },
-				clipTask: { type: "i", value: 1 },
-				clipMethod: { type: "i", value: 1 },
-				uSnapshot: { type: "tv", value: [] },
-				uSnapshotDepth: { type: "tv", value: [] },
-				uSnapView: { type: "Matrix4fv", value: [] },
-				uSnapProj: { type: "Matrix4fv", value: [] },
-				uSnapProjInv: { type: "Matrix4fv", value: [] },
-				uSnapViewInv: { type: "Matrix4fv", value: [] },
-				uShadowColor: { type: "3fv", value: [0, 0, 0] },
+				visibleNodes: {
+					type: "t",
+					value: this.visibleNodesTexture
+				},
+				pcIndex: {
+					type: "f",
+					value: 0
+				},
+				gradient: {
+					type: "t",
+					value: this.gradientTexture
+				},
+				classificationLUT: {
+					type: "t",
+					value: this.classificationTexture
+				},
+				uHQDepthMap: {
+					type: "t",
+					value: null
+				},
+				toModel: {
+					type: "Matrix4f",
+					value: []
+				},
+				diffuse: {
+					type: "fv",
+					value: [1, 1, 1]
+				},
+				transition: {
+					type: "f",
+					value: 0.5
+				},
+				intensityRange: {
+					type: "fv",
+					value: [0, 65000]
+				},
+				intensityGamma: {
+					type: "f",
+					value: 1
+				},
+				intensityContrast: {
+					type: "f",
+					value: 0
+				},
+				intensityBrightness: {
+					type: "f",
+					value: 0
+				},
+				rgbGamma: {
+					type: "f",
+					value: 1
+				},
+				rgbContrast: {
+					type: "f",
+					value: 0
+				},
+				rgbBrightness: {
+					type: "f",
+					value: 0
+				},
+				wRGB: {
+					type: "f",
+					value: 1
+				},
+				wIntensity: {
+					type: "f",
+					value: 0
+				},
+				wElevation: {
+					type: "f",
+					value: 0
+				},
+				wClassification: {
+					type: "f",
+					value: 0
+				},
+				wReturnNumber: {
+					type: "f",
+					value: 0
+				},
+				wSourceID: {
+					type: "f",
+					value: 0
+				},
+				useOrthographicCamera: {
+					type: "b",
+					value: false
+				},
+				clipTask: {
+					type: "i",
+					value: 1
+				},
+				clipMethod: {
+					type: "i",
+					value: 1
+				},
+				uSnapshot: {
+					type: "tv",
+					value: []
+				},
+				uSnapshotDepth: {
+					type: "tv",
+					value: []
+				},
+				uSnapView: {
+					type: "Matrix4fv",
+					value: []
+				},
+				uSnapProj: {
+					type: "Matrix4fv",
+					value: []
+				},
+				uSnapProjInv: {
+					type: "Matrix4fv",
+					value: []
+				},
+				uSnapViewInv: {
+					type: "Matrix4fv",
+					value: []
+				},
+				uShadowColor: {
+					type: "3fv",
+					value: [0, 0, 0]
+				},
 
-				uFilterReturnNumberRange: { type: "fv", value: [0, 7] },
-				uFilterNumberOfReturnsRange: { type: "fv", value: [0, 7] },
-				uFilterGPSTimeClipRange: { type: "fv", value: [0, 7] },
+				uFilterReturnNumberRange: {
+					type: "fv",
+					value: [0, 7]
+				},
+				uFilterNumberOfReturnsRange: {
+					type: "fv",
+					value: [0, 7]
+				},
+				uFilterGPSTimeClipRange: {
+					type: "fv",
+					value: [0, 7]
+				},
 			};
 
 			this.classification = ClassificationScheme.DEFAULT;
@@ -7237,7 +7636,10 @@ void main() {
 			if (this._shape !== value) {
 				this._shape = value;
 				this.updateShaderSource();
-				this.dispatchEvent({ type: 'point_shape_changed', target: this });
+				this.dispatchEvent({
+					type: 'point_shape_changed',
+					target: this
+				});
 				this.dispatchEvent({
 					type: 'material_property_changed',
 					target: this
@@ -7288,8 +7690,8 @@ void main() {
 		}
 
 		set elevationRange(value) {
-			let changed = this.uniforms.elevationRange.value[0] !== value[0]
-				|| this.uniforms.elevationRange.value[1] !== value[1];
+			let changed = this.uniforms.elevationRange.value[0] !== value[0] ||
+				this.uniforms.elevationRange.value[1] !== value[1];
 
 			if (changed) {
 				this.uniforms.elevationRange.value = value;
@@ -7751,7 +8153,11 @@ void main() {
 		setName(name) {
 			if (this.name !== name) {
 				this.name = name;
-				this.dispatchEvent({ type: 'name_changed', name: name, pointcloud: this });
+				this.dispatchEvent({
+					type: 'name_changed',
+					name: name,
+					pointcloud: this
+				});
 			}
 		}
 
@@ -8241,8 +8647,7 @@ void main() {
 				material.pointColorType = Potree.PointColorType.POINT_INDEX;
 
 				let renderTarget = new THREE.WebGLRenderTarget(
-					1, 1,
-					{
+					1, 1, {
 						minFilter: THREE.LinearFilter,
 						magFilter: THREE.NearestFilter,
 						format: THREE.RGBAFormat
@@ -8608,7 +9013,10 @@ void main() {
 			if (value !== this._visible) {
 				this._visible = value;
 
-				this.dispatchEvent({ type: 'visibility_changed', pointcloud: this });
+				this.dispatchEvent({
+					type: 'visibility_changed',
+					pointcloud: this
+				});
 			}
 
 		}
@@ -8693,7 +9101,9 @@ void main() {
 			geometry.setIndex(new THREE.BufferAttribute(indices, 1));
 			geometry.addAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-			let material = new THREE.LineBasicMaterial({ color: color });
+			let material = new THREE.LineBasicMaterial({
+				color: color
+			});
 
 			super(geometry, material);
 		}
@@ -8733,7 +9143,9 @@ void main() {
 	function updateVisibilityStructures(pointclouds, camera, renderer) {
 		let frustums = [];
 		let camObjPositions = [];
-		let priorityQueue = new BinaryHeap(function (x) { return 1 / x.weight; });
+		let priorityQueue = new BinaryHeap(function (x) {
+			return 1 / x.weight;
+		});
 
 		for (let i = 0; i < pointclouds.length; i++) {
 			let pointcloud = pointclouds[i];
@@ -8772,7 +9184,11 @@ void main() {
 			camObjPositions.push(camObjPos);
 
 			if (pointcloud.visible && pointcloud.root !== null) {
-				priorityQueue.push({ pointcloud: i, node: pointcloud.root, weight: Number.MAX_VALUE });
+				priorityQueue.push({
+					pointcloud: i,
+					node: pointcloud.root,
+					weight: Number.MAX_VALUE
+				});
 			}
 
 			// hide all previously visible nodes
@@ -8835,7 +9251,10 @@ void main() {
 			pointcloud.updateMatrixWorld();
 
 			if (!pointcloudTransformVersion.has(pointcloud)) {
-				pointcloudTransformVersion.set(pointcloud, { number: 0, transform: pointcloud.matrixWorld.clone() });
+				pointcloudTransformVersion.set(pointcloud, {
+					number: 0,
+					transform: pointcloud.matrixWorld.clone()
+				});
 			} else {
 				let version = pointcloudTransformVersion.get(pointcloud);
 
@@ -9087,9 +9506,14 @@ void main() {
 					weight = diagonal;
 				}
 
-				priorityQueue.push({ pointcloud: element.pointcloud, node: child, parent: node, weight: weight });
+				priorityQueue.push({
+					pointcloud: element.pointcloud,
+					node: child,
+					parent: node,
+					weight: weight
+				});
 			}
-		}// end priority queue loop
+		} // end priority queue loop
 
 		{ // update DEM
 			let maxDEMLevel = 4;
@@ -9219,7 +9643,11 @@ void main() {
 			this.pcoGeometry = geometry;
 			this.boundingBox = this.pcoGeometry.boundingBox;
 			this.boundingSphere = this.pcoGeometry.boundingSphere;
-			this.material = new PointCloudMaterial({ vertexColors: THREE.VertexColors, size: 0.05, treeType: TreeType.KDTREE });
+			this.material = new PointCloudMaterial({
+				vertexColors: THREE.VertexColors,
+				size: 0.05,
+				treeType: TreeType.KDTREE
+			});
 			this.material.sizeType = PointSizeType.ATTENUATED;
 			this.material.size = 0.05;
 			this.profileRequests = [];
@@ -9238,7 +9666,11 @@ void main() {
 		setName(name) {
 			if (this.name !== name) {
 				this.name = name;
-				this.dispatchEvent({ type: 'name_changed', name: name, pointcloud: this });
+				this.dispatchEvent({
+					type: 'name_changed',
+					name: name,
+					pointcloud: this
+				});
 			}
 		}
 
@@ -9431,8 +9863,7 @@ void main() {
 				material.pointColorType = PointColorType.POINT_INDEX;
 
 				let renderTarget = new THREE.WebGLRenderTarget(
-					1, 1,
-					{
+					1, 1, {
 						minFilter: THREE.LinearFilter,
 						magFilter: THREE.NearestFilter,
 						format: THREE.RGBAFormat
@@ -9649,9 +10080,9 @@ void main() {
 
 				visibleNodeTextureOffsets.set(node, i);
 
-				let b1 = 0;	// children
-				let b2 = 0;	// offset to first child
-				let b3 = 0;	// split
+				let b1 = 0; // children
+				let b2 = 0; // offset to first child
+				let b3 = 0; // split
 
 				if (node.geometryNode.left && visibleNodeNames.indexOf(node.geometryNode.left.number) > 0) {
 					b1 += 1;
@@ -10369,7 +10800,10 @@ void main() {
 					let geometryNode = node.geometryNode;
 
 					if (geometryNode.gpsTime) {
-						let { offset, range } = geometryNode.gpsTime;
+						let {
+							offset,
+							range
+						} = geometryNode.gpsTime;
 						let nodeMin = offset;
 						let nodeMax = offset + range;
 
@@ -10944,18 +11378,15 @@ void main() {
 						let flattenedMatrices = [].concat(...material.uniforms.uSnapView.value.map(c => c.elements));
 						const lSnapView = shader.uniformLocations["uSnapView[0]"];
 						gl.uniformMatrix4fv(lSnapView, false, flattenedMatrices);
-					}
-					{
+					} {
 						let flattenedMatrices = [].concat(...material.uniforms.uSnapProj.value.map(c => c.elements));
 						const lSnapProj = shader.uniformLocations["uSnapProj[0]"];
 						gl.uniformMatrix4fv(lSnapProj, false, flattenedMatrices);
-					}
-					{
+					} {
 						let flattenedMatrices = [].concat(...material.uniforms.uSnapProjInv.value.map(c => c.elements));
 						const lSnapProjInv = shader.uniformLocations["uSnapProjInv[0]"];
 						gl.uniformMatrix4fv(lSnapProjInv, false, flattenedMatrices);
-					}
-					{
+					} {
 						let flattenedMatrices = [].concat(...material.uniforms.uSnapViewInv.value.map(c => c.elements));
 						const lSnapViewInv = shader.uniformLocations["uSnapViewInv[0]"];
 						gl.uniformMatrix4fv(lSnapViewInv, false, flattenedMatrices);
@@ -11059,13 +11490,18 @@ void main() {
 			this.pointsServed = 0;
 			this.highestLevelServed = 0;
 
-			this.priorityQueue = new BinaryHeap(function (x) { return 1 / x.weight; });
+			this.priorityQueue = new BinaryHeap(function (x) {
+				return 1 / x.weight;
+			});
 
 			this.initialize();
 		}
 
 		initialize() {
-			this.priorityQueue.push({ node: this.pointcloud.pcoGeometry.root, weight: Infinity });
+			this.priorityQueue.push({
+				node: this.pointcloud.pcoGeometry.root,
+				weight: Infinity
+			});
 		};
 
 		// traverse the node and add intersecting descendants to queue
@@ -11082,7 +11518,10 @@ void main() {
 				let node = stack.pop();
 				let weight = node.boundingSphere.radius;
 
-				this.priorityQueue.push({ node: node, weight: weight });
+				this.priorityQueue.push({
+					node: node,
+					weight: weight
+				});
 
 				// add children that intersect the cutting plane
 				if (node.level < this.maxDepth) {
@@ -11153,7 +11592,10 @@ void main() {
 				}
 				if (this.temporaryResult.size() > 100) {
 					this.pointsServed += this.temporaryResult.size();
-					this.callback.onProgress({ request: this, points: this.temporaryResult });
+					this.callback.onProgress({
+						request: this,
+						points: this.temporaryResult
+					});
 					this.temporaryResult = new ProfileData(this.profile);
 				}
 			}
@@ -11163,11 +11605,16 @@ void main() {
 
 				if (this.temporaryResult.size() > 0) {
 					this.pointsServed += this.temporaryResult.size();
-					this.callback.onProgress({ request: this, points: this.temporaryResult });
+					this.callback.onProgress({
+						request: this,
+						points: this.temporaryResult
+					});
 					this.temporaryResult = new ProfileData(this.profile);
 				}
 
-				this.callback.onFinish({ request: this });
+				this.callback.onFinish({
+					request: this
+				});
 
 				let index = this.pointcloud.profileRequests.indexOf(this);
 				if (index >= 0) {
@@ -11377,7 +11824,9 @@ void main() {
 		cancel() {
 			this.callback.onCancel();
 
-			this.priorityQueue = new BinaryHeap(function (x) { return 1 / x.weight; });
+			this.priorityQueue = new BinaryHeap(function (x) {
+				return 1 / x.weight;
+			});
 
 			let index = this.pointcloud.profileRequests.indexOf(this);
 			if (index >= 0) {
@@ -11470,18 +11919,51 @@ void main() {
 			super();
 
 			let uniforms = {
-				screenWidth: { type: 'f', value: 0 },
-				screenHeight: { type: 'f', value: 0 },
-				edlStrength: { type: 'f', value: 1.0 },
-				radius: { type: 'f', value: 1.0 },
-				neighbours: { type: '2fv', value: [] },
-				depthMap: { type: 't', value: null },
+				screenWidth: {
+					type: 'f',
+					value: 0
+				},
+				screenHeight: {
+					type: 'f',
+					value: 0
+				},
+				edlStrength: {
+					type: 'f',
+					value: 1.0
+				},
+				radius: {
+					type: 'f',
+					value: 1.0
+				},
+				neighbours: {
+					type: '2fv',
+					value: []
+				},
+				depthMap: {
+					type: 't',
+					value: null
+				},
 				//colorMap: 		{ type: 't', 	value: null },
-				uRegularColor: { type: 't', value: null },
-				uRegularDepth: { type: 't', value: null },
-				uEDLColor: { type: 't', value: null },
-				uEDLDepth: { type: 't', value: null },
-				opacity: { type: 'f', value: 1.0 }
+				uRegularColor: {
+					type: 't',
+					value: null
+				},
+				uRegularDepth: {
+					type: 't',
+					value: null
+				},
+				uEDLColor: {
+					type: 't',
+					value: null
+				},
+				uEDLDepth: {
+					type: 't',
+					value: null
+				},
+				opacity: {
+					type: 'f',
+					value: 1.0
+				}
 			};
 
 			this.setValues({
@@ -11543,14 +12025,38 @@ void main() {
 			super();
 
 			let uniforms = {
-				screenWidth: { type: 'f', value: 0 },
-				screenHeight: { type: 'f', value: 0 },
-				edlStrength: { type: 'f', value: 1.0 },
-				radius: { type: 'f', value: 1.0 },
-				neighbours: { type: '2fv', value: [] },
-				uEDLMap: { type: 't', value: null },
-				uDepthMap: { type: 't', value: null },
-				uWeightMap: { type: 't', value: null },
+				screenWidth: {
+					type: 'f',
+					value: 0
+				},
+				screenHeight: {
+					type: 'f',
+					value: 0
+				},
+				edlStrength: {
+					type: 'f',
+					value: 1.0
+				},
+				radius: {
+					type: 'f',
+					value: 1.0
+				},
+				neighbours: {
+					type: '2fv',
+					value: []
+				},
+				uEDLMap: {
+					type: 't',
+					value: null
+				},
+				uDepthMap: {
+					type: 't',
+					value: null
+				},
+				uWeightMap: {
+					type: 't',
+					value: null
+				},
 			};
 
 			this.setValues({
@@ -11610,8 +12116,14 @@ void main() {
 			super();
 
 			let uniforms = {
-				uDepthMap: { type: 't', value: null },
-				uWeightMap: { type: 't', value: null },
+				uDepthMap: {
+					type: 't',
+					value: null
+				},
+				uWeightMap: {
+					type: 't',
+					value: null
+				},
 			};
 
 			this.setValues({
@@ -11904,16 +12416,46 @@ void main() {
 	 * @class
 	 */
 	const PointAttributeTypes = {
-		DATA_TYPE_DOUBLE: { ordinal: 0, size: 8 },
-		DATA_TYPE_FLOAT: { ordinal: 1, size: 4 },
-		DATA_TYPE_INT8: { ordinal: 2, size: 1 },
-		DATA_TYPE_UINT8: { ordinal: 3, size: 1 },
-		DATA_TYPE_INT16: { ordinal: 4, size: 2 },
-		DATA_TYPE_UINT16: { ordinal: 5, size: 2 },
-		DATA_TYPE_INT32: { ordinal: 6, size: 4 },
-		DATA_TYPE_UINT32: { ordinal: 7, size: 4 },
-		DATA_TYPE_INT64: { ordinal: 8, size: 8 },
-		DATA_TYPE_UINT64: { ordinal: 9, size: 8 }
+		DATA_TYPE_DOUBLE: {
+			ordinal: 0,
+			size: 8
+		},
+		DATA_TYPE_FLOAT: {
+			ordinal: 1,
+			size: 4
+		},
+		DATA_TYPE_INT8: {
+			ordinal: 2,
+			size: 1
+		},
+		DATA_TYPE_UINT8: {
+			ordinal: 3,
+			size: 1
+		},
+		DATA_TYPE_INT16: {
+			ordinal: 4,
+			size: 2
+		},
+		DATA_TYPE_UINT16: {
+			ordinal: 5,
+			size: 2
+		},
+		DATA_TYPE_INT32: {
+			ordinal: 6,
+			size: 4
+		},
+		DATA_TYPE_UINT32: {
+			ordinal: 7,
+			size: 4
+		},
+		DATA_TYPE_INT64: {
+			ordinal: 8,
+			size: 8
+		},
+		DATA_TYPE_UINT64: {
+			ordinal: 9,
+			size: 8
+		}
 	};
 
 	let i = 0;
@@ -12499,10 +13041,21 @@ void main() {
 		}
 
 		static createSchema(attributes) {
-			let schema = [
-				{ 'name': 'X', 'size': 4, 'type': 'signed' },
-				{ 'name': 'Y', 'size': 4, 'type': 'signed' },
-				{ 'name': 'Z', 'size': 4, 'type': 'signed' }
+			let schema = [{
+					'name': 'X',
+					'size': 4,
+					'type': 'signed'
+				},
+				{
+					'name': 'Y',
+					'size': 4,
+					'type': 'signed'
+				},
+				{
+					'name': 'Z',
+					'size': 4,
+					'type': 'signed'
+				}
 			];
 
 			// Once we include options in the UI to load a dynamic list of available
@@ -12514,13 +13067,33 @@ void main() {
 			// This is not default behaviour.
 			attributes.forEach(function (item) {
 				if (item === 'COLOR_PACKED') {
-					schema.push({ 'name': 'Red', 'size': 2, 'type': 'unsigned' });
-					schema.push({ 'name': 'Green', 'size': 2, 'type': 'unsigned' });
-					schema.push({ 'name': 'Blue', 'size': 2, 'type': 'unsigned' });
+					schema.push({
+						'name': 'Red',
+						'size': 2,
+						'type': 'unsigned'
+					});
+					schema.push({
+						'name': 'Green',
+						'size': 2,
+						'type': 'unsigned'
+					});
+					schema.push({
+						'name': 'Blue',
+						'size': 2,
+						'type': 'unsigned'
+					});
 				} else if (item === 'INTENSITY') {
-					schema.push({ 'name': 'Intensity', 'size': 2, 'type': 'unsigned' });
+					schema.push({
+						'name': 'Intensity',
+						'size': 2,
+						'type': 'unsigned'
+					});
 				} else if (item === 'CLASSIFICATION') {
-					schema.push({ 'name': 'Classification', 'size': 1, 'type': 'unsigned' });
+					schema.push({
+						'name': 'Classification',
+						'size': 1,
+						'type': 'unsigned'
+					});
 				}
 			});
 
@@ -12563,14 +13136,41 @@ void main() {
 		};
 
 		static getNormalization(serverURL, baseDepth, cb) {
-			let s = [
-				{ 'name': 'X', 'size': 4, 'type': 'floating' },
-				{ 'name': 'Y', 'size': 4, 'type': 'floating' },
-				{ 'name': 'Z', 'size': 4, 'type': 'floating' },
-				{ 'name': 'Red', 'size': 2, 'type': 'unsigned' },
-				{ 'name': 'Green', 'size': 2, 'type': 'unsigned' },
-				{ 'name': 'Blue', 'size': 2, 'type': 'unsigned' },
-				{ 'name': 'Intensity', 'size': 2, 'type': 'unsigned' }
+			let s = [{
+					'name': 'X',
+					'size': 4,
+					'type': 'floating'
+				},
+				{
+					'name': 'Y',
+					'size': 4,
+					'type': 'floating'
+				},
+				{
+					'name': 'Z',
+					'size': 4,
+					'type': 'floating'
+				},
+				{
+					'name': 'Red',
+					'size': 2,
+					'type': 'unsigned'
+				},
+				{
+					'name': 'Green',
+					'size': 2,
+					'type': 'unsigned'
+				},
+				{
+					'name': 'Blue',
+					'size': 2,
+					'type': 'unsigned'
+				},
+				{
+					'name': 'Intensity',
+					'size': 2,
+					'type': 'unsigned'
+				}
 			];
 
 			let url = serverURL + 'read?depth=' + baseDepth +
@@ -12604,7 +13204,10 @@ void main() {
 				if (colorNorm) console.log('Normalizing color');
 				if (intensityNorm) console.log('Normalizing intensity');
 
-				cb(null, { color: colorNorm, intensity: intensityNorm });
+				cb(null, {
+					color: colorNorm,
+					intensity: intensityNorm
+				});
 			});
 		};
 	}
@@ -12864,8 +13467,7 @@ void main() {
 			let boxGeometry = new THREE.BoxGeometry(1, 1, 1);
 			boxGeometry.computeBoundingBox();
 
-			let boxFrameGeometry = new THREE.Geometry();
-			{
+			let boxFrameGeometry = new THREE.Geometry(); {
 				// bottom
 				boxFrameGeometry.vertices.push(new THREE.Vector3(-0.5, -0.5, 0.5));
 				boxFrameGeometry.vertices.push(new THREE.Vector3(0.5, -0.5, 0.5));
@@ -12897,8 +13499,7 @@ void main() {
 				boxFrameGeometry.colors.push(new THREE.Vector3(1, 1, 1));
 			}
 
-			let planeFrameGeometry = new THREE.Geometry();
-			{
+			let planeFrameGeometry = new THREE.Geometry(); {
 				// middle line
 				planeFrameGeometry.vertices.push(new THREE.Vector3(-0.5, -0.5, 0.0));
 				planeFrameGeometry.vertices.push(new THREE.Vector3(-0.5, 0.5, 0.0));
@@ -12923,9 +13524,13 @@ void main() {
 			this.boundingBox = this.box.geometry.boundingBox;
 			this.add(this.box);
 
-			this.frame = new THREE.LineSegments(boxFrameGeometry, new THREE.LineBasicMaterial({ color: 0x000000 }));
+			this.frame = new THREE.LineSegments(boxFrameGeometry, new THREE.LineBasicMaterial({
+				color: 0x000000
+			}));
 			this.add(this.frame);
-			this.planeFrame = new THREE.LineSegments(planeFrameGeometry, new THREE.LineBasicMaterial({ color: 0xff0000 }));
+			this.planeFrame = new THREE.LineSegments(planeFrameGeometry, new THREE.LineBasicMaterial({
+				color: 0xff0000
+			}));
 			this.add(this.planeFrame);
 
 			// set default thickness
@@ -13062,7 +13667,11 @@ void main() {
 				}
 			}
 
-			this.dispatchEvent({ "type": "clip_volume_changed", "viewer": viewer, "volume": this });
+			this.dispatchEvent({
+				"type": "clip_volume_changed",
+				"viewer": viewer,
+				"volume": this
+			});
 		}
 
 		rotate(args) {
@@ -13097,7 +13706,11 @@ void main() {
 
 			this.updateLocalSystem();
 
-			this.dispatchEvent({ "type": "clip_volume_changed", "viewer": viewer, "volume": this });
+			this.dispatchEvent({
+				"type": "clip_volume_changed",
+				"viewer": viewer,
+				"volume": this
+			});
 		}
 
 		update() {
@@ -13227,7 +13840,9 @@ void main() {
 
 			let polyClipVol = new PolygonClipVolume(this.viewer.scene.getActiveCamera().clone());
 
-			this.dispatchEvent({ "type": "start_inserting_clipping_volume" });
+			this.dispatchEvent({
+				"type": "start_inserting_clipping_volume"
+			});
 
 			this.viewer.scene.addPolygonClipVolume(polyClipVol);
 			this.sceneMarker.add(polyClipVol);
@@ -13309,18 +13924,54 @@ void main() {
 		});
 
 		const Type = new Enum({
-			BYTE: { value: 1, bytes: 1 },
-			ASCII: { value: 2, bytes: 1 },
-			SHORT: { value: 3, bytes: 2 },
-			LONG: { value: 4, bytes: 4 },
-			RATIONAL: { value: 5, bytes: 8 },
-			SBYTE: { value: 6, bytes: 1 },
-			UNDEFINED: { value: 7, bytes: 1 },
-			SSHORT: { value: 8, bytes: 2 },
-			SLONG: { value: 9, bytes: 4 },
-			SRATIONAL: { value: 10, bytes: 8 },
-			FLOAT: { value: 11, bytes: 4 },
-			DOUBLE: { value: 12, bytes: 8 },
+			BYTE: {
+				value: 1,
+				bytes: 1
+			},
+			ASCII: {
+				value: 2,
+				bytes: 1
+			},
+			SHORT: {
+				value: 3,
+				bytes: 2
+			},
+			LONG: {
+				value: 4,
+				bytes: 4
+			},
+			RATIONAL: {
+				value: 5,
+				bytes: 8
+			},
+			SBYTE: {
+				value: 6,
+				bytes: 1
+			},
+			UNDEFINED: {
+				value: 7,
+				bytes: 1
+			},
+			SSHORT: {
+				value: 8,
+				bytes: 2
+			},
+			SLONG: {
+				value: 9,
+				bytes: 4
+			},
+			SRATIONAL: {
+				value: 10,
+				bytes: 8
+			},
+			FLOAT: {
+				value: 11,
+				bytes: 4
+			},
+			DOUBLE: {
+				value: 12,
+				bytes: 8
+			},
 		});
 
 		const Tag = new Enum({
@@ -13341,11 +13992,11 @@ void main() {
 			SOFTWARE: 305,
 			COLOR_MAP: 320,
 			SAMPLE_FORMAT: 339,
-			MODEL_PIXEL_SCALE: 33550,         // [GeoTIFF] TYPE: double   N: 3
-			MODEL_TIEPOINT: 33922,            // [GeoTIFF] TYPE: double   N: 6 * NUM_TIEPOINTS
-			GEO_KEY_DIRECTORY: 34735,         // [GeoTIFF] TYPE: short    N: >= 4
-			GEO_DOUBLE_PARAMS: 34736,         // [GeoTIFF] TYPE: short    N: variable
-			GEO_ASCII_PARAMS: 34737,          // [GeoTIFF] TYPE: ascii    N: variable
+			MODEL_PIXEL_SCALE: 33550, // [GeoTIFF] TYPE: double   N: 3
+			MODEL_TIEPOINT: 33922, // [GeoTIFF] TYPE: double   N: 6 * NUM_TIEPOINTS
+			GEO_KEY_DIRECTORY: 34735, // [GeoTIFF] TYPE: short    N: >= 4
+			GEO_DOUBLE_PARAMS: 34736, // [GeoTIFF] TYPE: short    N: variable
+			GEO_ASCII_PARAMS: 34737, // [GeoTIFF] TYPE: ascii    N: variable
 		});
 
 		const typeMapping = new Map([
@@ -13637,7 +14288,8 @@ void main() {
 				let ifdBuffer = concatBuffers([
 					new Uint16Array([ifds.length]),
 					...ifdEntryBuffers.values(),
-					new Uint32Array([0])]);
+					new Uint32Array([0])
+				]);
 				let ifdValueBuffer = concatBuffers([...ifdValueBuffers.values()]);
 
 				let tiffBuffer = concatBuffers([
@@ -13647,7 +14299,11 @@ void main() {
 					image.buffer
 				]);
 
-				return { width: width, height: height, buffer: tiffBuffer };
+				return {
+					width: width,
+					height: height,
+					buffer: tiffBuffer
+				};
 			}
 
 		}
@@ -13683,11 +14339,17 @@ void main() {
 
 			this.viewer.inputHandler.registerInteractiveScene(this.scene);
 
-			this.onRemove = (e) => { this.scene.remove(e.measurement); };
-			this.onAdd = e => { this.scene.add(e.measurement); };
+			this.onRemove = (e) => {
+				this.scene.remove(e.measurement);
+			};
+			this.onAdd = e => {
+				this.scene.add(e.measurement);
+			};
 
 			for (let measurement of viewer.scene.measurements) {
-				this.onAdd({ measurement: measurement });
+				this.onAdd({
+					measurement: measurement
+				});
 			}
 
 			viewer.addEventListener("update", this.update.bind(this));
@@ -14020,7 +14682,9 @@ void main() {
 			this.onAdd = e => this.scene.add(e.profile);
 
 			for (let profile of viewer.scene.profiles) {
-				this.onAdd({ profile: profile });
+				this.onAdd({
+					profile: profile
+				});
 			}
 
 			viewer.addEventListener("update", this.update.bind(this));
@@ -14463,30 +15127,120 @@ void main() {
 
 			this.activeHandle = null;
 			this.scaleHandles = {
-				"scale.x+": { name: "scale.x+", node: new THREE.Object3D(), color: red, alignment: [+1, +0, +0] },
-				"scale.x-": { name: "scale.x-", node: new THREE.Object3D(), color: red, alignment: [-1, +0, +0] },
-				"scale.y+": { name: "scale.y+", node: new THREE.Object3D(), color: green, alignment: [+0, +1, +0] },
-				"scale.y-": { name: "scale.y-", node: new THREE.Object3D(), color: green, alignment: [+0, -1, +0] },
-				"scale.z+": { name: "scale.z+", node: new THREE.Object3D(), color: blue, alignment: [+0, +0, +1] },
-				"scale.z-": { name: "scale.z-", node: new THREE.Object3D(), color: blue, alignment: [+0, +0, -1] },
+				"scale.x+": {
+					name: "scale.x+",
+					node: new THREE.Object3D(),
+					color: red,
+					alignment: [+1, +0, +0]
+				},
+				"scale.x-": {
+					name: "scale.x-",
+					node: new THREE.Object3D(),
+					color: red,
+					alignment: [-1, +0, +0]
+				},
+				"scale.y+": {
+					name: "scale.y+",
+					node: new THREE.Object3D(),
+					color: green,
+					alignment: [+0, +1, +0]
+				},
+				"scale.y-": {
+					name: "scale.y-",
+					node: new THREE.Object3D(),
+					color: green,
+					alignment: [+0, -1, +0]
+				},
+				"scale.z+": {
+					name: "scale.z+",
+					node: new THREE.Object3D(),
+					color: blue,
+					alignment: [+0, +0, +1]
+				},
+				"scale.z-": {
+					name: "scale.z-",
+					node: new THREE.Object3D(),
+					color: blue,
+					alignment: [+0, +0, -1]
+				},
 			};
 			this.focusHandles = {
-				"focus.x+": { name: "focus.x+", node: new THREE.Object3D(), color: red, alignment: [+1, +0, +0] },
-				"focus.x-": { name: "focus.x-", node: new THREE.Object3D(), color: red, alignment: [-1, +0, +0] },
-				"focus.y+": { name: "focus.y+", node: new THREE.Object3D(), color: green, alignment: [+0, +1, +0] },
-				"focus.y-": { name: "focus.y-", node: new THREE.Object3D(), color: green, alignment: [+0, -1, +0] },
-				"focus.z+": { name: "focus.z+", node: new THREE.Object3D(), color: blue, alignment: [+0, +0, +1] },
-				"focus.z-": { name: "focus.z-", node: new THREE.Object3D(), color: blue, alignment: [+0, +0, -1] },
+				"focus.x+": {
+					name: "focus.x+",
+					node: new THREE.Object3D(),
+					color: red,
+					alignment: [+1, +0, +0]
+				},
+				"focus.x-": {
+					name: "focus.x-",
+					node: new THREE.Object3D(),
+					color: red,
+					alignment: [-1, +0, +0]
+				},
+				"focus.y+": {
+					name: "focus.y+",
+					node: new THREE.Object3D(),
+					color: green,
+					alignment: [+0, +1, +0]
+				},
+				"focus.y-": {
+					name: "focus.y-",
+					node: new THREE.Object3D(),
+					color: green,
+					alignment: [+0, -1, +0]
+				},
+				"focus.z+": {
+					name: "focus.z+",
+					node: new THREE.Object3D(),
+					color: blue,
+					alignment: [+0, +0, +1]
+				},
+				"focus.z-": {
+					name: "focus.z-",
+					node: new THREE.Object3D(),
+					color: blue,
+					alignment: [+0, +0, -1]
+				},
 			};
 			this.translationHandles = {
-				"translation.x": { name: "translation.x", node: new THREE.Object3D(), color: red, alignment: [1, 0, 0] },
-				"translation.y": { name: "translation.y", node: new THREE.Object3D(), color: green, alignment: [0, 1, 0] },
-				"translation.z": { name: "translation.z", node: new THREE.Object3D(), color: blue, alignment: [0, 0, 1] },
+				"translation.x": {
+					name: "translation.x",
+					node: new THREE.Object3D(),
+					color: red,
+					alignment: [1, 0, 0]
+				},
+				"translation.y": {
+					name: "translation.y",
+					node: new THREE.Object3D(),
+					color: green,
+					alignment: [0, 1, 0]
+				},
+				"translation.z": {
+					name: "translation.z",
+					node: new THREE.Object3D(),
+					color: blue,
+					alignment: [0, 0, 1]
+				},
 			};
 			this.rotationHandles = {
-				"rotation.x": { name: "rotation.x", node: new THREE.Object3D(), color: red, alignment: [1, 0, 0] },
-				"rotation.y": { name: "rotation.y", node: new THREE.Object3D(), color: green, alignment: [0, 1, 0] },
-				"rotation.z": { name: "rotation.z", node: new THREE.Object3D(), color: blue, alignment: [0, 0, 1] },
+				"rotation.x": {
+					name: "rotation.x",
+					node: new THREE.Object3D(),
+					color: red,
+					alignment: [1, 0, 0]
+				},
+				"rotation.y": {
+					name: "rotation.y",
+					node: new THREE.Object3D(),
+					color: green,
+					alignment: [0, 1, 0]
+				},
+				"rotation.z": {
+					name: "rotation.z",
+					node: new THREE.Object3D(),
+					color: blue,
+					alignment: [0, 0, 1]
+				},
 			};
 			this.handles = Object.assign({}, this.scaleHandles, this.focusHandles, this.translationHandles, this.rotationHandles);
 			this.pickVolumes = [];
@@ -14497,8 +15251,7 @@ void main() {
 			this.initializeRotationHandles();
 
 
-			let boxFrameGeometry = new THREE.Geometry();
-			{
+			let boxFrameGeometry = new THREE.Geometry(); {
 				// bottom
 				boxFrameGeometry.vertices.push(new THREE.Vector3(-0.5, -0.5, 0.5));
 				boxFrameGeometry.vertices.push(new THREE.Vector3(0.5, -0.5, 0.5));
@@ -14527,7 +15280,9 @@ void main() {
 				boxFrameGeometry.vertices.push(new THREE.Vector3(-0.5, -0.5, -0.5));
 				boxFrameGeometry.vertices.push(new THREE.Vector3(-0.5, 0.5, -0.5));
 			}
-			this.frame = new THREE.LineSegments(boxFrameGeometry, new THREE.LineBasicMaterial({ color: 0xffff00 }));
+			this.frame = new THREE.LineSegments(boxFrameGeometry, new THREE.LineBasicMaterial({
+				color: 0xffff00
+			}));
 			this.scene.add(this.frame);
 
 
@@ -14580,8 +15335,12 @@ void main() {
 				this.pickVolumes.push(pickSphere);
 
 				node.setOpacity = (target) => {
-					let opacity = { x: material.opacity };
-					let t = new TWEEN.Tween(opacity).to({ x: target }, 100);
+					let opacity = {
+						x: material.opacity
+					};
+					let t = new TWEEN.Tween(opacity).to({
+						x: target
+					}, 100);
 					t.onUpdate(() => {
 						sphere.visible = opacity.x > 0;
 						pickSphere.visible = opacity.x > 0;
@@ -14684,8 +15443,12 @@ void main() {
 				this.pickVolumes.push(pickSphere);
 
 				node.setOpacity = (target) => {
-					let opacity = { x: material.opacity };
-					let t = new TWEEN.Tween(opacity).to({ x: target }, 100);
+					let opacity = {
+						x: material.opacity
+					};
+					let t = new TWEEN.Tween(opacity).to({
+						x: target
+					}, 100);
 					t.onUpdate(() => {
 						pickSphere.visible = opacity.x > 0;
 						box.visible = opacity.x > 0;
@@ -14696,7 +15459,7 @@ void main() {
 					t.start();
 				};
 
-				pickSphere.addEventListener("drag", e => { });
+				pickSphere.addEventListener("drag", e => {});
 
 				pickSphere.addEventListener("mouseup", e => {
 					e.consume();
@@ -14780,8 +15543,12 @@ void main() {
 				this.pickVolumes.push(pickVolume);
 
 				node.setOpacity = (target) => {
-					let opacity = { x: material.opacity };
-					let t = new TWEEN.Tween(opacity).to({ x: target }, 100);
+					let opacity = {
+						x: material.opacity
+					};
+					let t = new TWEEN.Tween(opacity).to({
+						x: target
+					}, 100);
 					t.onUpdate(() => {
 						box.visible = opacity.x > 0;
 						pickVolume.visible = opacity.x > 0;
@@ -14792,8 +15559,12 @@ void main() {
 					t.start();
 				};
 
-				pickVolume.addEventListener("drag", (e) => { this.dragTranslationHandle(e); });
-				pickVolume.addEventListener("drop", (e) => { this.dropTranslationHandle(e); });
+				pickVolume.addEventListener("drag", (e) => {
+					this.dragTranslationHandle(e);
+				});
+				pickVolume.addEventListener("drop", (e) => {
+					this.dropTranslationHandle(e);
+				});
 			}
 		}
 
@@ -14848,8 +15619,12 @@ void main() {
 				this.pickVolumes.push(pickVolume);
 
 				node.setOpacity = (target) => {
-					let opacity = { x: material.opacity };
-					let t = new TWEEN.Tween(opacity).to({ x: target }, 100);
+					let opacity = {
+						x: material.opacity
+					};
+					let t = new TWEEN.Tween(opacity).to({
+						x: target
+					}, 100);
 					t.onUpdate(() => {
 						box.visible = opacity.x > 0;
 						pickVolume.visible = opacity.x > 0;
@@ -14866,8 +15641,12 @@ void main() {
 				//	console.log(pickVolume.getWorldDirection(new THREE.Vector3()));
 				//});
 
-				pickVolume.addEventListener("drag", (e) => { this.dragRotationHandle(e); });
-				pickVolume.addEventListener("drop", (e) => { this.dropRotationHandle(e); });
+				pickVolume.addEventListener("drag", (e) => {
+					this.dragRotationHandle(e);
+				});
+				pickVolume.addEventListener("drop", (e) => {
+					this.dropRotationHandle(e);
+				});
 			}
 		}
 
@@ -15353,7 +16132,9 @@ void main() {
 			};
 
 			for (let volume of viewer.scene.volumes) {
-				this.onAdd({ volume: volume });
+				this.onAdd({
+					volume: volume
+				});
 			}
 
 			this.viewer.inputHandler.addEventListener('delete', e => {
@@ -15409,8 +16190,9 @@ void main() {
 					e.drag.end,
 					this.viewer.scene.getActiveCamera(),
 					this.viewer,
-					this.viewer.scene.pointclouds,
-					{ pickClipped: false });
+					this.viewer.scene.pointclouds, {
+						pickClipped: false
+					});
 
 				if (I) {
 					volume.position.copy(I.location);
@@ -15486,7 +16268,10 @@ void main() {
 		render() {
 			const viewer = this.viewer;
 
-			viewer.dispatchEvent({ type: "render.pass.begin", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.begin",
+				viewer: viewer
+			});
 
 
 
@@ -15500,8 +16285,7 @@ void main() {
 				viewer.skybox.camera.aspect = viewer.scene.cameraP.aspect;
 				viewer.skybox.camera.updateProjectionMatrix();
 				viewer.renderer.render(viewer.skybox.scene, viewer.skybox.camera);
-			}
-			else if (viewer.background === "gradient") {
+			} else if (viewer.background === "gradient") {
 				viewer.renderer.clear(true, true, false);
 				viewer.renderer.render(viewer.scene.sceneBG, viewer.scene.cameraBG);
 			} else if (viewer.background === "black") {
@@ -15529,7 +16313,10 @@ void main() {
 			// render scene
 			viewer.renderer.render(viewer.scene.scene, activeCam);
 
-			viewer.dispatchEvent({ type: "render.pass.scene", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.scene",
+				viewer: viewer
+			});
 
 			viewer.clippingTool.update();
 			viewer.renderer.render(viewer.clippingTool.sceneMarker, viewer.scene.cameraScreenSpace); //viewer.scene.cameraScreenSpace);
@@ -15541,7 +16328,10 @@ void main() {
 
 			viewer.transformationTool.update();
 
-			viewer.dispatchEvent({ type: "render.pass.perspective_overlay", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.perspective_overlay",
+				viewer: viewer
+			});
 
 			viewer.renderer.render(viewer.transformationTool.scene, activeCam);
 
@@ -15551,7 +16341,10 @@ void main() {
 			viewer.renderer.render(viewer.navigationCube, viewer.navigationCube.camera);
 			viewer.renderer.setViewport(0, 0, viewer.renderer.domElement.clientWidth, viewer.renderer.domElement.clientHeight);
 
-			viewer.dispatchEvent({ type: "render.pass.end", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.end",
+				viewer: viewer
+			});
 		}
 
 	}
@@ -15611,7 +16404,10 @@ void main() {
 			const viewer = this.viewer;
 
 			let pixelRatio = viewer.renderer.getPixelRatio();
-			let { width, height } = viewer.renderer.getSize();
+			let {
+				width,
+				height
+			} = viewer.renderer.getSize();
 
 			if (this.screenshot) {
 				width = this.screenshot.target.width;
@@ -15632,7 +16428,10 @@ void main() {
 				size = this.viewer.renderer.getSize();
 			}
 
-			let { width, height } = size;
+			let {
+				width,
+				height
+			} = size;
 
 			//let maxTextureSize = viewer.renderer.capabilities.maxTextureSize;
 			//if(width * 4 < 
@@ -15681,7 +16480,10 @@ void main() {
 			this.initEDL();
 			const viewer = this.viewer;
 
-			viewer.dispatchEvent({ type: "render.pass.begin", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.begin",
+				viewer: viewer
+			});
 
 			this.resize();
 
@@ -15796,7 +16598,11 @@ void main() {
 			viewer.renderer.render(viewer.scene.scene, camera, this.rtRegular);
 
 			//viewer.renderer.setRenderTarget(this.rtColor);
-			viewer.dispatchEvent({ type: "render.pass.scene", viewer: viewer, renderTarget: this.rtRegular });
+			viewer.dispatchEvent({
+				type: "render.pass.scene",
+				viewer: viewer,
+				renderTarget: this.rtRegular
+			});
 
 			{ // EDL OCCLUSION PASS
 				this.edlMaterial.uniforms.screenWidth.value = width;
@@ -15825,7 +16631,10 @@ void main() {
 
 			viewer.transformationTool.update();
 
-			viewer.dispatchEvent({ type: "render.pass.perspective_overlay", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.perspective_overlay",
+				viewer: viewer
+			});
 
 			viewer.renderer.render(viewer.controls.sceneControls, camera);
 			viewer.renderer.render(viewer.clippingTool.sceneVolume, camera);
@@ -15837,7 +16646,10 @@ void main() {
 			viewer.renderer.render(viewer.navigationCube, viewer.navigationCube.camera);
 			viewer.renderer.setViewport(0, 0, width, height);
 
-			viewer.dispatchEvent({ type: "render.pass.end", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.end",
+				viewer: viewer
+			});
 
 		}
 	}
@@ -15916,7 +16728,10 @@ void main() {
 			this.init();
 			const viewer = this.viewer;
 
-			viewer.dispatchEvent({ type: "render.pass.begin", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.begin",
+				viewer: viewer
+			});
 
 			this.resize();
 
@@ -16109,13 +16924,19 @@ void main() {
 
 			viewer.renderer.render(viewer.scene.scene, camera);
 
-			viewer.dispatchEvent({ type: "render.pass.scene", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.scene",
+				viewer: viewer
+			});
 
 			viewer.renderer.clearDepth();
 
 			viewer.transformationTool.update();
 
-			viewer.dispatchEvent({ type: "render.pass.perspective_overlay", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.perspective_overlay",
+				viewer: viewer
+			});
 
 			viewer.renderer.render(viewer.controls.sceneControls, camera);
 			viewer.renderer.render(viewer.clippingTool.sceneVolume, camera);
@@ -16127,7 +16948,10 @@ void main() {
 			viewer.renderer.render(viewer.navigationCube, viewer.navigationCube.camera);
 			viewer.renderer.setViewport(0, 0, width, height);
 
-			viewer.dispatchEvent({ type: "render.pass.end", viewer: viewer });
+			viewer.dispatchEvent({
+				type: "render.pass.end",
+				viewer: viewer
+			});
 
 		}
 
@@ -16178,7 +17002,9 @@ void main() {
 				if (e.drag.startHandled === undefined) {
 					e.drag.startHandled = true;
 
-					this.dispatchEvent({ type: 'start' });
+					this.dispatchEvent({
+						type: 'start'
+					});
 				}
 
 				let ndrag = {
@@ -16200,7 +17026,9 @@ void main() {
 			};
 
 			let drop = e => {
-				this.dispatchEvent({ type: 'end' });
+				this.dispatchEvent({
+					type: 'end'
+				});
 			};
 
 			let scroll = (e) => {
@@ -16302,16 +17130,16 @@ void main() {
 				mouse,
 				camera,
 				this.viewer,
-				this.scene.pointclouds,
-				{ pickClipped: true });
+				this.scene.pointclouds, {
+					pickClipped: true
+				});
 
 			if (I === null) {
 				return;
 			}
 
 
-			let targetRadius = 0;
-			{
+			let targetRadius = 0; {
 				let minimumJumpDistance = 0.2;
 
 				let domElement = this.renderer.domElement;
@@ -16332,8 +17160,12 @@ void main() {
 			let easing = TWEEN.Easing.Quartic.Out;
 
 			{ // animate
-				let value = { x: 0 };
-				let tween = new TWEEN.Tween(value).to({ x: 1 }, animationDuration);
+				let value = {
+					x: 0
+				};
+				let tween = new TWEEN.Tween(value).to({
+					x: 1
+				}, animationDuration);
 				tween.easing(easing);
 				this.tweens.push(tween);
 
@@ -16923,20 +17755,21 @@ void main() {
 								color: [0, 0, 0, 0.5]
 							})
 						})
-					})/*,
-					new ol.style.Style({
-						text: new ol.style.Text({
-							font: '12px helvetica,sans-serif',
-							text: text,
-							fill: new ol.style.Fill({
-								color: '#000'
-							}),
-							stroke: new ol.style.Stroke({
-								color: '#fff',
-								width: 2
-							})
-						})
-					}) */
+					})
+					/*,
+										new ol.style.Style({
+											text: new ol.style.Text({
+												font: '12px helvetica,sans-serif',
+												text: text,
+												fill: new ol.style.Fill({
+													color: '#000'
+												}),
+												stroke: new ol.style.Stroke({
+													color: '#fff',
+													width: 2
+												})
+											})
+										}) */
 				];
 			};
 
@@ -16976,7 +17809,9 @@ void main() {
 
 		init() {
 			this.elMap = $('#potree_map');
-			this.elMap.draggable({ handle: $('#potree_map_header') });
+			this.elMap.draggable({
+				handle: $('#potree_map_header')
+			});
 			this.elMap.resizable();
 
 			this.elTooltip = $(`<div style="position: relative; z-index: 100"></div>`);
@@ -17085,7 +17920,9 @@ void main() {
 					mousePositionControl
 				]),
 				layers: [
-					new ol.layer.Tile({ source: new ol.source.OSM() }),
+					new ol.layer.Tile({
+						source: new ol.source.OSM()
+					}),
 					this.toolLayer,
 					this.annotationsLayer,
 					this.sourcesLayer,
@@ -17230,7 +18067,9 @@ void main() {
 			}
 
 			this.viewer.scene.annotations.traverseDescendants(annotation => {
-				this.onAnnotationAdded({ annotation: annotation });
+				this.onAnnotationAdded({
+					annotation: annotation
+				});
 			});
 		}
 
@@ -17239,7 +18078,10 @@ void main() {
 				return this.extentsLayer;
 			}
 
-			this.gExtent = new ol.geom.LineString([[0, 0], [0, 0]]);
+			this.gExtent = new ol.geom.LineString([
+				[0, 0],
+				[0, 0]
+			]);
 
 			let feature = new ol.Feature(this.gExtent);
 			let featureVector = new ol.source.Vector({
@@ -17274,8 +18116,7 @@ void main() {
 			}
 
 			this.annotationsLayer = new ol.layer.Vector({
-				source: new ol.source.Vector({
-				}),
+				source: new ol.source.Vector({}),
 				style: new ol.style.Style({
 					fill: new ol.style.Fill({
 						color: 'rgba(255, 0, 0, 1)'
@@ -17296,7 +18137,12 @@ void main() {
 			}
 
 			// CAMERA LAYER
-			this.gCamera = new ol.geom.LineString([[0, 0], [0, 0], [0, 0], [0, 0]]);
+			this.gCamera = new ol.geom.LineString([
+				[0, 0],
+				[0, 0],
+				[0, 0],
+				[0, 0]
+			]);
 			let feature = new ol.Feature(this.gCamera);
 			let featureVector = new ol.source.Vector({
 				features: [feature]
@@ -17321,8 +18167,7 @@ void main() {
 			}
 
 			this.toolLayer = new ol.layer.Vector({
-				source: new ol.source.Vector({
-				}),
+				source: new ol.source.Vector({}),
 				style: new ol.style.Style({
 					fill: new ol.style.Fill({
 						color: 'rgba(255, 0, 0, 1)'
@@ -17364,8 +18209,7 @@ void main() {
 			}
 
 			this.sourcesLabelLayer = new ol.layer.Vector({
-				source: new ol.source.Vector({
-				}),
+				source: new ol.source.Vector({}),
 				style: new ol.style.Style({
 					fill: new ol.style.Fill({
 						color: 'rgba(255, 0, 0, 0.1)'
@@ -17515,7 +18359,9 @@ void main() {
 					//	'geometry': new ol.geom.LineString([p1, p2, p3, p4, p1])
 					// });
 					let feature = new ol.Feature({
-						'geometry': new ol.geom.Polygon([[p1, p2, p3, p4, p1]])
+						'geometry': new ol.geom.Polygon([
+							[p1, p2, p3, p4, p1]
+						])
 					});
 					feature.source = source;
 					feature.pointcloud = pointcloud;
@@ -18187,7 +19033,9 @@ void main() {
 
 				let string = CSVExporter.toString(points);
 
-				let blob = new Blob([string], { type: "text/string" });
+				let blob = new Blob([string], {
+					type: "text/string"
+				});
 				$('#potree_download_profile_ortho_link').attr('href', URL.createObjectURL(blob));
 
 				//let uri = 'data:application/octet-stream;base64,' + btoa(string);
@@ -18206,7 +19054,9 @@ void main() {
 
 				let buffer = LASExporter.toLAS(points);
 
-				let blob = new Blob([buffer], { type: "application/octet-binary" });
+				let blob = new Blob([buffer], {
+					type: "application/octet-binary"
+				});
 				$('#potree_download_profile_link').attr('href', URL.createObjectURL(blob));
 
 				//let u8view = new Uint8Array(buffer);
@@ -18322,7 +19172,10 @@ void main() {
 		}
 
 		initTHREE() {
-			this.renderer = new THREE.WebGLRenderer({ alpha: true, premultipliedAlpha: false });
+			this.renderer = new THREE.WebGLRenderer({
+				alpha: true,
+				premultipliedAlpha: false
+			});
 			this.renderer.setClearColor(0x000000, 0);
 			this.renderer.setSize(10, 10);
 			this.renderer.autoClear = true;
@@ -18452,7 +19305,9 @@ void main() {
 		reset() {
 			this.lastReset = new Date().getTime();
 
-			this.dispatchEvent({ type: "on_reset_once" });
+			this.dispatchEvent({
+				type: "on_reset_once"
+			});
 			this.removeEventListeners("on_reset_once");
 
 			this.autoFit = true;
@@ -18532,8 +19387,8 @@ void main() {
 		requestScaleUpdate() {
 
 			let threshold = 100;
-			let allowUpdate = ((this.lastReset === undefined) || (this.lastScaleUpdate === undefined))
-				|| ((new Date().getTime() - this.lastReset) > threshold && (new Date().getTime() - this.lastScaleUpdate) > threshold);
+			let allowUpdate = ((this.lastReset === undefined) || (this.lastScaleUpdate === undefined)) ||
+				((new Date().getTime() - this.lastReset) > threshold && (new Date().getTime() - this.lastScaleUpdate) > threshold);
 
 			if (allowUpdate) {
 
@@ -18613,7 +19468,9 @@ void main() {
 
 			this.requests = [];
 
-			this._recompute = () => { this.recompute(); };
+			this._recompute = () => {
+				this.recompute();
+			};
 
 			this.viewer.addEventListener("scene_changed", e => {
 				e.oldScene.removeEventListener("pointcloud_added", this._recompute);
@@ -18767,7 +19624,9 @@ void main() {
 					'type': 'Feature',
 					'geometry': {
 						'type': 'Polygon',
-						'coordinates': [[...coords, coords[0]]]
+						'coordinates': [
+							[...coords, coords[0]]
+						]
 					},
 					'properties': {
 						name: measurement.name
@@ -19022,7 +19881,9 @@ ENDSEC
 			this.measurement = measurement;
 			this.propertiesPanel = propertiesPanel;
 
-			this._update = () => { this.update(); };
+			this._update = () => {
+				this.update();
+			};
 		}
 
 		createCoordinatesTable(points) {
@@ -19061,8 +19922,9 @@ ENDSEC
 					Utils.clipboardCopy(msg);
 
 					this.viewer.postMessage(
-						`Copied value to clipboard: <br>'${msg}'`,
-						{ duration: 3000 });
+						`Copied value to clipboard: <br>'${msg}'`, {
+							duration: 3000
+						});
 				});
 
 				table.append(row);
@@ -19497,8 +20359,9 @@ ENDSEC
 				Utils.clipboardCopy(msg);
 
 				this.viewer.postMessage(
-					`Copied value to clipboard: <br>'${msg}'`,
-					{ duration: 3000 });
+					`Copied value to clipboard: <br>'${msg}'`, {
+						duration: 3000
+					});
 			});
 
 			this.elCopyScale = this.elContent.find("img[name=copyScale]");
@@ -19508,8 +20371,9 @@ ENDSEC
 				Utils.clipboardCopy(msg);
 
 				this.viewer.postMessage(
-					`Copied value to clipboard: <br>'${msg}'`,
-					{ duration: 3000 });
+					`Copied value to clipboard: <br>'${msg}'`, {
+						duration: 3000
+					});
 			});
 
 			this.elRemove = this.elContent.find("img[name=remove]");
@@ -19622,8 +20486,7 @@ ENDSEC
 				elMessage.html(`${message}`);
 			};
 
-			let handle = null;
-			{ // START FILTER
+			let handle = null; { // START FILTER
 				let url = `${viewer.server}/create_regions_filter?pointclouds=[${pointcloudsArg}]&regions=[${regionsArg}]`;
 
 				//console.log(url);
@@ -19654,7 +20517,10 @@ ENDSEC
 				});
 
 				let handleFiltering = (jsResponse) => {
-					let { progress, estimate } = jsResponse;
+					let {
+						progress,
+						estimate
+					} = jsResponse;
 
 					let progressFract = progress["processed points"] / estimate.points;
 					let progressPercents = parseInt(progressFract * 100);
@@ -19817,9 +20683,11 @@ ENDSEC
 				let elWidthSlider = this.elContent.find(`#sldProfileWidth`);
 
 				elWidthSlider.spinner({
-					min: 0, max: 10 * 1000 * 1000, step: 0.01,
+					min: 0,
+					max: 10 * 1000 * 1000,
+					step: 0.01,
 					numberFormat: 'n',
-					start: () => { },
+					start: () => {},
 					spin: (event, ui) => {
 						let value = elWidthSlider.spinner('value');
 						measurement.setWidth(value);
@@ -19877,8 +20745,7 @@ ENDSEC
 
 			let profile = this.measurement;
 
-			let regions = [];
-			{
+			let regions = []; {
 				let segments = profile.getSegments();
 				let width = profile.width;
 
@@ -19952,8 +20819,7 @@ ENDSEC
 				elMessage.html(`${message}`);
 			};
 
-			let handle = null;
-			{ // START FILTER
+			let handle = null; { // START FILTER
 				let url = `${viewer.server}/create_regions_filter?pointclouds=[${pointcloudsArg}]&regions=[${regionsArg}]`;
 
 				//console.log(url);
@@ -19984,7 +20850,10 @@ ENDSEC
 				});
 
 				let handleFiltering = (jsResponse) => {
-					let { progress, estimate } = jsResponse;
+					let {
+						progress,
+						estimate
+					} = jsResponse;
 
 					let progressFract = progress["processed points"] / estimate.points;
 					let progressPercents = parseInt(progressFract * 100);
@@ -20054,7 +20923,9 @@ ENDSEC
 			this.viewer = viewer;
 			this.propertiesPanel = propertiesPanel;
 
-			this._update = () => { this.update(); };
+			this._update = () => {
+				this.update();
+			};
 
 			let copyIconPath = Potree.resourcePath + '/icons/copy.svg';
 			this.elContent = $(`
@@ -20095,8 +20966,9 @@ ENDSEC
 				Utils.clipboardCopy(msg);
 
 				this.viewer.postMessage(
-					`Copied value to clipboard: <br>'${msg}'`,
-					{ duration: 3000 });
+					`Copied value to clipboard: <br>'${msg}'`, {
+						duration: 3000
+					});
 			});
 
 			this.elCopyTarget = this.elContent.find("img[name=copyTarget]");
@@ -20106,8 +20978,9 @@ ENDSEC
 				Utils.clipboardCopy(msg);
 
 				this.viewer.postMessage(
-					`Copied value to clipboard: <br>'${msg}'`,
-					{ duration: 3000 });
+					`Copied value to clipboard: <br>'${msg}'`, {
+						duration: 3000
+					});
 			});
 
 			this.propertiesPanel.addVolatileListener(viewer, "camera_changed", this._update);
@@ -20338,12 +21211,16 @@ ENDSEC
 					min: 0,
 					max: 3,
 					step: 0.01,
-					slide: function (event, ui) { material.size = ui.value; }
+					slide: function (event, ui) {
+						material.size = ui.value;
+					}
 				});
 
 				let update = (e) => {
 					lblPointSize.html(material.size.toFixed(2));
-					sldPointSize.slider({ value: material.size });
+					sldPointSize.slider({
+						value: material.size
+					});
 				};
 				this.addVolatileListener(material, "point_size_changed", update);
 
@@ -20401,7 +21278,9 @@ ENDSEC
 
 				let update = (e) => {
 					lblOpacity.html(material.opacity.toFixed(2));
-					sldOpacity.slider({ value: material.opacity });
+					sldOpacity.slider({
+						value: material.opacity
+					});
 				};
 				this.addVolatileListener(material, "opacity_changed", update);
 
@@ -20474,7 +21353,9 @@ ENDSEC
 					}
 				};
 
-				attributeSelection.selectmenu({ change: updateMaterialPanel });
+				attributeSelection.selectmenu({
+					change: updateMaterialPanel
+				});
 
 				let update = () => {
 					attributeSelection.val(Utils.toMaterialName(material.pointColorType)).selectmenu('refresh');
@@ -20486,12 +21367,26 @@ ENDSEC
 			}
 
 			{
-				let schemes = [
-					{ name: "SPECTRAL", icon: `${Potree.resourcePath}/icons/gradients_spectral.png` },
-					{ name: "YELLOW_GREEN", icon: `${Potree.resourcePath}/icons/gradients_yellow_green.png` },
-					{ name: "PLASMA", icon: `${Potree.resourcePath}/icons/gradients_plasma.png` },
-					{ name: "GRAYSCALE", icon: `${Potree.resourcePath}/icons/gradients_grayscale.png` },
-					{ name: "RAINBOW", icon: `${Potree.resourcePath}/icons/gradients_rainbow.png` },
+				let schemes = [{
+						name: "SPECTRAL",
+						icon: `${Potree.resourcePath}/icons/gradients_spectral.png`
+					},
+					{
+						name: "YELLOW_GREEN",
+						icon: `${Potree.resourcePath}/icons/gradients_yellow_green.png`
+					},
+					{
+						name: "PLASMA",
+						icon: `${Potree.resourcePath}/icons/gradients_plasma.png`
+					},
+					{
+						name: "GRAYSCALE",
+						icon: `${Potree.resourcePath}/icons/gradients_grayscale.png`
+					},
+					{
+						name: "RAINBOW",
+						icon: `${Potree.resourcePath}/icons/gradients_rainbow.png`
+					},
 				];
 
 				let elSchemeContainer = panel.find("#elevation_gradient_scheme_selection");
@@ -20522,25 +21417,39 @@ ENDSEC
 			{
 				panel.find('#sldRGBGamma').slider({
 					value: material.rgbGamma,
-					min: 0, max: 4, step: 0.01,
-					slide: (event, ui) => { material.rgbGamma = ui.value; }
+					min: 0,
+					max: 4,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.rgbGamma = ui.value;
+					}
 				});
 
 				panel.find('#sldRGBContrast').slider({
 					value: material.rgbContrast,
-					min: -1, max: 1, step: 0.01,
-					slide: (event, ui) => { material.rgbContrast = ui.value; }
+					min: -1,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.rgbContrast = ui.value;
+					}
 				});
 
 				panel.find('#sldRGBBrightness').slider({
 					value: material.rgbBrightness,
-					min: -1, max: 1, step: 0.01,
-					slide: (event, ui) => { material.rgbBrightness = ui.value; }
+					min: -1,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.rgbBrightness = ui.value;
+					}
 				});
 
 				panel.find('#sldHeightRange').slider({
 					range: true,
-					min: 0, max: 1000, step: 0.01,
+					min: 0,
+					max: 1000,
+					step: 0.01,
 					values: [0, 1000],
 					slide: (event, ui) => {
 						material.heightMin = ui.values[0];
@@ -20550,7 +21459,9 @@ ENDSEC
 
 				panel.find('#sldIntensityRange').slider({
 					range: true,
-					min: 0, max: 1, step: 0.01,
+					min: 0,
+					max: 1,
+					step: 0.01,
 					values: [0, 1],
 					slide: (event, ui) => {
 						let min = (Number(ui.values[0]) === 0) ? 0 : parseInt(Math.pow(2, 16 * ui.values[0]));
@@ -20561,56 +21472,92 @@ ENDSEC
 
 				panel.find('#sldIntensityGamma').slider({
 					value: material.intensityGamma,
-					min: 0, max: 4, step: 0.01,
-					slide: (event, ui) => { material.intensityGamma = ui.value; }
+					min: 0,
+					max: 4,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.intensityGamma = ui.value;
+					}
 				});
 
 				panel.find('#sldIntensityContrast').slider({
 					value: material.intensityContrast,
-					min: -1, max: 1, step: 0.01,
-					slide: (event, ui) => { material.intensityContrast = ui.value; }
+					min: -1,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.intensityContrast = ui.value;
+					}
 				});
 
 				panel.find('#sldIntensityBrightness').slider({
 					value: material.intensityBrightness,
-					min: -1, max: 1, step: 0.01,
-					slide: (event, ui) => { material.intensityBrightness = ui.value; }
+					min: -1,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.intensityBrightness = ui.value;
+					}
 				});
 
 				panel.find('#sldWeightRGB').slider({
 					value: material.weightRGB,
-					min: 0, max: 1, step: 0.01,
-					slide: (event, ui) => { material.weightRGB = ui.value; }
+					min: 0,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.weightRGB = ui.value;
+					}
 				});
 
 				panel.find('#sldWeightIntensity').slider({
 					value: material.weightIntensity,
-					min: 0, max: 1, step: 0.01,
-					slide: (event, ui) => { material.weightIntensity = ui.value; }
+					min: 0,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.weightIntensity = ui.value;
+					}
 				});
 
 				panel.find('#sldWeightElevation').slider({
 					value: material.weightElevation,
-					min: 0, max: 1, step: 0.01,
-					slide: (event, ui) => { material.weightElevation = ui.value; }
+					min: 0,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.weightElevation = ui.value;
+					}
 				});
 
 				panel.find('#sldWeightClassification').slider({
 					value: material.weightClassification,
-					min: 0, max: 1, step: 0.01,
-					slide: (event, ui) => { material.weightClassification = ui.value; }
+					min: 0,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.weightClassification = ui.value;
+					}
 				});
 
 				panel.find('#sldWeightReturnNumber').slider({
 					value: material.weightReturnNumber,
-					min: 0, max: 1, step: 0.01,
-					slide: (event, ui) => { material.weightReturnNumber = ui.value; }
+					min: 0,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.weightReturnNumber = ui.value;
+					}
 				});
 
 				panel.find('#sldWeightSourceID').slider({
 					value: material.weightSourceID,
-					min: 0, max: 1, step: 0.01,
-					slide: (event, ui) => { material.weightSourceID = ui.value; }
+					min: 0,
+					max: 1,
+					step: 0.01,
+					slide: (event, ui) => {
+						material.weightSourceID = ui.value;
+					}
 				});
 
 				panel.find(`#materials\\.color\\.picker`).spectrum({
@@ -20651,7 +21598,11 @@ ENDSEC
 					let range = material.elevationRange;
 
 					panel.find('#lblHeightRange').html(`${range[0].toFixed(2)} to ${range[1].toFixed(2)}`);
-					panel.find('#sldHeightRang').slider({ min: bMin, max: bMax, values: range });
+					panel.find('#sldHeightRang').slider({
+						min: bMin,
+						max: bMax,
+						values: range
+					});
 				};
 
 				let updateIntensityRange = function () {
@@ -20659,7 +21610,9 @@ ENDSEC
 					let [min, max] = range.map(v => Math.log2(v) / 16);
 
 					panel.find('#lblIntensityRange').html(`${parseInt(range[0])} to ${parseInt(range[1])}`);
-					panel.find('#sldIntensityRange').slider({ values: [min, max] });
+					panel.find('#sldIntensityRange').slider({
+						values: [min, max]
+					});
 				};
 
 				{
@@ -20679,9 +21632,15 @@ ENDSEC
 					panel.find('#lblIntensityContrast').html(contrast.toFixed(2));
 					panel.find('#lblIntensityBrightness').html(brightness.toFixed(2));
 
-					panel.find('#sldIntensityGamma').slider({ value: gamma });
-					panel.find('#sldIntensityContrast').slider({ value: contrast });
-					panel.find('#sldIntensityBrightness').slider({ value: brightness });
+					panel.find('#sldIntensityGamma').slider({
+						value: gamma
+					});
+					panel.find('#sldIntensityContrast').slider({
+						value: contrast
+					});
+					panel.find('#sldIntensityBrightness').slider({
+						value: brightness
+					});
 				};
 
 				let onRGBChange = () => {
@@ -20693,9 +21652,15 @@ ENDSEC
 					panel.find('#lblRGBContrast').html(contrast.toFixed(2));
 					panel.find('#lblRGBBrightness').html(brightness.toFixed(2));
 
-					panel.find('#sldRGBGamma').slider({ value: gamma });
-					panel.find('#sldRGBContrast').slider({ value: contrast });
-					panel.find('#sldRGBBrightness').slider({ value: brightness });
+					panel.find('#sldRGBGamma').slider({
+						value: gamma
+					});
+					panel.find('#sldRGBContrast').slider({
+						value: contrast
+					});
+					panel.find('#sldRGBBrightness').slider({
+						value: brightness
+					});
 				};
 
 				this.addVolatileListener(material, "material_property_changed", updateHeightRange);
@@ -20714,13 +21679,27 @@ ENDSEC
 		setMeasurement(object) {
 
 			let TYPE = {
-				DISTANCE: { panel: DistancePanel },
-				AREA: { panel: AreaPanel },
-				POINT: { panel: PointPanel },
-				ANGLE: { panel: AnglePanel },
-				HEIGHT: { panel: HeightPanel },
-				PROFILE: { panel: ProfilePanel },
-				VOLUME: { panel: VolumePanel }
+				DISTANCE: {
+					panel: DistancePanel
+				},
+				AREA: {
+					panel: AreaPanel
+				},
+				POINT: {
+					panel: PointPanel
+				},
+				ANGLE: {
+					panel: AnglePanel
+				},
+				HEIGHT: {
+					panel: HeightPanel
+				},
+				PROFILE: {
+					panel: ProfilePanel
+				},
+				VOLUME: {
+					panel: VolumePanel
+				}
 			};
 
 			let getType = (measurement) => {
@@ -20800,7 +21779,9 @@ ENDSEC
 				if (e.drag.startHandled === undefined) {
 					e.drag.startHandled = true;
 
-					this.dispatchEvent({ type: 'start' });
+					this.dispatchEvent({
+						type: 'start'
+					});
 				}
 
 				let camStart = this.camStart;
@@ -20876,8 +21857,9 @@ ENDSEC
 					e.mouse,
 					this.scene.getActiveCamera(),
 					this.viewer,
-					this.scene.pointclouds,
-					{ pickClipped: false });
+					this.scene.pointclouds, {
+						pickClipped: false
+					});
 
 				if (I) {
 					this.pivot = I.location;
@@ -20888,7 +21870,9 @@ ENDSEC
 			};
 
 			let drop = e => {
-				this.dispatchEvent({ type: 'end' });
+				this.dispatchEvent({
+					type: 'end'
+				});
 			};
 
 			let onMouseUp = e => {
@@ -20935,8 +21919,7 @@ ENDSEC
 				return;
 			}
 
-			let targetRadius = 0;
-			{
+			let targetRadius = 0; {
 				let minimumJumpDistance = 0.2;
 
 				let domElement = this.renderer.domElement;
@@ -20957,8 +21940,12 @@ ENDSEC
 			let easing = TWEEN.Easing.Quartic.Out;
 
 			{ // animate
-				let value = { x: 0 };
-				let tween = new TWEEN.Tween(value).to({ x: 1 }, animationDuration);
+				let value = {
+					x: 0
+				};
+				let tween = new TWEEN.Tween(value).to({
+					x: 1
+				}, animationDuration);
 				tween.easing(easing);
 				this.tweens.push(tween);
 
@@ -21098,7 +22085,9 @@ ENDSEC
 				if (e.drag.startHandled === undefined) {
 					e.drag.startHandled = true;
 
-					this.dispatchEvent({ type: 'start' });
+					this.dispatchEvent({
+						type: 'start'
+					});
 				}
 
 				let moveSpeed = this.viewer.getMoveSpeed();
@@ -21118,7 +22107,9 @@ ENDSEC
 			};
 
 			let drop = e => {
-				this.dispatchEvent({ type: 'end' });
+				this.dispatchEvent({
+					type: 'end'
+				});
 			};
 
 			let scroll = (e) => {
@@ -21168,8 +22159,7 @@ ENDSEC
 				return;
 			}
 
-			let targetRadius = 0;
-			{
+			let targetRadius = 0; {
 				let minimumJumpDistance = 0.2;
 
 				let domElement = this.renderer.domElement;
@@ -21190,8 +22180,12 @@ ENDSEC
 			let easing = TWEEN.Easing.Quartic.Out;
 
 			{ // animate
-				let value = { x: 0 };
-				let tween = new TWEEN.Tween(value).to({ x: 1 }, animationDuration);
+				let value = {
+					x: 0
+				};
+				let tween = new TWEEN.Tween(value).to({
+					x: 1
+				}, animationDuration);
 				tween.easing(easing);
 				this.tweens.push(tween);
 
@@ -21223,9 +22217,10 @@ ENDSEC
 
 			{ // cancel move animations on user input
 				let changes = [this.yawDelta,
-				this.pitchDelta,
-				this.translationDelta.length(),
-				this.translationWorldDelta.length()];
+					this.pitchDelta,
+					this.translationDelta.length(),
+					this.translationWorldDelta.length()
+				];
 				let changeHappens = changes.some(e => Math.abs(e) > 0.001);
 				if (changeHappens && this.tweens.length > 0) {
 					this.tweens.forEach(e => e.stop());
@@ -21499,7 +22494,14 @@ ENDSEC
 		}
 
 		update() {
-			let { elLeft, elRight, elStretch, elInside, visibleRange, chosenRange } = this;
+			let {
+				elLeft,
+				elRight,
+				elStretch,
+				elInside,
+				visibleRange,
+				chosenRange
+			} = this;
 
 			let pixelWidth = this.elCore.clientWidth;
 
@@ -21718,7 +22720,9 @@ ENDSEC
 				Potree.resourcePath + '/icons/sphere_distances.svg',
 				'[title]tt.volume_measurement',
 				() => {
-					let volume = this.volumeTool.startInsertion({ type: SphereVolume });
+					let volume = this.volumeTool.startInsertion({
+						type: SphereVolume
+					});
 
 					let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
 					let jsonNode = measurementsRoot.children.find(child => child.data.uuid === volume.uuid);
@@ -21779,7 +22783,9 @@ ENDSEC
 					if (measurements.length > 0) {
 						let geoJson = GeoJSONExporter.toString(measurements);
 
-						let url = window.URL.createObjectURL(new Blob([geoJson], { type: 'data:application/octet-stream' }));
+						let url = window.URL.createObjectURL(new Blob([geoJson], {
+							type: 'data:application/octet-stream'
+						}));
 						elDownloadJSON.attr('href', url);
 					} else {
 						this.viewer.postError("no measurements to export");
@@ -21795,7 +22801,9 @@ ENDSEC
 					if (measurements.length > 0) {
 						let dxf = DXFExporter.toString(measurements);
 
-						let url = window.URL.createObjectURL(new Blob([dxf], { type: 'data:application/octet-stream' }));
+						let url = window.URL.createObjectURL(new Blob([dxf], {
+							type: 'data:application/octet-stream'
+						}));
 						elDownloadDXF.attr('href', url);
 					} else {
 						this.viewer.postError("no measurements to export");
@@ -21832,10 +22840,10 @@ ENDSEC
 
 			let createNode = (parent, text, icon, object) => {
 				let nodeID = tree.jstree('create_node', parent, {
-					"text": text,
-					"icon": icon,
-					"data": object
-				},
+						"text": text,
+						"icon": icon,
+						"data": object
+					},
 					"last", false, false);
 
 				if (object.visible) {
@@ -21847,10 +22855,22 @@ ENDSEC
 				return nodeID;
 			};
 
-			let pcID = tree.jstree('create_node', "#", { "text": "<b>Point Clouds</b>", "id": "pointclouds" }, "last", false, false);
-			let measurementID = tree.jstree('create_node', "#", { "text": "<b>Measurements</b>", "id": "measurements" }, "last", false, false);
-			let annotationsID = tree.jstree('create_node', "#", { "text": "<b>Annotations</b>", "id": "annotations" }, "last", false, false);
-			let otherID = tree.jstree('create_node', "#", { "text": "<b>Other</b>", "id": "other" }, "last", false, false);
+			let pcID = tree.jstree('create_node', "#", {
+				"text": "<b>Point Clouds</b>",
+				"id": "pointclouds"
+			}, "last", false, false);
+			let measurementID = tree.jstree('create_node', "#", {
+				"text": "<b>Measurements</b>",
+				"id": "measurements"
+			}, "last", false, false);
+			let annotationsID = tree.jstree('create_node', "#", {
+				"text": "<b>Annotations</b>",
+				"id": "annotations"
+			}, "last", false, false);
+			let otherID = tree.jstree('create_node', "#", {
+				"text": "<b>Other</b>",
+				"id": "other"
+			}, "last", false, false);
 
 			tree.jstree("check_node", pcID);
 			tree.jstree("check_node", measurementID);
@@ -22075,20 +23095,28 @@ ENDSEC
 			}
 
 			for (let pointcloud of this.viewer.scene.pointclouds) {
-				onPointCloudAdded({ pointcloud: pointcloud });
+				onPointCloudAdded({
+					pointcloud: pointcloud
+				});
 			}
 
 			for (let measurement of this.viewer.scene.measurements) {
-				onMeasurementAdded({ measurement: measurement });
+				onMeasurementAdded({
+					measurement: measurement
+				});
 			}
 
 			for (let volume of [...this.viewer.scene.volumes, ...this.viewer.scene.polygonClipVolumes]) {
-				onVolumeAdded({ volume: volume });
+				onVolumeAdded({
+					volume: volume
+				});
 			}
 
 
 			for (let profile of this.viewer.scene.profiles) {
-				onProfileAdded({ profile: profile });
+				onProfileAdded({
+					profile: profile
+				});
 			}
 
 			{
@@ -22128,7 +23156,9 @@ ENDSEC
 
 			{
 				let elClipTask = $("#cliptask_options");
-				elClipTask.selectgroup({ title: "Clip Task" });
+				elClipTask.selectgroup({
+					title: "Clip Task"
+				});
 
 				elClipTask.find("input").click((e) => {
 					this.viewer.setClipTask(ClipTask[e.target.value]);
@@ -22141,7 +23171,9 @@ ENDSEC
 
 			{
 				let elClipMethod = $("#clipmethod_options");
-				elClipMethod.selectgroup({ title: "Clip Method" });
+				elClipMethod.selectgroup({
+					title: "Clip Method"
+				});
 
 				elClipMethod.find("input").click((e) => {
 					this.viewer.setClipMethod(ClipMethod[e.target.value]);
@@ -22159,7 +23191,9 @@ ENDSEC
 				Potree.resourcePath + '/icons/clip_volume.svg',
 				'[title]tt.clip_volume',
 				() => {
-					let item = this.volumeTool.startInsertion({ clip: true });
+					let item = this.volumeTool.startInsertion({
+						clip: true
+					});
 
 					let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
 					let jsonNode = measurementsRoot.children.find(child => child.data.uuid === item.uuid);
@@ -22173,7 +23207,9 @@ ENDSEC
 				Potree.resourcePath + "/icons/clip-polygon.svg",
 				"[title]tt.clip_polygon",
 				() => {
-					let item = this.viewer.clippingTool.startInsertion({ type: "polygon" });
+					let item = this.viewer.clippingTool.startInsertion({
+						type: "polygon"
+					});
 
 					let measurementsRoot = $("#jstree_scene").jstree().get_json("measurements");
 					let jsonNode = measurementsRoot.children.find(child => child.data.uuid === item.uuid);
@@ -22182,7 +23218,7 @@ ENDSEC
 				}
 			));
 
-			{// SCREEN BOX SELECT
+			{ // SCREEN BOX SELECT
 				let boxSelectTool = new ScreenBoxSelectTool(this.viewer);
 
 				clippingToolBar.append(this.createToolIcon(
@@ -22190,8 +23226,9 @@ ENDSEC
 					"[title]tt.screen_clip_box",
 					() => {
 						if (!(this.viewer.scene.getActiveCamera() instanceof THREE.OrthographicCamera)) {
-							this.viewer.postMessage(`Switch to Orthographic Camera Mode before using the Screen-Box-Select tool.`,
-								{ duration: 2000 });
+							this.viewer.postMessage(`Switch to Orthographic Camera Mode before using the Screen-Box-Select tool.`, {
+								duration: 2000
+							});
 							return;
 						}
 
@@ -22234,7 +23271,9 @@ ENDSEC
 
 				sldReturnNumber.slider({
 					range: true,
-					min: 1, max: 7, step: 1,
+					min: 1,
+					max: 7,
+					step: 1,
 					values: [0, 7],
 					slide: (event, ui) => {
 						this.viewer.setFilterReturnNumberRange(ui.values[0], ui.values[1]);
@@ -22245,7 +23284,9 @@ ENDSEC
 					let [from, to] = this.viewer.filterReturnNumberRange;
 
 					lblReturnNumber[0].innerHTML = `${from} to ${to}`;
-					sldReturnNumber.slider({ values: [from, to] });
+					sldReturnNumber.slider({
+						values: [from, to]
+					});
 				};
 
 				this.viewer.addEventListener('filter_return_number_range_changed', onReturnNumberChanged);
@@ -22259,7 +23300,9 @@ ENDSEC
 
 				sldNumberOfReturns.slider({
 					range: true,
-					min: 1, max: 7, step: 1,
+					min: 1,
+					max: 7,
+					step: 1,
 					values: [0, 7],
 					slide: (event, ui) => {
 						this.viewer.setFilterNumberOfReturnsRange(ui.values[0], ui.values[1]);
@@ -22270,7 +23313,9 @@ ENDSEC
 					let [from, to] = this.viewer.filterNumberOfReturnsRange;
 
 					lblNumberOfReturns[0].innerHTML = `${from} to ${to}`;
-					sldNumberOfReturns.slider({ values: [from, to] });
+					sldNumberOfReturns.slider({
+						values: [from, to]
+					});
 				};
 
 				this.viewer.addEventListener('filter_number_of_returns_range_changed', onNumberOfReturnsChanged);
@@ -22414,7 +23459,9 @@ ENDSEC
 				min: 100 * 1000,
 				max: 10 * 1000 * 1000,
 				step: 1000,
-				slide: (event, ui) => { this.viewer.setPointBudget(ui.value); }
+				slide: (event, ui) => {
+					this.viewer.setPointBudget(ui.value);
+				}
 			});
 
 			$('#sldFOV').slider({
@@ -22422,7 +23469,9 @@ ENDSEC
 				min: 20,
 				max: 100,
 				step: 1,
-				slide: (event, ui) => { this.viewer.setFOV(ui.value); }
+				slide: (event, ui) => {
+					this.viewer.setFOV(ui.value);
+				}
 			});
 
 			$('#sldEDLRadius').slider({
@@ -22430,7 +23479,9 @@ ENDSEC
 				min: 1,
 				max: 4,
 				step: 0.01,
-				slide: (event, ui) => { this.viewer.setEDLRadius(ui.value); }
+				slide: (event, ui) => {
+					this.viewer.setEDLRadius(ui.value);
+				}
 			});
 
 			$('#sldEDLStrength').slider({
@@ -22438,27 +23489,37 @@ ENDSEC
 				min: 0,
 				max: 5,
 				step: 0.01,
-				slide: (event, ui) => { this.viewer.setEDLStrength(ui.value); }
+				slide: (event, ui) => {
+					this.viewer.setEDLStrength(ui.value);
+				}
 			});
 
 			this.viewer.addEventListener('point_budget_changed', (event) => {
 				$('#lblPointBudget')[0].innerHTML = Utils.addCommas(this.viewer.getPointBudget());
-				$('#sldPointBudget').slider({ value: this.viewer.getPointBudget() });
+				$('#sldPointBudget').slider({
+					value: this.viewer.getPointBudget()
+				});
 			});
 
 			this.viewer.addEventListener('fov_changed', (event) => {
 				$('#lblFOV')[0].innerHTML = parseInt(this.viewer.getFOV());
-				$('#sldFOV').slider({ value: this.viewer.getFOV() });
+				$('#sldFOV').slider({
+					value: this.viewer.getFOV()
+				});
 			});
 
 			this.viewer.addEventListener('edl_radius_changed', (event) => {
 				$('#lblEDLRadius')[0].innerHTML = this.viewer.getEDLRadius().toFixed(1);
-				$('#sldEDLRadius').slider({ value: this.viewer.getEDLRadius() });
+				$('#sldEDLRadius').slider({
+					value: this.viewer.getEDLRadius()
+				});
 			});
 
 			this.viewer.addEventListener('edl_strength_changed', (event) => {
 				$('#lblEDLStrength')[0].innerHTML = this.viewer.getEDLStrength().toFixed(1);
-				$('#sldEDLStrength').slider({ value: this.viewer.getEDLStrength() });
+				$('#sldEDLStrength').slider({
+					value: this.viewer.getEDLStrength()
+				});
 			});
 
 			this.viewer.addEventListener('background_changed', (event) => {
@@ -22470,8 +23531,7 @@ ENDSEC
 			$('#lblFOV')[0].innerHTML = parseInt(this.viewer.getFOV());
 			$('#lblEDLRadius')[0].innerHTML = this.viewer.getEDLRadius().toFixed(1);
 			$('#lblEDLStrength')[0].innerHTML = this.viewer.getEDLStrength().toFixed(1);
-			$('#chkEDLEnabled')[0].checked = this.viewer.getEDLEnabled();
-			{
+			$('#chkEDLEnabled')[0].checked = this.viewer.getEDLEnabled(); {
 				let elBackground = $(`#background_options`);
 				elBackground.selectgroup();
 
@@ -22497,7 +23557,9 @@ ENDSEC
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + '/icons/earth_controls_1.png',
 				'[title]tt.earth_control',
-				() => { this.viewer.setNavigationMode(EarthControls); }
+				() => {
+					this.viewer.setNavigationMode(EarthControls);
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
@@ -22521,13 +23583,17 @@ ENDSEC
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + '/icons/orbit_controls.svg',
 				'[title]tt.orbit_control',
-				() => { this.viewer.setNavigationMode(OrbitControls); }
+				() => {
+					this.viewer.setNavigationMode(OrbitControls);
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + '/icons/focus.svg',
 				'[title]tt.focus_control',
-				() => { this.viewer.fitToScreen(); }
+				() => {
+					this.viewer.fitToScreen();
+				}
 			));
 
 
@@ -22535,7 +23601,9 @@ ENDSEC
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/navigation_cube.svg",
 				"[title]tt.navigation_cube_control",
-				() => { this.viewer.toggleNavigationCube(); }
+				() => {
+					this.viewer.toggleNavigationCube();
+				}
 			));
 
 			elNavigation.append("<br>");
@@ -22544,37 +23612,49 @@ ENDSEC
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/left.svg",
 				"[title]tt.left_view_control",
-				() => { this.viewer.setLeftView(); }
+				() => {
+					this.viewer.setLeftView();
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/right.svg",
 				"[title]tt.right_view_control",
-				() => { this.viewer.setRightView(); }
+				() => {
+					this.viewer.setRightView();
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/front.svg",
 				"[title]tt.front_view_control",
-				() => { this.viewer.setFrontView(); }
+				() => {
+					this.viewer.setFrontView();
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/back.svg",
 				"[title]tt.back_view_control",
-				() => { this.viewer.setBackView(); }
+				() => {
+					this.viewer.setBackView();
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/top.svg",
 				"[title]tt.top_view_control",
-				() => { this.viewer.setTopView(); }
+				() => {
+					this.viewer.setTopView();
+				}
 			));
 
 			elNavigation.append(this.createToolIcon(
 				Potree.resourcePath + "/icons/bottom.svg",
 				"[title]tt.bottom_view_control",
-				() => { this.viewer.setBottomView(); }
+				() => {
+					this.viewer.setBottomView();
+				}
 			));
 
 
@@ -22588,7 +23668,9 @@ ENDSEC
 			</selectgroup>
 		`);
 			elNavigation.append(elCameraProjection);
-			elCameraProjection.selectgroup({ title: "Camera Projection" });
+			elCameraProjection.selectgroup({
+				title: "Camera Projection"
+			});
 			elCameraProjection.find("input").click((e) => {
 				this.viewer.setCameraMode(CameraMode[e.target.value]);
 			});
@@ -22611,12 +23693,16 @@ ENDSEC
 				min: 0,
 				max: 1,
 				step: 0.01,
-				slide: (event, ui) => { this.viewer.setMoveSpeed(toLinearSpeed(ui.value)); }
+				slide: (event, ui) => {
+					this.viewer.setMoveSpeed(toLinearSpeed(ui.value));
+				}
 			});
 
 			this.viewer.addEventListener('move_speed_changed', (event) => {
 				lblMoveSpeed.html(this.viewer.getMoveSpeed().toFixed(1));
-				sldMoveSpeed.slider({ value: toExpSpeed(this.viewer.getMoveSpeed()) });
+				sldMoveSpeed.slider({
+					value: toExpSpeed(this.viewer.getMoveSpeed())
+				});
 			});
 
 			lblMoveSpeed.html(this.viewer.getMoveSpeed().toFixed(1));
@@ -22631,19 +23717,25 @@ ENDSEC
 					min: 0,
 					max: 1000,
 					step: 0.01,
-					slide: (event, ui) => { this.viewer.setMinNodeSize(ui.value); }
+					slide: (event, ui) => {
+						this.viewer.setMinNodeSize(ui.value);
+					}
 				});
 
 				this.viewer.addEventListener('minnodesize_changed', (event) => {
 					$('#lblMinNodeSize').html(parseInt(this.viewer.getMinNodeSize()));
-					$('#sldMinNodeSize').slider({ value: this.viewer.getMinNodeSize() });
+					$('#sldMinNodeSize').slider({
+						value: this.viewer.getMinNodeSize()
+					});
 				});
 				$('#lblMinNodeSize').html(parseInt(this.viewer.getMinNodeSize()));
 			}
 
 			{
 				let elSplatQuality = $("#splat_quality_options");
-				elSplatQuality.selectgroup({ title: "Splat Quality" });
+				elSplatQuality.selectgroup({
+					title: "Splat Quality"
+				});
 
 				elSplatQuality.find("input").click((e) => {
 					if (e.target.value === "standard") {
@@ -22707,7 +23799,9 @@ ENDSEC
 				this.domElement.tabIndex = 2222;
 			}
 
-			this.domElement.addEventListener('contextmenu', (event) => { event.preventDefault(); }, false);
+			this.domElement.addEventListener('contextmenu', (event) => {
+				event.preventDefault();
+			}, false);
 			this.domElement.addEventListener('click', this.onMouseClick.bind(this), false);
 			this.domElement.addEventListener('mousedown', this.onMouseDown.bind(this), false);
 			this.domElement.addEventListener('mouseup', this.onMouseUp.bind(this), false);
@@ -22920,7 +24014,9 @@ ENDSEC
 			e.preventDefault();
 
 			let consumed = false;
-			let consume = () => { return consumed = true; };
+			let consume = () => {
+				return consumed = true;
+			};
 			if (this.hoveredElements.length === 0) {
 				for (let inputListener of this.getSortedListeners()) {
 					inputListener.dispatchEvent({
@@ -22952,7 +24048,9 @@ ENDSEC
 						el.object._listeners['drag'].length > 0));
 
 				if (target) {
-					this.startDragging(target.object, { location: target.point });
+					this.startDragging(target.object, {
+						location: target.point
+					});
 				} else {
 					this.startDragging(null);
 				}
@@ -22972,7 +24070,9 @@ ENDSEC
 
 
 			let consumed = false;
-			let consume = () => { return consumed = true; };
+			let consume = () => {
+				return consumed = true;
+			};
 			if (this.hoveredElements.length === 0) {
 				for (let inputListener of this.getSortedListeners()) {
 					inputListener.dispatchEvent({
@@ -23103,7 +24203,9 @@ ENDSEC
 							type: 'drag',
 							drag: this.drag,
 							viewer: this.viewer,
-							consume: () => { dragConsumed = true; }
+							consume: () => {
+								dragConsumed = true;
+							}
 						});
 
 						if (dragConsumed) {
@@ -23423,15 +24525,20 @@ ENDSEC
 								pin_image.style.right = "-302px";
 
 								let person_name = document.getElementById("Name");
-								person_name.innerHTML = pin_objects[i].person_name;
+								let person_surname = document.getElementById("Surname");
+								let full_name = pin_objects[i].person_name;
+								let firstname = full_name.split(' ')[0];
+								let surname = full_name.split(' ')[1];
+								person_name.innerHTML = firstname;
+								person_surname.innerHTML = surname;
+
 
 								hovered_object.object.parent.children[0].visible = true;
 								hovered_object.object.parent.children[1].visible = false;
 								hovered_object.object.parent.children[0].material.color = new THREE.Color(100, 11, 1);
-							}
-							else {
+							} else {
 
-								pin_image.style.right = "0px";
+								pin_image.style.right = "10px";
 
 
 							}
@@ -23515,8 +24622,7 @@ ENDSEC
 			this.scene = scene;
 		}
 
-		update(delta) {
-		}
+		update(delta) {}
 
 		getNormalizedDrag() {
 			if (!this.drag) {
@@ -23546,7 +24652,8 @@ ENDSEC
 	}
 
 
-	var mouse_down_detector, hovered_object, pin_was_hovered = false, pin_was_clicked = false;
+	var mouse_down_detector, hovered_object, pin_was_hovered = false,
+		pin_was_clicked = false;
 
 
 
@@ -23784,7 +24891,7 @@ ENDSEC
 					}
 				}
 
-				this.pointCloudLoadedCallback = args.onPointCloudLoaded || function () { };
+				this.pointCloudLoadedCallback = args.onPointCloudLoaded || function () {};
 
 				// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				//	defaultSettings.navigation = "Orbit";
@@ -23801,25 +24908,64 @@ ENDSEC
 				this.edlRadius = 1.4;
 				this.useEDL = false;
 				this.classifications = {
-					0: { visible: true, name: 'never classified' },
-					1: { visible: true, name: 'unclassified' },
-					2: { visible: true, name: 'ground' },
-					3: { visible: true, name: 'low vegetation' },
-					4: { visible: true, name: 'medium vegetation' },
-					5: { visible: true, name: 'high vegetation' },
-					6: { visible: true, name: 'building' },
-					7: { visible: true, name: 'low point(noise)' },
-					8: { visible: true, name: 'key-point' },
-					9: { visible: true, name: 'water' },
-					12: { visible: true, name: 'overlap' }
+					0: {
+						visible: true,
+						name: 'never classified'
+					},
+					1: {
+						visible: true,
+						name: 'unclassified'
+					},
+					2: {
+						visible: true,
+						name: 'ground'
+					},
+					3: {
+						visible: true,
+						name: 'low vegetation'
+					},
+					4: {
+						visible: true,
+						name: 'medium vegetation'
+					},
+					5: {
+						visible: true,
+						name: 'high vegetation'
+					},
+					6: {
+						visible: true,
+						name: 'building'
+					},
+					7: {
+						visible: true,
+						name: 'low point(noise)'
+					},
+					8: {
+						visible: true,
+						name: 'key-point'
+					},
+					9: {
+						visible: true,
+						name: 'water'
+					},
+					12: {
+						visible: true,
+						name: 'overlap'
+					}
 				};
 
 				this.moveSpeed = 10;
 
 				this.LENGTH_UNITS = {
-					METER: { code: 'm' },
-					FEET: { code: 'ft' },
-					INCH: { code: '\u2033' }
+					METER: {
+						code: 'm'
+					},
+					FEET: {
+						code: 'ft'
+					},
+					INCH: {
+						code: '\u2033'
+					}
 				};
 				this.lengthUnit = this.LENGTH_UNITS.METER;
 
@@ -24084,7 +25230,10 @@ ENDSEC
 		setMinNodeSize(value) {
 			if (this.minNodeSize !== value) {
 				this.minNodeSize = value;
-				this.dispatchEvent({ 'type': 'minnodesize_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'minnodesize_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24102,7 +25251,10 @@ ENDSEC
 			}
 
 			this.background = bg;
-			this.dispatchEvent({ 'type': 'background_changed', 'viewer': this });
+			this.dispatchEvent({
+				'type': 'background_changed',
+				'viewer': this
+			});
 		}
 
 		setDescription(value) {
@@ -24116,7 +25268,10 @@ ENDSEC
 		setShowBoundingBox(value) {
 			if (this.showBoundingBox !== value) {
 				this.showBoundingBox = value;
-				this.dispatchEvent({ 'type': 'show_boundingbox_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'show_boundingbox_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24127,7 +25282,11 @@ ENDSEC
 		setMoveSpeed(value) {
 			if (this.moveSpeed !== value) {
 				this.moveSpeed = value;
-				this.dispatchEvent({ 'type': 'move_speed_changed', 'viewer': this, 'speed': value });
+				this.dispatchEvent({
+					'type': 'move_speed_changed',
+					'viewer': this,
+					'speed': value
+				});
 			}
 		};
 
@@ -24138,7 +25297,10 @@ ENDSEC
 		setWeightClassification(w) {
 			for (let i = 0; i < this.scene.pointclouds.length; i++) {
 				this.scene.pointclouds[i].material.weightClassification = w;
-				this.dispatchEvent({ 'type': 'attribute_weights_changed' + i, 'viewer': this });
+				this.dispatchEvent({
+					'type': 'attribute_weights_changed' + i,
+					'viewer': this
+				});
 			}
 		};
 
@@ -24146,7 +25308,10 @@ ENDSEC
 			value = Boolean(value);
 			if (this.freeze !== value) {
 				this.freeze = value;
-				this.dispatchEvent({ 'type': 'freeze_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'freeze_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24189,7 +25354,10 @@ ENDSEC
 		setPointBudget(value) {
 			if (Potree.pointBudget !== value) {
 				Potree.pointBudget = parseInt(value);
-				this.dispatchEvent({ 'type': 'point_budget_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'point_budget_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24200,7 +25368,10 @@ ENDSEC
 		setShowAnnotations(value) {
 			if (this.showAnnotations !== value) {
 				this.showAnnotations = value;
-				this.dispatchEvent({ 'type': 'show_annotations_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'show_annotations_changed',
+					'viewer': this
+				});
 			}
 		}
 
@@ -24211,7 +25382,10 @@ ENDSEC
 		setDEMCollisionsEnabled(value) {
 			if (this.useDEMCollisions !== value) {
 				this.useDEMCollisions = value;
-				this.dispatchEvent({ 'type': 'use_demcollisions_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'use_demcollisions_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24223,7 +25397,10 @@ ENDSEC
 			value = Boolean(value);
 			if (this.useEDL !== value) {
 				this.useEDL = value;
-				this.dispatchEvent({ 'type': 'use_edl_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'use_edl_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24234,7 +25411,10 @@ ENDSEC
 		setEDLRadius(value) {
 			if (this.edlRadius !== value) {
 				this.edlRadius = value;
-				this.dispatchEvent({ 'type': 'edl_radius_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'edl_radius_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24245,7 +25425,10 @@ ENDSEC
 		setEDLStrength(value) {
 			if (this.edlStrength !== value) {
 				this.edlStrength = value;
-				this.dispatchEvent({ 'type': 'edl_strength_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'edl_strength_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24256,7 +25439,10 @@ ENDSEC
 		setFOV(value) {
 			if (this.fov !== value) {
 				this.fov = value;
-				this.dispatchEvent({ 'type': 'fov_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'fov_changed',
+					'viewer': this
+				});
 			}
 		};
 
@@ -24282,32 +25468,53 @@ ENDSEC
 
 		setClassificationVisibility(key, value) {
 			if (!this.classifications[key]) {
-				this.classifications[key] = { visible: value, name: 'no name' };
-				this.dispatchEvent({ 'type': 'classification_visibility_changed', 'viewer': this });
+				this.classifications[key] = {
+					visible: value,
+					name: 'no name'
+				};
+				this.dispatchEvent({
+					'type': 'classification_visibility_changed',
+					'viewer': this
+				});
 			} else if (this.classifications[key].visible !== value) {
 				this.classifications[key].visible = value;
-				this.dispatchEvent({ 'type': 'classification_visibility_changed', 'viewer': this });
+				this.dispatchEvent({
+					'type': 'classification_visibility_changed',
+					'viewer': this
+				});
 			}
 		};
 
 		setFilterReturnNumberRange(from, to) {
 			this.filterReturnNumberRange = [from, to];
-			this.dispatchEvent({ 'type': 'filter_return_number_range_changed', 'viewer': this });
+			this.dispatchEvent({
+				'type': 'filter_return_number_range_changed',
+				'viewer': this
+			});
 		}
 
 		setFilterNumberOfReturnsRange(from, to) {
 			this.filterNumberOfReturnsRange = [from, to];
-			this.dispatchEvent({ 'type': 'filter_number_of_returns_range_changed', 'viewer': this });
+			this.dispatchEvent({
+				'type': 'filter_number_of_returns_range_changed',
+				'viewer': this
+			});
 		}
 
 		setFilterGPSTimeRange(from, to) {
 			this.filterGPSTimeRange = [from, to];
-			this.dispatchEvent({ 'type': 'filter_gps_time_range_changed', 'viewer': this });
+			this.dispatchEvent({
+				'type': 'filter_gps_time_range_changed',
+				'viewer': this
+			});
 		}
 
 		setFilterGPSTimeExtent(from, to) {
 			this.filterGPSTimeExtent = [from, to];
-			this.dispatchEvent({ 'type': 'filter_gps_time_extent_changed', 'viewer': this });
+			this.dispatchEvent({
+				'type': 'filter_gps_time_extent_changed',
+				'viewer': this
+			});
 		}
 
 		setLengthUnit(value) {
@@ -24323,7 +25530,11 @@ ENDSEC
 					break;
 			}
 
-			this.dispatchEvent({ 'type': 'length_unit_changed', 'viewer': this, value: value });
+			this.dispatchEvent({
+				'type': 'length_unit_changed',
+				'viewer': this,
+				value: value
+			});
 		}
 
 		zoomTo(node, factor, animationDuration = 0) {
@@ -24379,10 +25590,16 @@ ENDSEC
 				});
 				tween.onComplete(() => {
 					view.lookAt(target);
-					this.dispatchEvent({ type: 'focusing_finished', target: this });
+					this.dispatchEvent({
+						type: 'focusing_finished',
+						target: this
+					});
 				});
 
-				this.dispatchEvent({ type: 'focusing_started', target: this });
+				this.dispatchEvent({
+					type: 'focusing_started',
+					target: this
+				});
 				tween.start();
 			}
 		};
@@ -24688,7 +25905,9 @@ ENDSEC
 				let imgMapToggle = document.createElement('img');
 				imgMapToggle.src = new URL(Potree.resourcePath + '/icons/map_icon.png').href;
 				imgMapToggle.style.display = 'none';
-				imgMapToggle.onclick = e => { this.toggleMap(); };
+				imgMapToggle.onclick = e => {
+					this.toggleMap();
+				};
 				imgMapToggle.id = 'potree_map_toggle';
 
 				viewer.renderArea.insertBefore(imgMapToggle, viewer.renderArea.children[0]);
@@ -25244,7 +26463,11 @@ ENDSEC
 					box.updateMatrixWorld();
 					let boxInverse = new THREE.Matrix4().getInverse(box.matrixWorld);
 					let boxPosition = box.getWorldPosition(new THREE.Vector3());
-					return { box: box, inverse: boxInverse, position: boxPosition };
+					return {
+						box: box,
+						inverse: boxInverse,
+						position: boxPosition
+					};
 				});
 
 				let clipPolygons = this.scene.polygonClipVolumes.filter(vol => vol.initialized);
@@ -25415,7 +26638,11 @@ ENDSEC
 					for (let [key, value] of glQueries) {
 
 						let group = {
-							measures: value.map(v => { return { duration: v } }),
+							measures: value.map(v => {
+								return {
+									duration: v
+								}
+							}),
 							sum: value.reduce((a, i) => a + i, 0),
 							n: value.length,
 							min: Math.min(...value),
@@ -25445,11 +26672,11 @@ ENDSEC
 					let cmax = 10;
 					let csam = 6;
 
-					let message = ` ${"NAME".padEnd(cn)} |`
-						+ ` ${"MIN".padStart(cmin)} |`
-						+ ` ${"MEDIAN".padStart(cmed)} |`
-						+ ` ${"MAX".padStart(cmax)} |`
-						+ ` ${"SAMPLES".padStart(csam)} \n`;
+					let message = ` ${"NAME".padEnd(cn)} |` +
+						` ${"MIN".padStart(cmin)} |` +
+						` ${"MEDIAN".padStart(cmed)} |` +
+						` ${"MAX".padStart(cmax)} |` +
+						` ${"SAMPLES".padStart(csam)} \n`;
 					message += ` ${"-".repeat(message.length)}\n`;
 
 					names = Array.from(names).sort();
@@ -25460,11 +26687,11 @@ ENDSEC
 						let max = group.max.toFixed(3);
 						let n = group.n;
 
-						message += ` ${name.padEnd(cn)} |`
-							+ ` ${min.padStart(cmin)} |`
-							+ ` ${median.padStart(cmed)} |`
-							+ ` ${max.padStart(cmax)} |`
-							+ ` ${n.toString().padStart(csam)}\n`;
+						message += ` ${name.padEnd(cn)} |` +
+							` ${min.padStart(cmin)} |` +
+							` ${median.padStart(cmed)} |` +
+							` ${max.padStart(cmax)} |` +
+							` ${n.toString().padStart(csam)}\n`;
 					}
 					message += `\n`;
 					console.log(message);
@@ -25648,7 +26875,10 @@ ENDSEC
 	function loadPointCloud(path, name, callback) {
 		let loaded = function (pointcloud) {
 			pointcloud.name = name;
-			callback({ type: 'pointcloud_loaded', pointcloud: pointcloud });
+			callback({
+				type: 'pointcloud_loaded',
+				pointcloud: pointcloud
+			});
 		};
 
 		// load pointcloud
@@ -25851,7 +27081,9 @@ ENDSEC
 	exports.Viewer = Viewer;
 	exports.Scene = Scene;
 
-	Object.defineProperty(exports, '__esModule', { value: true });
+	Object.defineProperty(exports, '__esModule', {
+		value: true
+	});
 
 })));
 //# sourceMappingURL=potree.js.map
