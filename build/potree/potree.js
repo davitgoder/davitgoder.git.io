@@ -24423,7 +24423,7 @@ ENDSEC
 
 			//some_function();
 
-
+			
 
 
 
@@ -24433,7 +24433,7 @@ ENDSEC
 			document.addEventListener('mousedown', (event) => {
 				mouse_down_detector = true;
 				if (pin_image.style.right == "0px") {
-					pin_image.style.right = "-302px";
+					pin_image.style.right = "10px";
 				}
 			});
 
@@ -24528,7 +24528,7 @@ ENDSEC
 								let person_surname = document.getElementById("Surname");
 								let full_name = pin_objects[i].person_name;
 								let firstname = full_name.split(' ')[0];
-								let surname = full_name.split(' ')[1];
+								let surname = full_name.split(' ')[1] + ' '+full_name.split(' ')[2];
 								person_name.innerHTML = firstname;
 								person_surname.innerHTML = surname;
 
