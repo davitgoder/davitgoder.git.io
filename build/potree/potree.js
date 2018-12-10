@@ -16278,29 +16278,26 @@ void main() {
 
 
 			// render skybox
-
-			viewer.renderer.setClearColor(0xFFFFFF, 1);
-			viewer.renderer.clear(true, true, false);
-			// if (viewer.background === "skybox") {
-			// 	viewer.renderer.clear(true, true, false);
-			// 	viewer.skybox.camera.rotation.copy(viewer.scene.cameraP.rotation);
-			// 	viewer.skybox.camera.fov = viewer.scene.cameraP.fov;
-			// 	viewer.skybox.camera.aspect = viewer.scene.cameraP.aspect;
-			// 	viewer.skybox.camera.updateProjectionMatrix();
-			// 	viewer.renderer.render(viewer.skybox.scene, viewer.skybox.camera);
-			// } else if (viewer.background === "gradient") {
-			// 	viewer.renderer.clear(true, true, false);
-			// 	viewer.renderer.render(viewer.scene.sceneBG, viewer.scene.cameraBG);
-			// } else if (viewer.background === "black") {
-			// 	viewer.renderer.setClearColor(0x000000, 1);
-			// 	viewer.renderer.clear(true, true, false);
-			// } else if (viewer.background === "white") {
-			// 	viewer.renderer.setClearColor(0xFFFFFF, 1);
-			// 	viewer.renderer.clear(true, true, false);
-			// } else {
-			// 	viewer.renderer.setClearColor(0x000000, 0);
-			// 	viewer.renderer.clear(true, true, false);
-			// }
+			if (viewer.background === "skybox") {
+				viewer.renderer.clear(true, true, false);
+				viewer.skybox.camera.rotation.copy(viewer.scene.cameraP.rotation);
+				viewer.skybox.camera.fov = viewer.scene.cameraP.fov;
+				viewer.skybox.camera.aspect = viewer.scene.cameraP.aspect;
+				viewer.skybox.camera.updateProjectionMatrix();
+				viewer.renderer.render(viewer.skybox.scene, viewer.skybox.camera);
+			} else if (viewer.background === "gradient") {
+				viewer.renderer.clear(true, true, false);
+				viewer.renderer.render(viewer.scene.sceneBG, viewer.scene.cameraBG);
+			} else if (viewer.background === "black") {
+				viewer.renderer.setClearColor(0x000000, 1);
+				viewer.renderer.clear(true, true, false);
+			} else if (viewer.background === "white") {
+				viewer.renderer.setClearColor(0xFFFFFF, 1);
+				viewer.renderer.clear(true, true, false);
+			} else {
+				viewer.renderer.setClearColor(0x000000, 0);
+				viewer.renderer.clear(true, true, false);
+			}
 
 			for (let pointcloud of this.viewer.scene.pointclouds) {
 				pointcloud.material.useEDL = false;
