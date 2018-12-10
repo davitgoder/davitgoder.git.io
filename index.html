@@ -140,13 +140,14 @@
 
 			<div class="current_image" style="display:flex;align-items:flex-stsart;position:relative; ">
 				<img id='tree_image' src='resources/images/4.png' alt='image' width="170" height="170" left: 50; top: -72px; />
-				<img id='tree_image' src='resources/images/rightbachground.png' alt='image' width="180" height="170" left: 50; top: -72px; />
+				<img id='tree_image' src='resources/images/rightbachground.png' alt='image' width="180" height="170" left: 50; top:
+				 -72px; />
 				<!-- <img style="position: absolute;left:57%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/circle.png'
 				 alt='image' width="80" height="80" left: 50; top: -80px; /> -->
 
 				<img style="position: absolute;left:85%;top:30%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.jpg'
 				 alt='image' width="90" height="50" left: 50; top: -80px; />
-				 
+
 
 
 				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
@@ -181,8 +182,12 @@
 				let search_word = input.value;
 
 				//for testing
+
+
+
 				for (let i = 0; i < pin_objects.length; i++) {
-					if (search_word == pin_objects[i].person_name) { // pick any tree 
+
+					if ( (search_word + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
 
 						this.go_to_tree(pin_objects[i]);
 						return;
@@ -245,7 +250,7 @@
 
 				tree_obj.mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1);
 
-			
+
 
 
 
@@ -253,7 +258,7 @@
 				let person_surname = document.getElementById("Surname");
 				let full_name = tree_obj.person_name;
 				let firstname = full_name.split(' ')[0];
-				let surname = full_name.split(' ')[1] + ' '+full_name.split(' ')[2];
+				let surname = full_name.split(' ')[1] + ' ' + full_name.split(' ')[2];
 				person_name.innerHTML = firstname;
 				person_surname.innerHTML = surname;
 
@@ -362,7 +367,7 @@
 			// viewer.setPointBudget(1 * 100000);
 			// viewer.loadSettingsFromURL();
 
-		//	viewer.setDescription(" <a target='_blank' href='https://www.treepex.org/'>Developed by TreePex</a>");
+			//	viewer.setDescription(" <a target='_blank' href='https://www.treepex.org/'>Developed by TreePex</a>");
 
 			// menue_block
 			viewer.loadGUI(() => {
