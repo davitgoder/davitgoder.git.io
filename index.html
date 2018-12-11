@@ -138,12 +138,30 @@
 			 data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavitgoder.github.io%2Fdavitgoder.git.io%2F&amp;src=sdkpreparse"
 				 class="fb-xfbml-parse-ignore">გაზიარება</a></div>
 
+
+
+
 			<div class="current_image" style="display:flex;align-items:flex-stsart;position:relative; ">
+				<img id='tree_image' src='resources/images/4.png' alt='image' width="160" height="170" left: 50; top: -72px; />
+				<img id='tree_image' src='resources/images/rightbachground.png' alt='image' width="160" height="170" left: 50; top: -72px; />
+				<img style="position: absolute;left:53%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/circle.png'
+				 alt='image' width="80" height="80" left: 50; top: -80px; />
+				<img style="position: absolute;left:53%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/Treepex.png'
+				 alt='image' width="80" height="80" left: 50; top: -80px; />
+				<img style="position: absolute;left:79%;top:15%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.png'
+				 alt='image' width="90" height="50" left: 50; top: -80px; />
+				<img style="position: absolute;left:80%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/text.png'
+				 alt='image' width="100" height="50" left: 50; top: -20px; />
+				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
+					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
+				</p>
+			</div>
+
+			<!-- <div class="current_image" style="display:flex;align-items:flex-stsart;position:relative; ">
 				<img id='tree_image' src='resources/images/4.png' alt='image' width="170" height="170" left: 50; top: -72px; />
 				<img id='tree_image' src='resources/images/rightbachground.png' alt='image' width="180" height="170" left: 50; top:
 				 -72px; />
-				<!-- <img style="position: absolute;left:57%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/circle.png'
-				 alt='image' width="80" height="80" left: 50; top: -80px; /> -->
+
 
 				<img style="position: absolute;left:85%;top:30%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.jpg'
 				 alt='image' width="90" height="50" left: 50; top: -80px; />
@@ -152,11 +170,11 @@
 
 				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
 					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
-					<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
+
 				</p>
-				<!-- <div id="Name" style="position: relative; width: 100%; height: 100%; left: 200px; top: -100px; padding-right: 500px"></div> -->
-				<div id="Date" style="position: relative; width: 100%; height: 100%; left: 180px; top: -134px;"></div>
-			</div>
+
+				<div id="Date" style="position: relative; width: 100%; height: 100%; left: 180px; top: -134px;"></div> -->
+		</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
@@ -187,7 +205,7 @@
 
 				for (let i = 0; i < pin_objects.length; i++) {
 
-					if ( (search_word + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
+					if ((search_word + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
 
 						this.go_to_tree(pin_objects[i]);
 						return;
