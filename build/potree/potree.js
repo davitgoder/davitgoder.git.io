@@ -16274,9 +16274,9 @@ void main() {
 			});
 
 
-
+			//_goder background color
 			viewer.renderer.clear(true, true, false);
-				viewer.renderer.render(viewer.scene.sceneBG, viewer.scene.cameraBG);
+			viewer.renderer.render(viewer.scene.sceneBG, viewer.scene.cameraBG);
 
 
 			// render skybox
@@ -24425,7 +24425,7 @@ ENDSEC
 
 			//some_function();
 
-			
+
 
 
 
@@ -24530,7 +24530,7 @@ ENDSEC
 								let person_surname = document.getElementById("Surname");
 								let full_name = pin_objects[i].person_name;
 								let firstname = full_name.split(' ')[0];
-								let surname = full_name.split(' ')[1] + ' '+full_name.split(' ')[2];
+								let surname = full_name.split(' ')[1] + ' ' + full_name.split(' ')[2];
 								person_name.innerHTML = firstname;
 								person_surname.innerHTML = surname;
 
