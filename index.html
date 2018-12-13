@@ -3,7 +3,7 @@
 
 <head>
 
-	
+
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -57,30 +57,7 @@
 
 			});
 
-
-					// FB.api('/me', function (response) {
-					// fbinfo = new Array();
-					// fbinfo[0] = response.id;
-					// fbinfo[1] = response.first_name;
-					// fbinfo[2] = response.last_name;
-					// fbinfo[3] = response.email;
-
-					// var im =  "http://graph.facebook.com/" + response.id +
-					// 	"/picture?type=normal";
-
-					// 	console.log("im:    ",im);
-
-// document.getElementById("profileImage").setAttribute("src", "http://graph.facebook.com/" + response.id +
-// 						"/picture?type=normal");
-
-				
-
-
 			FB.AppEvents.logPageView();
-
-	
-
-
 			
 		};
 
@@ -172,10 +149,10 @@
 				 alt='image' width="80" height="80" left: 50; top: -80px; />
 				<img style="position: absolute;left:53%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/treepex.png'
 				 alt='image' width="80" height="80" left: 50; top: -80px; />
-				<img style="position: absolute;left:79%;top:15%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.png'
-				 alt='image' width="90" height="50" left: 50; top: -80px; />
-				<img style="position: absolute;left:80%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/text.png'
-				 alt='image' width="100" height="50" left: 50; top: -20px; />
+				<!-- <img style="position: absolute;left:79%;top:15%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.png'
+				 alt='image' width="90" height="50" left: 50; top: -80px; /> -->
+				<!-- <img style="position: absolute;left:80%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/text.png'
+				 alt='image' width="100" height="50" left: 50; top: -20px; /> -->
 				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
 					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
 				</p>
@@ -212,6 +189,7 @@
 
 		<script>
 			this.readJSON("build/data.json"); // initilze trees
+
 			var json_string;
 
 
@@ -230,7 +208,7 @@
 
 				for (let i = 0; i < pin_objects.length; i++) {
 
-					if ((search_word + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
+					if (( /*search_word*/ "Elina Agnati" + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
 
 						this.go_to_tree(pin_objects[i]);
 						return;
@@ -572,7 +550,7 @@
 
 
 					//viewer.scene.scene.add(locationgrid);
-					console.log("jbsdusbdu wudbwudbgwd ujwbduwdbgwudb wudbwudwudbg");
+
 					var geometry = new THREE.BoxGeometry(1, 1, 1);
 					var material = new THREE.MeshBasicMaterial({
 						color: 0x00ff00
@@ -682,6 +660,8 @@
 						obj.rotation.set(Math.PI / 2, Math.PI, 0)
 						//	obj.children[0].visible = false;
 						viewer.scene.scene.add(obj);
+
+						this.search_tree(); // only for testing
 					}
 
 				}, onProgress, onError);
