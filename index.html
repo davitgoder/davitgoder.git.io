@@ -149,10 +149,10 @@
 				 alt='image' width="80" height="80" left: 50; top: -80px; />
 				<img style="position: absolute;left:53%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/treepex.png'
 				 alt='image' width="80" height="80" left: 50; top: -80px; />
-				<!-- <img style="position: absolute;left:79%;top:15%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.png'
-				 alt='image' width="90" height="50" left: 50; top: -80px; /> -->
-				<!-- <img style="position: absolute;left:80%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/text.png'
-				 alt='image' width="100" height="50" left: 50; top: -20px; /> -->
+				<img id="pb" style="position: absolute;left:79%;top:15%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.png'
+				 alt='image' width="90" height="50" left: 50; top: -80px; />
+				<img id="text" style="position: absolute;left:80%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/text.png'
+				 alt='image' width="100" height="50" left: 50; top: -20px; />
 				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
 					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
 				</p>
@@ -210,11 +210,16 @@
 
 					if (( /*search_word*/ "Elina Agnati" + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
 
+document.getElementById("pb").src = "resources/images/tets.png";
+document.getElementById("text").src = "resources/images/tets.png" ;
+
+
 						this.go_to_tree(pin_objects[i]);
 						return;
 						//	pin_objects[i].mesh_obj.children[0].material.emissive[0] =  new THREE.Color( 0xff0000 );
 						//return;
 					}
+					
 				}
 
 				console.log(input.value);

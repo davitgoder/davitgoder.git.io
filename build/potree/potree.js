@@ -24526,6 +24526,10 @@ ENDSEC
 							if (pin_was_hovered) {
 								pin_image.style.right = "-302px";
 
+
+								document.getElementById("pb").src = "resources/images/pb.png";
+								document.getElementById("text").src = "resources/images/text.png" ;
+
 								let person_name = document.getElementById("Name");
 								let person_surname = document.getElementById("Surname");
 								let full_name = pin_objects[i].person_name;
