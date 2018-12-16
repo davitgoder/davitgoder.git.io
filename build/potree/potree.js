@@ -24511,13 +24511,9 @@ ENDSEC
 				if (hovered_object != null) {
 
 					console.log("hoveredswdsf: ", hovered_object.object.parent);
-					//console.log("height ", this.viewer.scene.estimateHeightAt(new THREE.Vector3(589999.587, 231557.213, 745.614)));
-
-					//this.zoom_to_pin(hovered_object.point);
-
+	
 					let clicked_object_name = hovered_object.object.name; // this is mesh object name
-
-
+					
 					console.log("mesh obj: ", hovered_object);
 					for (let i = 0; i < pin_objects.length; i++) {
 						if (clicked_object_name == pin_objects[i].object_id) {
@@ -24525,11 +24521,7 @@ ENDSEC
 							console.log("hovered: ", hovered_object.point);
 							if (pin_was_hovered) {
 								pin_image.style.right = "-302px";
-
-
-								document.getElementById("pb").src = "resources/images/pb.png";
-								document.getElementById("text").src = "resources/images/text.png" ;
-
+								
 								let person_name = document.getElementById("Name");
 								let person_surname = document.getElementById("Surname");
 								let full_name = pin_objects[i].person_name;

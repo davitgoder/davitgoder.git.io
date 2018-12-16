@@ -196,33 +196,17 @@
 
 
 			function search_tree() {
-
-
 				var input = document.getElementById('input');
-
 				let search_word = input.value;
-
 				//for testing
-
-
-
 				for (let i = 0; i < pin_objects.length; i++) {
 
-					if (( /*search_word*/ "Elina Agnati" + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
-
-document.getElementById("pb").src = "resources/images/tets.png";
-document.getElementById("text").src = "resources/images/tets.png" ;
-
+					if ((search_word + "'s Tree").toUpperCase() == pin_objects[i].person_name.toUpperCase()) { // pick any tree 
 
 						this.go_to_tree(pin_objects[i]);
 						return;
-						//	pin_objects[i].mesh_obj.children[0].material.emissive[0] =  new THREE.Color( 0xff0000 );
-						//return;
 					}
-					
 				}
-
-				console.log(input.value);
 			}
 
 			function readTextFile(file) {
@@ -279,10 +263,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 
 
 				tree_obj.mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1);
-
-
-
-
 
 				let person_name = document.getElementById("Name");
 				let person_surname = document.getElementById("Surname");
@@ -392,13 +372,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 			viewer.setPointBudget(1 * 1000 * 1000);
 			viewer.loadSettingsFromURL();
 
-			// viewer.setEDLEnabled(false);
-			// viewer.setFOV(60);
-			// viewer.setPointBudget(1 * 100000);
-			// viewer.loadSettingsFromURL();
-
-			//	viewer.setDescription(" <a target='_blank' href='https://www.treepex.org/'>Developed by TreePex</a>");
-
 			// menue_block
 			viewer.loadGUI(() => {
 				viewer.setLanguage('en');
@@ -420,18 +393,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 				scene.view.lookAt(new THREE.Vector3(589851.587, 231428.213, 615.634));
 				viewer.fitToScreen();
 
-				console.log("E: ", e);
-
-
-
-
-
-				// var vertices = e.geometry.vertices;
-				// for (var i = 0; i < vertices.length; i++) {
-				// 	var vertex = vertices[i].clone();
-				// 	vertex.applyMatrix4(mesh.matrixWorld);
-				// 	// do something with the transformed vertex
-				// }
 			});
 
 
@@ -475,15 +436,11 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 					}
 				};
 
-
-
 				soil_texture.wrapS = THREE.RepeatWrapping;
 				soil_texture.wrapT = THREE.RepeatWrapping;
 
 				pin_texture.wrapS = THREE.RepeatWrapping;
 				pin_texture.wrapT = THREE.RepeatWrapping;
-
-
 
 				let onError = function (xhr) {};
 				let loader = new THREE.OBJLoader(manager);
@@ -496,13 +453,9 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 						}
 					});
 
-
-
 					soil_model.position.set(
 						589742.5396259155, 231513.74975000002, 723.1750000762939
 					);
-
-
 					soil_model.scale.multiplyScalar(200);
 					soil_model.rotation.set(Math.PI / 2, Math.PI, 0)
 					viewer.scene.scene.add(soil_model);
@@ -520,13 +473,9 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 					var locations_txt = this.readTextFile("./resources/models/testmodels/locations.txt");
 					console.log("text: ", locations_txt);
 
-
-
-
 					soil_model.position.set(
 						589742.5396259155, 231513.74975000002, 723.1750000762939
 					);
-
 
 					soil_model.scale.multiplyScalar(200);
 					soil_model.rotation.set(Math.PI / 2, Math.PI, 0)
@@ -552,10 +501,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 					locationgrid.scale.multiplyScalar(200);
 					locationgrid.rotation.set(Math.PI / 2, Math.PI, 0)
 
-
-
-					//viewer.scene.scene.add(locationgrid);
-
 					var geometry = new THREE.BoxGeometry(1, 1, 1);
 					var material = new THREE.MeshBasicMaterial({
 						color: 0x00ff00
@@ -565,75 +510,14 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 						589742.5396259155, 231513.74975000002, 723.1750000762939
 					);
 					viewer.scene.scene.add(cube);
-
-
-
-
-
 					locationgrid.updateMatrixWorld();
 
 					console.log("locationgrid:::: ", locationgrid);
 					for (let k = 0; k < locationgrid.children.length; k++) {
-
-						//	let obj = loaded_mesh_test.clone(true);
-
-
-
-						//var vector = locationgrid.children[k].geometry.vertices[0].clone();
-
-						//vector.applyMatrix4(locationgrid.children[k].matrixWorld);
-
-						//	console.log("each_________________  ", locationgrid.children[k]);
-
-
-						//	locationgrid.updateMatrixWorld(false);
 						let pos_vector = new THREE.Vector3();
-
-						//	pos_vector = THREE.geometry.center(locationgrid.children[k].geometry.boundingSphere.center);
-
-
-
-
-
-
-						//pos_vector.setFromMatrixPosition(locationgrid.children[k].matrixWorld);
-
-
-
-						//	pos_vector = locationgrid.children[k].geometry.boundingSphere.center;
-
-						//pos_vector.applyMatrix4(locationgrid.children[k].matrixWorld);
-
-						//	locationgrid.children[k].getPositionFromMatrix(pos_vector);
-						//pos_vector = locationgrid.children[k].position;
-						//locationgrid.children[k].position = obj.position;
-
-						//locationgrid.children[k].getWorldPosition(pos_vector);
-
-
-						//obj.position.set(pos_vector.x + k, pos_vector.y, pos_vector.z);
-
-						// console.log("obj.position; ", locationgrid.children[k]);
-
-
-
-						// obj.scale.multiplyScalar(1);
-						// obj.rotation.set(Math.PI / 2, Math.PI, 0);
-						// obj.visible = true;
-						// //obj.children[0].visible = false;
-						// viewer.scene.scene.add(obj);
 					}
 
-
-					//locationgrid.updateMatrixWorld();
-					//console.log("locationgrid.children: ", locationgrid.children[110].localToWorld());
-
-
-
 				}, onProgress, onError);
-
-
-
 
 				loader.load('./resources/models/newpin.obj', function (loaded_mesh) {
 					loaded_mesh.traverse(function (child) {
@@ -643,9 +527,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 						loaded_mesh_test = loaded_mesh;
 						loaded_mesh.children[0].visible = false;
 					});
-
-
-
 
 					for (let i = 0; i < json_string.length; i++) {
 						let obj = loaded_mesh.clone(true);
@@ -663,7 +544,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 						pin_objects.push(pin);
 						obj.scale.multiplyScalar(2);
 						obj.rotation.set(Math.PI / 2, Math.PI, 0)
-						//	obj.children[0].visible = false;
 						viewer.scene.scene.add(obj);
 
 						this.search_tree(); // only for testing
@@ -672,8 +552,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 				}, onProgress, onError);
 
 				draw();
-
-
 
 				function draw() {
 
@@ -697,29 +575,6 @@ document.getElementById("text").src = "resources/images/tets.png" ;
 					imageObj.setAttribute('crossOrigin', 'anonymous');
 					imageObj.src = "http://lorempixel.com/400/200/";
 				};
-
-
-
-
-
-
-
-				// function object_loader(position) {
-				// 	loader.load('./resources/models/XE.obj', function (object) {
-				// 		object.traverse(function (child) {
-				// 			if (child instanceof THREE.Mesh) {
-				// 				child.material.map = texture;
-				// 			}
-				// 		});
-				// 		object.position.set(position[0], position[1], position[2]);
-				// 		object.scale.multiplyScalar(500);
-				// 		object.rotation.set(Math.PI / 2, Math.PI, 0)
-
-				// 		viewer.scene.scene.add(object);
-
-
-				// 	}, onProgress, onError);
-				// }
 
 			}
 		</script>
