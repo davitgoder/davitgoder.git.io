@@ -24431,7 +24431,7 @@ ENDSEC
 
 			let cam = this.viewer.scene.getActiveCamera();
 
-			//let image_toggle = false, mouse_down_detector = false; // image apperance constroll
+
 			document.addEventListener('mousedown', (event) => {
 				mouse_down_detector = true;
 				if (pin_image.style.right == "0px") {
@@ -24441,11 +24441,7 @@ ENDSEC
 
 
 			document.addEventListener('mouseup', (event) => {
-				//on click is called that checks if mouse_down_detector is true, this assures that function will be called only once
-				//TODO: romove this after cklick system is corrected
 				this.on_click();
-
-
 				mouse_down_detector = false;
 			});
 
@@ -24511,9 +24507,9 @@ ENDSEC
 				if (hovered_object != null) {
 
 					console.log("hoveredswdsf: ", hovered_object.object.parent);
-	
+
 					let clicked_object_name = hovered_object.object.name; // this is mesh object name
-					
+
 					console.log("mesh obj: ", hovered_object);
 					for (let i = 0; i < pin_objects.length; i++) {
 						if (clicked_object_name == pin_objects[i].object_id) {
@@ -24521,7 +24517,7 @@ ENDSEC
 							console.log("hovered: ", hovered_object.point);
 							if (pin_was_hovered) {
 								pin_image.style.right = "-302px";
-								
+
 								let person_name = document.getElementById("Name");
 								let person_surname = document.getElementById("Surname");
 								let full_name = pin_objects[i].person_name;
@@ -24650,7 +24646,8 @@ ENDSEC
 	}
 
 
-	var mouse_down_detector, hovered_object, pin_was_hovered = false,
+	var mouse_down_detector = true,
+		hovered_object, pin_was_hovered = false,
 		pin_was_clicked = false;
 
 

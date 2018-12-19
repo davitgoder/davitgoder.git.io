@@ -124,15 +124,32 @@
 
 		</style>
 
+
+	<style>
+		#bg {
+  	  position: fixed; 
+	  top: 0; 
+	  left: 0; 
+	
+  	   min-width: 100%;
+  	   min-height: 100%;
+  	   z-index: 100000000;
+	}
+	</style>
+
 	</head>
 
 	<body>
 
+
+		<img src="resources/images/gif.gif" id="bg" alt="">
+
 		<div id="seachrbar" , class="searchbar">
-
 			<input id="input" onkeyup="search_tree()" type="text" name="search" placeholder="Search...">
-
 		</div>
+
+
+
 
 		<div id="pin_image" , class="shcreensh">
 			<div class="fb-share-button" data-href="https://treepex3dmap.org/" data-layout="button_count" data-size="small"
@@ -156,42 +173,44 @@
 				</p>
 			</div>
 
-			<!-- <div class="current_image" style="display:flex;align-items:flex-stsart;position:relative; ">
-				<img id='tree_image' src='resources/images/4.png' alt='image' width="170" height="170" left: 50; top: -72px; />
-				<img id='tree_image' src='resources/images/rightbachground.png' alt='image' width="180" height="170" left: 50; top:
-				 -72px; />
-
-
-				<img style="position: absolute;left:85%;top:30%;transform:translate(-50%, -50%);width:80x;" src='resources/images/pb.jpg'
-				 alt='image' width="90" height="50" left: 50; top: -80px; />
-
-
-
-				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
-					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
-
-				</p>
-
-				<div id="Date" style="position: relative; width: 100%; height: 100%; left: 180px; top: -134px;"></div> -->
 		</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 		<script>
 			function get_url() {
-				var url_string = document.URL;
-				var tree_ides = url_string.split("/");
-				var tree_id = tree_ides[tree_ides.length - 1];
+				let searchParams = new URLSearchParams(window.location.search)
+				searchParams.has('id')
+				let param = searchParams.get('id')
+				let tree_id = "id:" + param;
+				//for testing
+				if (tree_id) {
+					for (var j = 0; j < 5; j++) {
+						console.log("tree select");
+						this.select_random_tree(pin_objects);
+					}
+
+					for (let i = 0; i < pin_objects.length; i++) {
+						if (tree_id == pin_objects[i].object_id) { // pick any tree 
+							this.go_to_tree(pin_objects[i]);
+							return;
+						}
+					}
+
+				}
+			}
+
+			function select_random_tree(pin_array) {
+				var value = pin_array[Math.floor(Math.random() * pin_array.length)];
+				this.select_tree(value);
 			}
 		</script>
 
 		<script>
 			this.readJSON("build/data.json"); // initilze trees
 
+
 			var json_string;
-
-
-
 
 			function search_tree() {
 				var input = document.getElementById('input');
@@ -253,14 +272,9 @@
 			function go_to_tree(tree_obj) { // _goder
 
 				//this.screenshot();
+				this.select_tree(tree_obj);
 
 				let final_postion = tree_obj.mesh_obj.position;
-
-				tree_obj.mesh_obj.children[0].visible = true;
-				tree_obj.mesh_obj.children[1].visible = false;
-
-
-				tree_obj.mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1);
 
 				let person_name = document.getElementById("Name");
 				let person_surname = document.getElementById("Surname");
@@ -300,6 +314,12 @@
 				var lookat_rotation = new THREE.Vector3(final_postion.x, final_postion.y, final_postion.z);
 				viewer.scene.view.lookAt(lookat_rotation);
 
+			}
+
+			function select_tree(tree) {
+				tree.mesh_obj.children[0].visible = true;
+				tree.mesh_obj.children[1].visible = false;
+				tree.mesh_obj.children[0].material.color = new THREE.Color(100, 11, 1);
 			}
 
 			var image_url;
@@ -544,8 +564,13 @@
 						obj.rotation.set(Math.PI / 2, Math.PI, 0)
 						viewer.scene.scene.add(obj);
 
-						this.search_tree(); // only for testing
+
+
 					}
+
+
+					document.getElementById("bg").style.display = "none";
+					this.get_url();
 
 				}, onProgress, onError);
 
