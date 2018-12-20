@@ -1,16 +1,16 @@
 [{
     "object_id": "id:0",
-    "person_name": "Diana Tigishvili's Tree",
+    "person_name": "Maia Sikharulidze's Tree",
     "plant_date": "533",
-    "person_email": "Diana.Tigishvili@pashabank.ge",
+    "person_email": "m.sikharulidze@ardi.ge",
     "pin_picture": "1",
     "mesh_obj": "mesh obj",
     "obj_pos": [590097.3, 231302.859, 761.395]
 }, {
     "object_id": "id:1",
-    "person_name": "Giorgi Turdziladze's Tree",
+    "person_name": "Diana Tigishvili's Tree",
     "plant_date": "533",
-    "person_email": "turdziladze@ardi.ge",
+    "person_email": "Diana.Tigishvili@pashabank.ge",
     "pin_picture": "2",
     "mesh_obj": "mesh obj",
     "obj_pos": [590097.2, 231310.672, 758.255]
