@@ -168,9 +168,12 @@
 				 alt='image' width="90" height="50" left: 50; top: -80px; />
 				<img id="text" style="position: absolute;left:80%;top:40%;transform:translate(-50%, -50%);width:80x;" src='resources/images/text.png'
 				 alt='image' width="100" height="50" left: 50; top: -20px; />
-				<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
-					<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
-				</p>
+				<div id="555">
+					<p class="sansserif" id="Name" style="  position: absolute;px;bottom: 15px;right: 10px;">
+						<p class="sansserif" id="Surname" style="  position: absolute;px;bottom: 0px;right: 10px;"> </p>>
+					</p>
+				</div>
+
 			</div>
 
 		</div>
@@ -178,8 +181,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 		<script>
-
-			
 			function get_url() {
 				let searchParams = new URLSearchParams(window.location.search)
 				searchParams.has('id')
@@ -187,17 +188,76 @@
 				let tree_id = "id:" + param;
 				//for testing
 				if (tree_id) {
-					for (var j = 0; j < 5; j++) {
-						console.log("tree select");
-						this.select_random_tree(pin_objects);
+
+
+
+
+
+					if (param == "555") {
+
+
+
+						for (let i = 0; i < pin_objects.length; i++) {
+							if ("555" != pin_objects[i].pin_picture) { // pick any tree 
+								pin_objects[i].mesh_obj.visible = false;
+
+
+
+
+
+							}
+
+							var supp_by = document.getElementById("pb");
+							supp_by.src = "resources/images/Supported By .png";
+
+							var text_img = document.getElementById("text");
+							text_img.src = "resources/images/SGI .png";
+
+
+							document.getElementById("555").style.display = "none";
+
+							supp_by.style.height = "auto";
+							supp_by.style.width = "150px";	
+
+							supp_by.style.top = "40%";
+
+
+							text_img.style.height = "auto";
+							text_img.style.width = "150px";
+
+							text_img.style.top = "70%";
+
+
+							//document.getElementsByClassName("sansserif").vsis = "";
+
+							//document.geleme("Name").style.top = "100px";  
+
+							//var element = document.getElementById("Name");
+							//element.parentNode.removeChild(element);
+
+
+
+
+						}
+
+
+					} else {
+
+						for (var j = 0; j < 5; j++) {
+							console.log("tree select");
+							this.select_random_tree(pin_objects);
+						}
+
+						for (let i = 0; i < pin_objects.length; i++) {
+							if (tree_id == pin_objects[i].object_id) { // pick any tree 
+								this.go_to_tree(pin_objects[i]);
+								return;
+							}
+						}
+
 					}
 
-					for (let i = 0; i < pin_objects.length; i++) {
-						if (tree_id == pin_objects[i].object_id) { // pick any tree 
-							this.go_to_tree(pin_objects[i]);
-							return;
-						}
-					}
+
 
 				}
 			}
