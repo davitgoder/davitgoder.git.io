@@ -207,6 +207,8 @@
 
 							}
 
+
+
 							var supp_by = document.getElementById("pb");
 							supp_by.src = "resources/images/supportedbysgi.png";
 
@@ -217,7 +219,7 @@
 							document.getElementById("555").style.display = "none";
 
 							supp_by.style.height = "auto";
-							supp_by.style.width = "150px";	
+							supp_by.style.width = "150px";
 
 							supp_by.style.top = "40%";
 
@@ -228,44 +230,50 @@
 							text_img.style.top = "70%";
 
 
-							//document.getElementsByClassName("sansserif").vsis = "";
-
-							//document.geleme("Name").style.top = "100px";  
-
-							//var element = document.getElementById("Name");
-							//element.parentNode.removeChild(element);
-
-
-
-
-						}
-
-
-					} else {
-
-						for (var j = 0; j < 5; j++) {
-							console.log("tree select");
-							this.select_random_tree(pin_objects);
-						}
-
-						for (let i = 0; i < pin_objects.length; i++) {
-							if (tree_id == pin_objects[i].object_id) { // pick any tree 
-								this.go_to_tree(pin_objects[i]);
-								return;
+							for (let i = 0; i < pin_objects.length; i++) {
+								if ("id:1497" == pin_objects[i].object_id) { // pick any tree 
+									this.go_to_tree(pin_objects[i]);
+									
+								}
 							}
+
+								//document.getElementsByClassName("sansserif").vsis = "";
+
+								//document.geleme("Name").style.top = "100px";  
+
+								//var element = document.getElementById("Name");
+								//element.parentNode.removeChild(element);
+
+
+
+							}
+
+
+						} else {
+
+							for (var j = 0; j < 5; j++) {
+								console.log("tree select");
+								this.select_random_tree(pin_objects);
+							}
+
+							for (let i = 0; i < pin_objects.length; i++) {
+								if (tree_id == pin_objects[i].object_id) { // pick any tree 
+									this.go_to_tree(pin_objects[i]);
+									return;
+								}
+							}
+
 						}
+
+
 
 					}
-
-
-
 				}
-			}
 
-			function select_random_tree(pin_array) {
-				var value = pin_array[Math.floor(Math.random() * pin_array.length)];
-				this.select_tree(value);
-			}
+				function select_random_tree(pin_array) {
+					var value = pin_array[Math.floor(Math.random() * pin_array.length)];
+					this.select_tree(value);
+				}
 		</script>
 
 		<script>
